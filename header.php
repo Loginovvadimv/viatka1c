@@ -18,7 +18,7 @@
 <body>
 
 
-<section class="header">
+<header class="header">
     <div class="header__topBg">
     <div class="container">
             <div class="header__topWrap">
@@ -48,7 +48,7 @@
 
                 <div class="header__left">
                     <div class="header__logo">
-                        <a href="/"></a><img src="<?= ASSETS ?>/images/icons/logo.svg" alt="logo">
+                        <a href="/"><img src="<?= ASSETS ?>/images/icons/logo.svg" alt="logo"></a>
                     </div>
                     <nav class="header__nav">
                         <ul class="header__ul">
@@ -68,4 +68,4 @@
             </div>
         </div>
     </div>
-</section>
+</header>

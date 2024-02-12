@@ -41,6 +41,31 @@ export default class Slider {
             })
         }
 
+
+        const news = document.querySelector('.news')
+        if (news) {
+            this.createSlider(news, {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                allowTouchMove: true,
+                loop: true,
+                autoHeight: false,
+                calculateHeight: false,
+                speed: 1000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: false
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                    }
+                }
+            })
+        }
+
     }
 
     static createSlider(parent, options) {

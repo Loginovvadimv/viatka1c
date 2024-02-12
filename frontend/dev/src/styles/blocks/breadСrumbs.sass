@@ -1,0 +1,24 @@
+.breadСrumbs
+  position: relative
+  z-index: 3
+  display: flex
+  gap: 6px
+  align-items: center
+  margin-bottom: 24px
+  img
+    width: 12px
+    height: 12px
+  a
+    color: rgb(37, 37, 37)
+    &:hover
+      color: #fa7e10
+  .crumbActive
+    color: rgb(136, 136, 136)
+    &:hover
+      color: #fa7e10
+
+
+@media (max-width: 424px)
+  .breadСrumbs
+    gap: 8px
+    margin-bottom: 16px
