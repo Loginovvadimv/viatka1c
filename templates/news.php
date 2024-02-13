@@ -16,23 +16,23 @@ foreach ($news->posts as $article) {
         'preview' => get_the_post_thumbnail($article->ID, 'full', ['loading' => 'lazy']),
         'except' => get_the_excerpt($article->ID),
         'link' => get_permalink($article->ID),
-        'date' => $article->post_date,
+//        'date' => $article->post_date,
+        'date' => Helper::getHumanDate($article->post_date),
     ];
 }
 ?>
 
-<section class="news">
+<section class="news newSection">
     <div class="container">
-        <pre>
-            <?= var_dump($data['articles']) ?>
-        </pre>
+<!--        <pre>-->
+<!--            --><?php //= var_dump($news) ?>
+<!--        </pre>-->
 
         <div class="news__flexBox">
             <div class="news__title title">Новости</div>
             <a href="/allnews/"><button class="news__btn btn-white">Все новости</button></a>
         </div>
-        <div class="swiper">
-            <div class="swiper-wrapper">
+            <div class="news__wrapper">
                 <?php foreach ($data['articles'] as $article): ?>
                 <div class="news__wrap">
                     <a href="<?= $article['link'] ?>">
@@ -51,10 +51,8 @@ foreach ($news->posts as $article) {
                             <?=$article['except'] ?>
                         </div>
                     </div>
-
                 </div>
                 <?php endforeach; ?>
             </div>
-        </div>
     </div>
 </section>

@@ -28,15 +28,21 @@
                             'type' => 'text',
                         ),
                         array (
+                            'key' => 'phone-link',
+                            'label' => 'Телефон ссылка',
+                            'name' => 'Телефон ссылка',
+                            'type' => 'text',
+                        ),
+                        array (
                             'key' => 'email',
                             'label' => 'E-Mail',
                             'name' => 'E-Mail',
                             'type' => 'text',
                         ),
                         array (
-                            'key' => 'messengers',
-                            'label' => 'Мессенджеры',
-                            'name' => 'Мессенджеры',
+                            'key' => 'messenger-vk',
+                            'label' => 'ссылка вк',
+                            'name' => 'ссылка вк',
                             'type' => 'text',
                         ),
                         array (

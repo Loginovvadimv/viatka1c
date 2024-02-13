@@ -9,23 +9,27 @@
         static function getMonth($month_number){
             $months = [
                 '',
-                'янв',
-                'февр',
+                'января',
+                'февраля',
                 'марта',
-                'апр',
+                'апреля',
                 'мая',
                 'июня',
                 'июля',
-                'авг',
-                'сент',
-                'окт',
-                'нояб',
-                'дек',
+                'августа',
+                'сентября',
+                'октября',
+                'ноября',
+                'декабря',
             ];
             return $months[ $month_number ];
         }
     
         static function only_num($string) {
             return preg_replace("/[^0-9]/", '', $string);
+        }
+        static function getHumanDate( $date ) {
+            $month = self::getMonth(date('n', strtotime( $date )));
+            return date( 'd', strtotime( $date ) ) . ' ' . $month  . ' ' . date( 'Y', strtotime( $date ) );
         }
     }
