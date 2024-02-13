@@ -3,15 +3,10 @@ get_header();
 $id = get_the_ID();
 
 $article = get_post($id);
-
-//$news = new WP_Query($args)
-
 ?>
 
 <section class="singleNews newSection">
     <div class="container">
-
-
         <div class="singleNews__head">
             <div class="singleNews__breadСrumbs breadСrumbs">
                 <a href="/">Главная</a>

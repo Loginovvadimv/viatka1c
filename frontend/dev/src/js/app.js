@@ -8,6 +8,8 @@ import './classes/Tabs.js'
 import './classes/SetSizes.js'
 import './classes/CookieAccept.js'
 import './classes/ToTop.js'
+import './classes/Pagination.js'
+
 
 import './classes/Hover3D.js'
 import './classes/Inputer.js'
