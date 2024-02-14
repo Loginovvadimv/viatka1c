@@ -37,8 +37,8 @@
                     <div class="footer__nav">
                         Информация
                         <ul>
-                            <li><a href="">Контакты</a></li>
-                            <li><a href="">О нас</a></li>
+                            <li><a href="/contacts/">Контакты</a></li>
+                            <li><a href="/forus/">О нас</a></li>
                         </ul>
                     </div>
                     <div class="footer__links">
@@ -69,6 +69,6 @@
 
             </div>
         </footer>
-
+        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<c2a888d7-28f1-4234-89bb-c4785a857bc4>" type="text/javascript"></script>
     </body>
 </html>

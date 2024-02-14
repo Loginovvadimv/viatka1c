@@ -13,4 +13,5 @@
     require_once __DIR__ . '/backend/classes/Mailer.php';
     require_once __DIR__ . '/backend/classes/Helper.php';
     require_once __DIR__ . '/backend/classes/Content.php';
+    require_once __DIR__ . '/backend/classes/Events.php';
     

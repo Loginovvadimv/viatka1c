@@ -24,33 +24,41 @@ foreach ($news->posts as $article) {
 }
 ?>
 
-<section class="news newSection">
+<section class="pageNews newSection">
     <div class="container">
-        <div class="news__breadСrumbs breadСrumbs">
-            <a href="/">Главная</a>
-            <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-            <a href="#" class="crumbActive">События</a>
-            <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-            <a href="/allnews/" class="crumbActive">Новости</a>
+        <div class="pageNews__bgWrap background-wrap">
+            <div class="pageNews__breadСrumbs breadСrumbs">
+                <a href="/">Главная</a>
+                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                <a href="#" class="crumbActive">События</a>
+                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                <a href="/allnews/" class="crumbActive">Новости</a>
+            </div>
+            <div class="pageNews__title title">Новости</div>
         </div>
-        <div class="news__title title">Новости</div>
-        <div class="news__wrapper">
+        <nav class="quick-links">
+            <a href="#"></a>
+            <a href="#"></a>
+            <a href="#"></a>
+        </nav>
+
+        <div class="pageNews__wrapper">
             <?php foreach ($data['articles'] as $article): ?>
-                <div class="news__wrap">
-                    <a href="<?= $article['link'] ?>">
+                <div class="pageNews__wrap">
+                    <a class="pageNews__link" href="<?= $article['link'] ?>">
                         <?= $article['preview'] ?>
                     </a>
-                    <div class="news__info">
-                        <div class="news__date subtitle"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
+                    <div class="pageNews__info">
+                        <div class="pageNews__date subtitle"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
                             <?= $article['date'] ?>
                         </div>
                         <a href="<?= $article['link'] ?>">
-                            <div class="news__name subtitle">
+                            <div class="pageNews__name subtitle">
                                 <?= $article['name'] ?>
                             </div>
                         </a>
-                        <div class="news__text subtitle">
-                            <?=$article['except'] ?>
+                        <div class="pageNews__text subtitle">
+                            <?=$article['content'] ?>
                         </div>
                     </div>
                 </div>

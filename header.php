@@ -55,8 +55,8 @@
                             <li class="header__li"><a href="#">События</a></li>
                             <li class="header__li"><a href="#">Партнёрам</a></li>
                             <li class="header__li"><a href="#">Продукты</a></li>
-                            <li class="header__li"><a href="#">О нас</a></li>
-                            <li class="header__li"><a href="#">Контакты</a></li>
+                            <li class="header__li"><a href="/forus/">О нас</a></li>
+                            <li class="header__li"><a href="/contacts/">Контакты</a></li>
                         </ul>
                     </nav>
                 </div>

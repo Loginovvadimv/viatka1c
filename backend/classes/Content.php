@@ -38,6 +38,20 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Реквизиты',
+                'menu_title' => 'Реквизиты',
+                'menu_slug' => 'requisites',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'О нас',
+                'menu_title' => 'О нас',
+                'menu_slug' => 'forus',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 
