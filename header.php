@@ -54,7 +54,7 @@
                             <li class="header__li"><a href="#">События</a></li>
                             <li class="header__li"><a href="#">Партнёрам</a>
                                 <ul class="submenu">
-                                    <li><a href="#">Партнёрские программы</a></li>
+                                    <li><a href="/partners/">Партнёрские программы</a></li>
                                 </ul>
                             </li>
                             <li class="header__li"><a href="#">Продукты</a></li>
