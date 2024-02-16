@@ -52,6 +52,20 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Дипломы и сертификаты',
+                'menu_title' => 'Дипломы и сертификаты',
+                'menu_slug' => 'diploms',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Благодарственные письма',
+                'menu_title' => 'Благодарственные письма',
+                'menu_slug' => 'letters',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

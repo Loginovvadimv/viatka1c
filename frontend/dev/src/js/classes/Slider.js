@@ -41,6 +41,55 @@ export default class Slider {
             })
         }
 
+        const diploms = document.querySelector('.diploms')
+        if (diploms) {
+            this.createSlider(diploms, {
+                slidesPerView: 1,
+                spaceBetween: 24,
+                allowTouchMove: true,
+                loop: true,
+                autoHeight: false,
+                calculateHeight: false,
+                speed: 1000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: false
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                    }
+                }
+            })
+        }
+
+
+        const letters = document.querySelector('.letters')
+        if (letters) {
+            this.createSlider(letters, {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                allowTouchMove: true,
+                loop: true,
+                autoHeight: false,
+                calculateHeight: false,
+                speed: 1000,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: false
+                },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                    }
+                }
+            })
+        }
+
 
         const news = document.querySelector('.news')
         if (news) {

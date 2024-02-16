@@ -45,15 +45,18 @@
     <div class="header__bottomWrapper">
         <div class="container">
             <div class="header__bottomWrap">
-
                 <div class="header__left">
                     <div class="header__logo">
                         <a href="/"><img src="<?= ASSETS ?>/images/icons/logo.svg" alt="logo"></a>
                     </div>
                     <nav class="header__nav">
-                        <ul class="header__ul">
+                        <ul class="header__ul topmenu">
                             <li class="header__li"><a href="#">События</a></li>
-                            <li class="header__li"><a href="#">Партнёрам</a></li>
+                            <li class="header__li"><a href="#">Партнёрам</a>
+                                <ul class="submenu">
+                                    <li><a href="#">Партнёрские программы</a></li>
+                                </ul>
+                            </li>
                             <li class="header__li"><a href="#">Продукты</a></li>
                             <li class="header__li"><a href="/forus/">О нас</a></li>
                             <li class="header__li"><a href="/contacts/">Контакты</a></li>
@@ -64,7 +67,6 @@
                     <a class="header__phone" href="tel:+78332223272"><?= get_field('phone', 'options') ?></a>
                     <button class="btn-orange header__btn">Задать вопрос</button>
                 </div>
-
             </div>
         </div>
     </div>
