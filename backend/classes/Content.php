@@ -66,6 +66,20 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Расписание экзаменов',
+                'menu_title' => 'Расписание экзаменов',
+                'menu_slug' => 'examens',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Акции',
+                'menu_title' => 'Акции',
+                'menu_slug' => 'stocks',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

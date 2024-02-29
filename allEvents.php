@@ -1,26 +1,12 @@
 <?php
-// Template Name: Все мероприятия
 get_header();
-$args = array(
-    'posts_per_page' => 4,
+$params = array(
     'post_type' => 'events',
-    'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
+    'posts_per_page' => 4,
 );
-$events = new WP_Query($args);
-
-foreach ($events->posts as $article) {
-    $data['articles'][] = [
-        'id' => $article->ID,
-        'name' => $article->post_title,
-        'content' => apply_filters('the_content', get_post_field('post_content', $article->ID)),
-        'preview' => get_the_post_thumbnail($article->ID, 'full', ['loading' => 'lazy']),
-        'except' => get_the_excerpt($article->ID),
-        'link' => get_permalink($article->ID),
-        'date' => Helper::getHumanDate($article->post_date),
-    ];
-}
+$events = get_posts($params);
 ?>
 
 <section class="allEvents newSection">
@@ -30,25 +16,27 @@ foreach ($events->posts as $article) {
             <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
             <a href="#" class="crumbActive">События</a>
             <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-            <a href="/allevents/" class="crumbActive">Мероприятия</a>
+            <div class="crumbActive">Мероприятия</div>
         </div>
         <h2 class="allEvents__title title">Мероприятия</h2>
-        <div class="events__wrapper">
-            <?php foreach ($data['articles'] as $article): ?>
+        <div class="allEvents__wrapper">
+            <?php foreach ($events as $key => $item): ?>
                 <div class="events__wrap">
-                    <a class="pageNews__link" href="<?= $article['link'] ?>">
-                        <?= $article['preview'] ?>
+                    <a href="<?= $item->guid ?>">
+                    <img class="events__img" src="<?= get_field('event-img', $item->ID)?>" alt="event" loading="lazy">
                     </a>
                     <div class="events__info">
-                        <div class="events__date subtitle"><?= $article['date'] ?></div>
-                        <div class="events__time subtitle">
-                            <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= $article['events-time'] ?>
+                        <div class="events__date fs16"><?= get_field('event-date', $item->ID) ?></div>
+                        <div class="events__time fs16">
+                            <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $item->ID) ?>
                         </div>
-                        <div class="events__name subtitle"><?= $article['name'] ?></div>
+                        <a href="<?= $item->guid ?>">
+                        <div class="events__name fs16"><?= get_field('event-name', $item->ID) ?></div>
+                        </a>
+                    </div>
                     </div>
                 </div>
             <?php endforeach; ?>
         </div>
-    </div>
 </section>
 <?php get_footer() ?>

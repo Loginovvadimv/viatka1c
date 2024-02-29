@@ -1,66 +1,90 @@
 .header
-  width: 100%
+  background: #eee
   position: fixed
-  top: 0
-  z-index: 10
-  background: #FFF
-  &__topBg
-    background-color: #F6F6FA
-    padding: 11px 0
+  width: 100%
+  z-index: 99999999
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25)
+  .nav
+    background: rgb(255, 255, 255)
+    display: flex
+    gap: 36px
+    align-items: center
+  .nav > ul > li
+    display: inline-block
+    position: relative
+    z-index: 100
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 18px
+    font-weight: 600
+    line-height: 24px
+    text-align: left
+    padding: 30px 0
+  .nav > ul > li > ul
+    position: absolute
+    left: 0
+    top: 100%
+    padding: 36px 1000em /* trick from css-tricks comments */
+    margin: 0 -1000em
+    z-index: 101
+    visibility: hidden
+    opacity: 0
+    background: rgba(255, 240, 240, 0.8)
+    border-top: 1px solid rgb(215, 216, 225)
+    display: flex
+    flex-direction: column
+    gap: 24px
+  .nav > ul > li:hover > ul
+    visibility: visible
+    opacity: 1
+    background-color: #FFFFFF
+  .nav > ul > li > ul > li
+  .nav > ul > li:hover .drop
+    font-weight: bold
+  &__search
+    align-items: center
+    display: flex
+    justify-content: center
+    background: #ffffff
+    border-radius: 24px
+  &__bottomWrapper
+    background-color: #FFFFFF
+    display: flex
+    justify-content: center
   &__topWrap
     display: flex
     justify-content: space-between
     align-items: center
+    padding: 12px 0
   &__info
     display: flex
     gap: 36px
   &__adress
     display: flex
     gap: 12px
-    color: rgb(136, 136, 136)
-  &__mail
-    color: rgb(136, 136, 136)
-  &__bottomWrap
-    padding: 14px 0
-    display: flex
-    justify-content: space-between
-    align-items: flex-start
-  &__left
-    display: flex
-    gap: 36px
     align-items: center
-  &__ul
+  &__search
+    a
+      color: rgb(136, 136, 136)
+      display: flex
+      gap: 12px
+      background-color: #eeeeee
+      align-items: center
+  .navContainer
     display: flex
     gap: 24px
-  &__li
-    color: rgb(37, 37, 37)
-    font-size: 18px
-    font-weight: 600
-    line-height: 24px
-  &__bottomWrapper
-    box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
-    position: relative
-  &__right
+  &__wrap
     display: flex
     gap: 36px
     align-items: center
+  &__flexBox
+    display: flex
+    justify-content: space-between
+  &__btn
+    padding: 16px 24px
   &__phone
     color: rgb(37, 37, 37)
     font-size: 20px
     font-weight: 600
     line-height: 28px
 
-
-  .submenu
-    display: none
-    position: absolute
-    background: #FFFFFF
-    padding: 36px 0
-    width: 100%
-    min-width: 100%
-    top: 64px
-  .topmenu
-    li
-      &:hover
-        .submenu
-          display: block

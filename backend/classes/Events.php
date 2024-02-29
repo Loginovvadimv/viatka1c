@@ -15,9 +15,9 @@ class Events {
                 'labels' => array(
                     'name'               => 'Мероприятия', // основное название для типа записи
                     'singular_name'      => 'Мероприятия', // название для одной записи этого типа
-                    'add_new'            => 'Добавить Мероприятие', // для добавления новой записи
-                    'add_new_item'       => 'Добавление Мероприятие', // заголовка у вновь создаваемой записи в админ-панели.
-                    'edit_item'          => 'Редактирование Мероприятия', // для редактирования типа записи
+                    'add_new'            => 'Добавить мероприятие', // для добавления новой записи
+                    'add_new_item'       => 'Добавление Мероприятия', // заголовка у вновь создаваемой записи в админ-панели.
+                    'edit_item'          => 'Редактирование Мероприятия_', // для редактирования типа записи
                     'new_item'           => 'Новое Мероприятие', // текст новой записи
                     'view_item'          => 'Смотреть Мероприятие', // для просмотра записи этого типа.
                     'search_items'       => 'Искать Мероприятие', // для поиска по этим типам записи
@@ -38,12 +38,12 @@ class Events {
                 'show_in_rest'        => null, // добавить в REST API. C WP 4.7
                 'rest_base'           => null, // $post_type. C WP 4.7
                 'menu_position'       => null,
-                'menu_icon'           => 'dashicons-format-aside',
+                'menu_icon'           => 'dashicons-portfolio',
                 //'capability_type'   => 'post',
                 //'capabilities'      => 'post', // массив дополнительных прав для этого типа записи
                 //'map_meta_cap'      => null, // Ставим true чтобы включить дефолтный обработчик специальных прав
                 'hierarchical'        => false,
-                'supports'            => array('title','editor', 'thumbnail', 'excerpt'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
+                'supports'            => array('title'), // 'title','editor','author','thumbnail','excerpt','trackbacks','custom-fields','comments','revisions','page-attributes','post-formats'
                 'taxonomies'          => array(),
                 'has_archive'         => false,
                 'rewrite'             => true,
@@ -56,4 +56,3 @@ class Events {
 }
 
 new Events();
-

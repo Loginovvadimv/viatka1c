@@ -29,15 +29,10 @@ export default class Slider {
                 slidesPerView: 1,
                 spaceBetween: 24,
                 allowTouchMove: true,
-                loop: true,
+                loop: false,
                 autoHeight: false,
                 calculateHeight: false,
                 speed: 1000,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: true,
-                    pauseOnMouseEnter: false
-                }
             })
         }
 
@@ -81,6 +76,26 @@ export default class Slider {
                     disableOnInteraction: true,
                     pauseOnMouseEnter: false
                 },
+                breakpoints: {
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                    }
+                }
+            })
+        }
+
+
+        const stocks = document.querySelector('.stocks')
+        if (stocks) {
+            this.createSlider(stocks, {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                allowTouchMove: true,
+                loop: false,
+                autoHeight: false,
+                calculateHeight: false,
+                speed: 1000,
                 breakpoints: {
                     1024: {
                         slidesPerView: 'auto',

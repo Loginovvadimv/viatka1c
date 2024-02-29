@@ -30,9 +30,9 @@ foreach ($news->posts as $article) {
             <div class="pageNews__breadСrumbs breadСrumbs">
                 <a href="/">Главная</a>
                 <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#" class="crumbActive">События</a>
+                <a href="#">События</a>
                 <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/allnews/" class="crumbActive">Новости</a>
+                <div class="crumbActive">Новости</div>
             </div>
             <div class="pageNews__title title">Новости</div>
         </div>

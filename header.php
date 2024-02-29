@@ -17,57 +17,91 @@
 
 <body>
 
-
 <header class="header">
-    <div class="header__topBg">
     <div class="container">
-            <div class="header__topWrap">
-                <div class="header__info">
-                    <div class="header__adress subtitle"><img src="<?= ASSETS ?>/images/icons/locate.svg" alt="locate"><?= get_field('address', 'options') ?></div>
-                    <div class="header__mail subtitle"><a href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a></div>
-                </div>
-                <div class="header__search">
-                    <div class="search search-live">
-                        <form action="<?= get_site_url() ?>/" class="search__form">
-                            <input type="text" class="search__input" name="s" value="<?= isset($_GET['s']) ? $_GET['s'] : '' ?>" autocomplete="off" placeholder="Поиск по товарам">
-                            <button type="submit" class="search__submit">
-                                <img src="<?= ASSETS ?>/images/parts/header/search.svg">
-                            </button>
-                        </form>
+        <div class="header__topWrap">
+            <div class="header__info">
+                <div class="header__adress fs16"><img src="<?= ASSETS ?>/images/icons/locate.svg" alt="locate"><?= get_field('address', 'options') ?></div>
+                <div class="header__mail fs16"><a href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a></div>
+            </div>
+<!--            <div class="header__search">-->
+<!--                <div class="search search-live">-->
+<!--                    <form action="--><?php //= get_site_url() ?><!--/" class="search__form">-->
+<!--                        <input type="text" class="search__input" name="s" value="--><?php //= isset($_GET['s']) ? $_GET['s'] : '' ?><!--" autocomplete="off" placeholder="Поиск">-->
+<!--                        <button type="submit" class="search__submit">-->
+<!--                            <img src="--><?php //= ASSETS ?><!--/images/parts/header/search.svg">-->
+<!--                        </button>-->
+<!--                    </form>-->
+<!---->
+<!--                    <div class="header__search-list search__results" hidden>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+            <div class="header__search fs16"><a href="#">
+                    <img src="<?= ASSETS ?>/images/icons/search.svg" alt="search">
+                    Поиск
+                </a>
 
-                        <div class="header__search-list search__results" hidden>
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </div>
+<!--     NAVIGATION-->
     <div class="header__bottomWrapper">
-        <div class="container">
-            <div class="header__bottomWrap">
-                <div class="header__left">
-                    <div class="header__logo">
-                        <a href="/"><img src="<?= ASSETS ?>/images/icons/logo.svg" alt="logo"></a>
-                    </div>
-                    <nav class="header__nav">
-                        <ul class="header__ul topmenu">
-                            <li class="header__li"><a href="#">События</a></li>
-                            <li class="header__li"><a href="#">Партнёрам</a>
-                                <ul class="submenu">
-                                    <li><a href="/partners/">Партнёрские программы</a></li>
-                                </ul>
-                            </li>
-                            <li class="header__li"><a href="#">Продукты</a></li>
-                            <li class="header__li"><a href="/forus/">О нас</a></li>
-                            <li class="header__li"><a href="/contacts/">Контакты</a></li>
+        <div class="container header__flexBox">
+            <div class="nav">
+                <div class="header__logo">
+                    <a href="/"><img src="<?= ASSETS ?>/images/icons/logo.svg" alt="logo"></a>
+                </div>
+                <ul class="navContainer">
+                    <li>
+                        <a class="drop" href="#">События</a>
+                        <ul>
+                            <li><a href="#">Widget A</a></li>
+                            <li><a href="#">Widget B</a></li>
+                            <li><a href="#">Widget C</a></li>
                         </ul>
-                    </nav>
-                </div>
-                <div class="header__right">
-                    <a class="header__phone" href="tel:+78332223272"><?= get_field('phone', 'options') ?></a>
-                    <button class="btn-orange header__btn">Задать вопрос</button>
-                </div>
+                    </li>
+                    <li>
+                        <a class="drop" href="#">Партнёрам</a>
+                        <ul>
+                            <li><a href="#">Location A</a></li>
+                            <li><a href="#">Location B</a></li>
+                            <li><a href="#">Location C</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="drop" href="#">Продукты</a>
+                        <ul>
+                            <li><a href="#">President</a></li>
+                            <li><a href="#">VP</a></li>
+                            <li><a href="#">Manager</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="drop" href="/forus/">О нас</a>
+                        <ul>
+                            <li><a href="#">President</a></li>
+                            <li><a href="#">VP</a></li>
+                            <li><a href="#">Manager</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="drop" href="/contacts/">Контакты</a>
+                        <ul>
+                            <li><a href="#">President</a></li>
+                            <li><a href="#">VP</a></li>
+                            <li><a href="#">Manager</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__wrap">
+                <div class="header__phone"><a href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a></div>
+                <div class="header__btn btn-orange">Задать вопрос</div>
             </div>
         </div>
+
+
     </div>
+
 </header>

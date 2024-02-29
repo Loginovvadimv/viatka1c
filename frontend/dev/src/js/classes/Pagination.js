@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', function () {
         showPage(currentPage);
     }
 
-    pagination('.events__wrapper', '.events__wrap', 1);
+    pagination('.events__wrapper', '.events__wrap', 4);
 
 
 });

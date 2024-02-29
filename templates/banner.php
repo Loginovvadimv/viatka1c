@@ -2,7 +2,7 @@
     $bannerRepeat = get_field('banner_repeat', 'options');
 ?>
 
-<section class="banner section">
+<section class="banner section" id="banner">
     <div class="container">
         <div class="banner__container">
             <div class="swiper">
