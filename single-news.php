@@ -80,15 +80,15 @@ foreach ($news->posts as $item) {
                         <?= $item['preview'] ?>
                     </a>
                     <div class="news__info">
-                        <div class="news__date subtitle"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
+                        <div class="news__date fs16"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
                             <?= $item['date'] ?>
                         </div>
                         <a href="<?= $item['link'] ?>">
-                            <div class="news__name subtitle">
+                            <div class="news__name fs16">
                                 <?= $item['name'] ?>
                             </div>
                         </a>
-                        <div class="news__text subtitle">
+                        <div class="news__text fs16">
                             <?=$item['except'] ?>
                         </div>
                     </div>

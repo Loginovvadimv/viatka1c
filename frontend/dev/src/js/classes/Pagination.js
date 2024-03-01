@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const content = document.querySelector(wrapperContent);
         const itemsPerPage = numContent; // set number of items per page
         let currentPage = 0;
-        const items = Array.from(content.querySelectorAll(boxContent)).slice(0); // tag name set to section and slice set to 0
+        const items = Array.from(document.querySelectorAll(boxContent)); // tag name set to section and slice set to 0
 
         function showPage(page) {
             const startIndex = page * itemsPerPage;
@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     pagination('.events__wrapper', '.events__wrap', 4);
+
 
 
 });

@@ -49,15 +49,15 @@ foreach ($news->posts as $article) {
                         <?= $article['preview'] ?>
                     </a>
                     <div class="pageNews__info">
-                        <div class="pageNews__date subtitle"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
+                        <div class="pageNews__date fs16"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
                             <?= $article['date'] ?>
                         </div>
                         <a href="<?= $article['link'] ?>">
-                            <div class="pageNews__name subtitle">
+                            <div class="pageNews__name fs16">
                                 <?= $article['name'] ?>
                             </div>
                         </a>
-                        <div class="pageNews__text subtitle">
+                        <div class="pageNews__text fs16">
                             <?=$article['content'] ?>
                         </div>
                     </div>

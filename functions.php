@@ -14,5 +14,6 @@
     require_once __DIR__ . '/backend/classes/Helper.php';
     require_once __DIR__ . '/backend/classes/Content.php';
     require_once __DIR__ . '/backend/classes/Events.php';
+    require_once __DIR__ . '/backend/classes/Stocks.php';
 
     

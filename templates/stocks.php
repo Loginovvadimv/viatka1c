@@ -1,5 +1,11 @@
 <?php
-    $stock = get_field('stock', 'options');
+$params = array(
+    'post_type' => 'stocks',
+    'orderby' => 'date',
+    'order' => 'DESC',
+    'posts_per_page' => -1,
+);
+$stocks = get_posts($params);
 ?>
 <section class="stocks section">
     <div class="container">
@@ -16,7 +22,6 @@
                                 <div class="stocks__img">
                                     <img src="<?= $item['img'] ?>" alt="logo">
                                 </div>
-
                                 <div class="stocks__info">
                                     <div class="stocks__text"><?= $item['name'] ?></div>
                                     <div class="stocks__date"><?= $item['date'] ?></div>
@@ -34,8 +39,6 @@
                         </svg></button>
                 </div>
             </div>
-
         </div>
-
     </div>
 </section>
