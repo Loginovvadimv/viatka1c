@@ -11,14 +11,17 @@ $events = get_posts($params);
 
 <section class="allEvents newSection">
     <div class="container">
-        <div class="allEvents__breadСrumbs breadСrumbs">
-            <a href="/">Главная</a>
-            <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-            <a href="#" class="crumbActive">События</a>
-            <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-            <div class="crumbActive">Мероприятия</div>
+        <div class="background-wrap">
+            <div class="allEvents__breadСrumbs breadСrumbs">
+                <a href="/">Главная</a>
+                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                <a href="#" class="crumbActive">События</a>
+                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                <div class="crumbActive">Мероприятия</div>
+            </div>
+            <h2 class="allEvents__title title">Мероприятия</h2>
         </div>
-        <h2 class="allEvents__title title">Мероприятия</h2>
+
         <div class="allEvents__wrapper">
                 <?php foreach ($events as $key => $event): ?>
                 <div class="events__wrap">

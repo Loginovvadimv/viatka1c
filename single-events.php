@@ -8,8 +8,6 @@ $params = array(
     'p'=> get_the_ID()
 );
 $events = get_posts($params);
-$eventAdvUl = get_field('event-adv-ul', $events[0]->ID);
-$eventsProgRep = get_field('events-progRep', $events[0]->ID);
 $eventsSpeakRep = get_field('events-speakRep', $events[0]->ID);
 $eventsСonditions = get_field('events-conditions', $events[0]->ID);
 $eventsAttentions = get_field('events-attentions', $events[0]->ID);
@@ -43,24 +41,10 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
 
                 </div>
                 <div class="eventsSingle__invation">
-                    <div class="eventsSingle__invationTitle"><?= get_field('event-inv', $item->ID) ?></div>
-                    <div class="eventsSingle__advWrapper">
-                        <div class="eventsSingle__advTitle fs16"><?= get_field('event-adv-title', $item->ID) ?></div>
-                        <ul class="eventsSingle__advUl">
-                            <?php foreach ($eventAdvUl as $key => $item2): ?>
-                            <li class="eventsSingle__advLi fs16"><div class="eventsSingle__ellipse"></div><?= $item2['event-adv-li'] ?></li>
-                            <?php endforeach; ?>
-                        </ul>
+                    <div class="eventsSingle__infoWrapper">
+                        <?= $item->post_content ?>
                     </div>
-                    <div class="eventsSingle__dopInfo fs16"><?= get_field('event-dopInfo', $item->ID) ?></div>
-                    <div class="eventsSingle__programs">
-                        <div class="eventsSingle__programsTitle subtitle"><?= get_field('events-progTitle', $item->ID) ?></div>
-                        <ul class="eventsSingle__programsUl">
-                            <?php foreach ($eventsProgRep as $key => $item3): ?>
-                                <li class="eventsSingle__programsLi fs16"><div class="eventsSingle__ellipse"></div><?= $item3['events-prog-list'] ?></li>
-                            <?php endforeach; ?>
-                        </ul>
-                    </div>
+                    <?php if(!empty($eventsSpeakRep)): ?>
                     <div class="eventsSingle__teachers">
                         <div class="eventsSingle__teachersTitle subtitle">Спикеры</div>
                         <?php foreach ($eventsSpeakRep as $item4): ?>
@@ -75,6 +59,8 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         <div class="eventsSingle__line"></div>
                         <?php endforeach; ?>
                     </div>
+                    <?php endif; ?>
+                    <?php if(!empty($eventsСonditions)): ?>
                     <div class="eventsSingle__conditions">
                         <div class="eventsSingle__conditionsTitle subtitle"><?= get_field('events-conditions-title', $item->ID) ?></div>
                         <ul class="eventsSingle__conditionsUl">
@@ -83,6 +69,8 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                             <?php endforeach; ?>
                         </ul>
                     </div>
+                    <?php endif; ?>
+                    <?php if(!empty($eventsAttentions)): ?>
                     <div class="eventsSingle__attention">
                         <div class="eventsSingle__attentionTitle subtitle">Внимание</div>
                         <ul>
@@ -92,6 +80,7 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         </ul>
                         <div class="eventsSingle__blockColor"></div>
                     </div>
+                    <?php endif; ?>
                     <button class="eventsSingle__regbtn btn-orange">Зарегистрироваться</button>
                 </div>
             </div>

@@ -11,24 +11,27 @@ $stocks = get_posts($params);
     <div class="container">
         <div class="stocks__wrapper">
             <div class="stocks__box">
-                <h2 class="stocks__title title"><?= get_field('stocks-title', 'options') ?></h2>
-                <button class="btn-white stocks-btn">Все акции</button>
+                <h2 class="stocks__title title">Акции</h2>
+                <a href="/allpromos/"><button class="btn-white stocks-btn">Все акции</button></a>
             </div>
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <?php if (!empty($stock)): ?>
-                        <?php foreach ($stock as $item): ?>
+            <div class="stocks__swiper">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <?php foreach ($stocks as $key => $stock): ?>
                             <div class="stocks__wrap">
                                 <div class="stocks__img">
-                                    <img src="<?= $item['img'] ?>" alt="logo">
+                                    <a href="<?= $stock->guid ?>">
+                                        <img src="<?= get_the_post_thumbnail($stock->ID, 'full', ['loading' => 'lazy']) ?>" alt="logo">
+                                    </a>
                                 </div>
                                 <div class="stocks__info">
-                                    <div class="stocks__text"><?= $item['name'] ?></div>
-                                    <div class="stocks__date"><?= $item['date'] ?></div>
+                                    <a href="<?= $stock->guid ?>"><div class="stocks__text"><?= $stock->post_title  ?></div></a>
+                                    <div class="stocks__date"><?= get_field('promodate', $stock->ID)?></div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
-                    <?php endif; ?>
+                    </div>
+
                 </div>
                 <div class="slider__arrows">
                     <button class="slider__arrow slider__arrow--prev"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -39,6 +42,7 @@ $stocks = get_posts($params);
                         </svg></button>
                 </div>
             </div>
+
         </div>
     </div>
 </section>
