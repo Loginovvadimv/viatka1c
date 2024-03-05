@@ -52,7 +52,7 @@
                         <a class="drop" href="#">Партнёрам</a>
                         <ul>
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
-                            <li><a href="#">Location B</a></li>
+                            <li><a href="/partners-programms/">Партнерские программы</a></li>
                             <li><a href="#">Location C</a></li>
                         </ul>
                     </li>
