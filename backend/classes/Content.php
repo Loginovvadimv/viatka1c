@@ -87,6 +87,13 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Сертификация',
+                'menu_title' => 'Сертификация',
+                'menu_slug' => 'certification',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

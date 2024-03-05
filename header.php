@@ -49,35 +49,35 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="#">Партнёрам</a>
+                        <a class="drop" href="/become-a-partner/">Партнёрам</a>
                         <ul>
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
-                            <li><a href="#">Location C</a></li>
+                            <li><a href="/certification/">Сертификация</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="drop" href="#">Продукты</a>
                         <ul>
-                            <li><a href="#">President</a></li>
-                            <li><a href="#">VP</a></li>
-                            <li><a href="#">Manager</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="drop" href="/forus/">О нас</a>
                         <ul>
-                            <li><a href="#">President</a></li>
-                            <li><a href="#">VP</a></li>
-                            <li><a href="#">Manager</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="drop" href="/contacts/">Контакты</a>
                         <ul>
-                            <li><a href="#">President</a></li>
-                            <li><a href="#">VP</a></li>
-                            <li><a href="#">Manager</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
                         </ul>
                     </li>
                 </ul>
