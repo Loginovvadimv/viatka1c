@@ -80,6 +80,13 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Как стать партнером',
+                'menu_title' => 'Как стать партнером',
+                'menu_slug' => 'become-partner',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

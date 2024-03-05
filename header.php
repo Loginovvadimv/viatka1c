@@ -24,19 +24,6 @@
                 <div class="header__adress fs16"><img src="<?= ASSETS ?>/images/icons/locate.svg" alt="locate"><?= get_field('address', 'options') ?></div>
                 <div class="header__mail fs16"><a href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a></div>
             </div>
-<!--            <div class="header__search">-->
-<!--                <div class="search search-live">-->
-<!--                    <form action="--><?php //= get_site_url() ?><!--/" class="search__form">-->
-<!--                        <input type="text" class="search__input" name="s" value="--><?php //= isset($_GET['s']) ? $_GET['s'] : '' ?><!--" autocomplete="off" placeholder="Поиск">-->
-<!--                        <button type="submit" class="search__submit">-->
-<!--                            <img src="--><?php //= ASSETS ?><!--/images/parts/header/search.svg">-->
-<!--                        </button>-->
-<!--                    </form>-->
-<!---->
-<!--                    <div class="header__search-list search__results" hidden>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
             <div class="header__search fs16"><a href="#">
                     <img src="<?= ASSETS ?>/images/icons/search.svg" alt="search">
                     Поиск
@@ -56,15 +43,15 @@
                     <li>
                         <a class="drop" href="#">События</a>
                         <ul>
-                            <li><a href="#">Widget A</a></li>
-                            <li><a href="#">Widget B</a></li>
-                            <li><a href="#">Widget C</a></li>
+                            <li><a href="/allnews/">Новости</a></li>
+                            <li><a href="/allevents/">Мероприятия</a></li>
+                            <li><a href="/allpromos/">Акции</a></li>
                         </ul>
                     </li>
                     <li>
                         <a class="drop" href="#">Партнёрам</a>
                         <ul>
-                            <li><a href="#">Location A</a></li>
+                            <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="#">Location B</a></li>
                             <li><a href="#">Location C</a></li>
                         </ul>
