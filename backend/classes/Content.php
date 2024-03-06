@@ -108,6 +108,13 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => '1С:Софт',
+                'menu_title' => '1С:Софт',
+                'menu_slug' => 'soft',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

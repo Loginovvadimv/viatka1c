@@ -54,6 +54,7 @@
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
                             <li><a href="/certification/">Сертификация</a></li>
+                            <li><a href="/1ssoft/">1С:Софт</a></li>
                         </ul>
                     </li>
                     <li>
