@@ -94,6 +94,20 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Сертификация 1С:Профессионал',
+                'menu_title' => 'Сертификация 1С:Профессионал',
+                'menu_slug' => 'certification-professional',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
+            acf_add_options_sub_page( array(
+                'page_title' => 'Сертификация 1С:Специалист',
+                'menu_title' => 'Сертификация 1С:Специалист',
+                'menu_slug' => 'certification-specialist',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 
