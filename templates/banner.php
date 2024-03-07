@@ -12,7 +12,7 @@
                         <img src="<?= $item['banner_img'] ?>" alt="banner" class="banner__bg">
                         <img src="<?= $item['banner_img-mob'] ?>" alt="banner" class="banner__bg-mob">
                         <div class="banner__info">
-                            <h1 class="banner__title"><?= $item['banner_title'] ?></h1>
+                            <h2 class="banner__title"><?= $item['banner_title'] ?></h2>
                             <div class="banner__subtitle"><?= $item['banner_subtitle'] ?></div>
                         </div>
                         <button class="banner__btn btn-orange">Подробнее</button>

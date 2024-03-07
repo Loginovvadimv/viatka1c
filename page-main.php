@@ -6,8 +6,8 @@
 <?php get_template_part('templates/banner') ?>
 <?php get_template_part('templates/events') ?>
 <?php get_template_part('templates/becomePartner') ?>
-<?php get_template_part('templates/news') ?>
-<?php get_template_part('templates/examens') ?>
-<?php get_template_part('templates/stocks') ?>
-
-<?php get_footer() ?>
+<?php //get_template_part('templates/news') ?>
+<?php //get_template_part('templates/examens') ?>
+<?php //get_template_part('templates/stocks') ?>
+<!---->
+<?php //get_footer() ?>

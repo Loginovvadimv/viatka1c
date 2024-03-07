@@ -24,7 +24,7 @@
     position: absolute
     left: 0
     top: 100%
-    padding: 36px 1000em /* trick from css-tricks comments */
+    padding: 36px 991em /* trick from css-tricks comments */
     margin: 0 -1000em
     z-index: 101
     visibility: hidden
@@ -71,10 +71,13 @@
       align-items: center
   .navContainer
     display: flex
+    align-items: center
   &__wrap
     display: flex
     gap: 36px
     align-items: center
+    &-mob
+      display: none
   &__flexBox
     display: flex
     justify-content: space-between
@@ -85,6 +88,169 @@
     font-size: 20px
     font-weight: 600
     line-height: 28px
+    &-mob
+      display: none
+  .ul2
+    padding: 36px 985em !important
+  .ul3
+    padding: 36px 978em !important
+  &__hamb
+    display: none
+    flex-direction: column
+    width: 24px
+    height: 40px
+    justify-content: center
+    align-items: flex-start
+    row-gap: 5px
+    cursor: pointer
+    position: absolute
+    top: 0
+    right: 0
+    span
+      border-radius: 10px
+      width: 24px
+      height: 2px
+      background-color: #212121
+      display: block
+      transition: .3s all
+    &-open
+      span
+        transition: .3s all
+        &:nth-child(1)
+          transform: rotate(-45deg)
+        &:nth-child(2)
+          display: none
+        &:nth-child(3)
+          transform: rotate(45deg)
+          margin-top: -7px
+  .active
+    border-bottom: 2px solid #E5573C
+
+@media (max-width: 424px)
+  .header
+    &__topWrap
+      display: none
+    .navContainer
+      display: none
+    &__wrap
+      display: none
+      &-mob
+        display: flex
+        gap: 16px
+    &__flexBox
+      padding: 11px 16px
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+    &__logo
+      max-width: 104px
+      width: 100%
+      height: 43px
+    &__phone
+      &-mob
+        width: 48px
+        height: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 12px
+        background: rgb(246, 246, 250)
+    &__hamb
+      display: flex
+      position: inherit
+      justify-content: center
+      align-items: center
+      width: 48px
+      height: 48px
+      border-radius: 12px
+      background: rgb(246, 246, 250)
+
+
+
+@media (min-width: 425px) and (max-width: 767px)
+  .header
+    &__topWrap
+      display: none
+    .navContainer
+      display: none
+    &__wrap
+      display: none
+      &-mob
+        display: flex
+        gap: 16px
+    &__flexBox
+      padding: 11px 16px
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+    &__logo
+      max-width: 104px
+      width: 100%
+      height: 43px
+    &__phone
+      &-mob
+        width: 48px
+        height: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 12px
+        background: rgb(246, 246, 250)
+    &__hamb
+      display: flex
+      position: inherit
+      justify-content: center
+      align-items: center
+      width: 48px
+      height: 48px
+      border-radius: 12px
+      background: rgb(246, 246, 250)
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .header
+    &__topWrap
+      display: none
+    .navContainer
+      display: none
+    &__wrap
+      display: none
+      &-mob
+        display: flex
+        gap: 16px
+    &__flexBox
+      padding: 11px 16px
+      box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+    &__logo
+      max-width: 104px
+      width: 100%
+      height: 43px
+    &__phone
+      &-mob
+        width: 48px
+        height: 48px
+        display: flex
+        align-items: center
+        justify-content: center
+        border-radius: 12px
+        background: rgb(246, 246, 250)
+    &__hamb
+      display: flex
+      position: inherit
+      justify-content: center
+      align-items: center
+      width: 48px
+      height: 48px
+      border-radius: 12px
+      background: rgb(246, 246, 250)
+
+
+@media (min-width: 1023px) and (max-width: 1100px)
+  .header
+    .nav
+      gap: 12px
+    &__wrap
+      gap: 12px
+    .nav > ul > li
+      font-size: 16px
+
+
 
 
 

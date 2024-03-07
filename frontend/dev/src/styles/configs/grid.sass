@@ -1,4 +1,4 @@
-$container_width: 1224px
+$container_width: 1440px
 $paddings: 16px
 
 $xs: 640px
@@ -8,10 +8,9 @@ $lg: calc($container_width + calc($paddings * 2))
 
 .container
 	width: 100%
-	max-width: 1224px
-	//padding: 0px $paddings
+	max-width: 1292px
+	padding: 0px $paddings
 	margin: 0 auto
-	padding: 0
 
 @mixin max($px)
 	@media screen and (max-width: $px)
@@ -20,4 +19,3 @@ $lg: calc($container_width + calc($paddings * 2))
 @mixin min($px)
 	@media screen and (min-width: $px)
 		@content
-

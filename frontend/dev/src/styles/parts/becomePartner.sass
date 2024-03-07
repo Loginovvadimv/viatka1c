@@ -6,6 +6,7 @@
     overflow: hidden
     display: flex
     justify-content: space-between
+    gap: 24px
   &__img
     position: absolute
     top: 0
@@ -13,6 +14,50 @@
     width: 100%
     height: 100%
     z-index: 3
+    &-mob
+      display: none
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+      z-index: 3
+
   &__title
     color: rgb(244, 244, 244)
 
+
+@media (max-width: 424px)
+  .becomePartner
+    &__img
+      display: none
+      &-mob
+        display: block
+    &__wrapper
+      flex-direction: column
+      padding: 16px
+      gap: 16px
+    &__btn
+      padding: 16px 32px 16px 32px
+
+@media (min-width: 425px) and (max-width: 767px)
+  .becomePartner
+    &__img
+      display: none
+      &-mob
+        display: block
+    &__wrapper
+      flex-direction: column
+      padding: 16px
+      gap: 16px
+    &__btn
+      padding: 16px 32px 16px 32px
+    &__title
+      margin: 0 auto
+      text-align: center
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .becomePartner
+    &__wrapper
+      gap: 16px

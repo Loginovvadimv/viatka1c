@@ -50,7 +50,7 @@
                     </li>
                     <li>
                         <a class="drop" href="/become-a-partner/">Партнёрам</a>
-                        <ul>
+                        <ul class="ul2">
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
                             <li><a href="/certification/">Сертификация</a></li>
@@ -59,7 +59,7 @@
                     </li>
                     <li>
                         <a class="drop" href="#">Продукты</a>
-                        <ul>
+                        <ul class="ul3">
                             <li><a href="#">1</a></li>
                             <li><a href="#">2</a></li>
                             <li><a href="#">3</a></li>
@@ -67,19 +67,9 @@
                     </li>
                     <li>
                         <a class="drop" href="/forus/">О нас</a>
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                        </ul>
                     </li>
                     <li>
                         <a class="drop" href="/contacts/">Контакты</a>
-                        <ul>
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                        </ul>
                     </li>
                 </ul>
             </div>
@@ -87,9 +77,20 @@
                 <div class="header__phone"><a href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a></div>
                 <div class="header__btn btn-orange">Задать вопрос</div>
             </div>
+            <div class="header__wrap-mob">
+                <a href="<?= get_field('phone-link', 'options') ?>"><div class="header__phone-mob"><img src="<?= ASSETS ?>/images/icons/call.svg" alt="phone"></div></a>
+                <div class="header__hamb">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
         </div>
 
 
     </div>
 
 </header>
+
+
+
