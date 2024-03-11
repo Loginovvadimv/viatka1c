@@ -8,12 +8,14 @@
 <section class="becomePartnerpage newSection">
     <div class="container">
         <div class="background-wrap">
-            <div class="becomePartnerpage__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/become-a-partner/">Партнёрам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div  class="crumbActive">Как стать партнёром</div>
+            <div class="scroller">
+                <div class="becomePartnerpage__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/become-a-partner/">Партнёрам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div  class="crumbActive">Как стать партнёром</div>
+                </div>
             </div>
             <h2 class="title becomePartnerpage__title">Как стать партнёром</h2>
         </div>

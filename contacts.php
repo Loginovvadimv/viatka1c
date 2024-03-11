@@ -6,10 +6,12 @@
 <section class="contacts">
     <div class="container">
             <div class="contacts__bgWrap background-wrap">
-                <div class="contacts__breadСrumbs breadСrumbs">
-                    <a href="/">Главная</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/contacts/" class="crumbActive">Контакты</a>
+                <div class="scroller">
+                    <div class="contacts__breadСrumbs breadСrumbs">
+                        <a href="/">Главная</a>
+                        <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                        <a href="/contacts/" class="crumbActive">Контакты</a>
+                    </div>
                 </div>
                 <h1 class="contacts__title title">Контакты</h1>
             </div>

@@ -10,11 +10,14 @@
 <section class="forus newSection">
     <div class="container">
         <div class="forus__bgWrap background-wrap">
-            <div class="forus__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/forus/" class="crumbActive">О нас</a>
+            <div class="scroller">
+                <div class="forus__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/forus/" class="crumbActive">О нас</a>
+                </div>
             </div>
+
             <h1 class="forus__title title">О нас</h1>
         </div>
         <div class="forus__info">

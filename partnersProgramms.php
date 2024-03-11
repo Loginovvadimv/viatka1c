@@ -12,12 +12,14 @@ $partners = get_posts($params);
 <section class="partnersProgramms newSection">
     <div class="container">
         <div class="partnersProgramms__bgWrap background-wrap">
-            <div class="partnersProgramms__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#">Партнерам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">Партнёрские программы</div>
+            <div class="scroller">
+                <div class="partnersProgramms__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="#">Партнерам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">Партнёрские программы</div>
+                </div>
             </div>
             <h2 class="pageNews__title title">Партнёрские программы</h2>
         </div>

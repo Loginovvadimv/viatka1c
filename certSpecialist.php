@@ -9,14 +9,16 @@ $specLinks = get_field('spec-links', 'options');
 <section class="certSpecialist newSection">
     <div class="container">
         <div class="certSpecialist__bgWrap background-wrap">
-            <div class="certSpecialist__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/become-a-partner/">Партнёрам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/certification/">Сертификация</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">Сертификация "1С:Специалист</div>
+            <div class="scroller">
+                <div class="certSpecialist__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/become-a-partner/">Партнёрам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/certification/">Сертификация</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">Сертификация "1С:Специалист</div>
+                </div>
             </div>
             <h2 class="certification__title title">Сертификация "1С:Специалист</h2>
         </div>

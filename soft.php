@@ -10,12 +10,14 @@ $softListDown = get_field('soft-list-down', 'options');
 <section class="soft newSection">
     <div class="container">
         <div class="soft__bgWrap background-wrap">
-            <div class="soft__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/become-a-partner/">Партнёрам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">1С:Софт</div>
+            <div class="scroller">
+                <div class="soft__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/become-a-partner/">Партнёрам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">1С:Софт</div>
+                </div>
             </div>
             <h2 class="soft__title title">1С:Софт</h2>
         </div>

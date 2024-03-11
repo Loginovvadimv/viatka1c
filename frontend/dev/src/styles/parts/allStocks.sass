@@ -7,3 +7,25 @@
   &__wrap
     max-width: none
     width: 48%
+
+@media (max-width: 480px)
+  .allStocks
+    &__wrapper
+      flex-direction: column
+    .stocks__wrap
+      width: 100%
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .allStocks
+    &__wrapper
+      gap: 12px
+    .stocks__wrap
+      width: 49%
+
+
+@media (min-width: 1024px) and (max-width: 1240px)
+  .allStocks
+    &__wrapper
+      gap: 24px
+    .stocks__wrap
+      width: 48.5%

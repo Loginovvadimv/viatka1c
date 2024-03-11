@@ -31,14 +31,16 @@ foreach ($news->posts as $item) {
 <section class="singleNews newSection">
     <div class="container">
         <div class="singleNews__head">
-            <div class="singleNews__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#">События</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/allnews/">Новости</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="" class="crumbActive"><?= $article->post_title ?></a>
+            <div class="scroller">
+                <div class="singleNews__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="#">События</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/allnews/">Новости</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="" class="crumbActive"><?= $article->post_title ?></a>
+                </div>
             </div>
             <h1 class="singleNews__h1 h1"><?= $article->post_title ?></h1>
         </div>

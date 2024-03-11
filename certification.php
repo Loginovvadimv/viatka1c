@@ -7,12 +7,14 @@ $sertList = get_field('sert-list', 'options');
 <section class="certification newSection">
     <div class="container">
         <div class="certification__bgWrap background-wrap">
-            <div class="certification__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/become-a-partner/">Партнёрам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">Сертификация</div>
+            <div class="scroller">
+                <div class="certification__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/become-a-partner/">Партнёрам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">Сертификация</div>
+                </div>
             </div>
             <h2 class="certification__title title">Сертификация</h2>
         </div>

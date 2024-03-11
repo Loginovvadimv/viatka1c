@@ -12,23 +12,28 @@ $events = get_posts($params);
 <section class="allEvents newSection">
     <div class="container">
         <div class="background-wrap">
-            <div class="allEvents__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#" class="crumbActive">События</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">Мероприятия</div>
+            <div class="scroller">
+                <div class="allEvents__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="#" class="crumbActive">События</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">Мероприятия</div>
+                </div>
             </div>
             <h2 class="allEvents__title title">Мероприятия</h2>
         </div>
-        <div class="quickLinks">
-            <div class="link-block quickLinks__block">
-                <a href="/allnews/">Новости</a>
-                <a href="/allevents/" class="active">Мероприятия</a>
-                <a href="/allpromos/">Акции</a>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/allnews/">Новости</a>
+                    <a href="/allevents/" class="active">Мероприятия</a>
+                    <a href="/allpromos/">Акции</a>
+                </div>
+                <div class="quickLinks__line"></div>
             </div>
-            <div class="quickLinks__line"></div>
         </div>
+
         <div class="allEvents__wrapper">
                 <?php foreach ($events as $key => $event): ?>
                 <div class="events__wrap">

@@ -14,21 +14,23 @@ $stocks = get_posts($params);
 <section class="stocksSingle newSection">
     <div class="container">
         <div class="background-wrap">
-            <div class="contacts__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#">События</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/allpromos/">Акции</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div  class="crumbActive"><?= $item->post_title ?></div>
+            <div class="scroller">
+                <div class="contacts__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="#">События</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/allpromos/">Акции</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div  class="crumbActive"><?= $item->post_title ?></div>
+                </div>
             </div>
             <h2 class="eventsSingle__title title"><?= $item->post_title ?></h2>
         </div>
         <div class="stocksSingle__wrap">
             <div class="stocksSingle__info">
                 <?= $item->post_content ?>
-                <a href="/allpromos/"><button class="btn-white stocksSingle__btn">
+                <a class="stocksSingle__btnLink" href="/allpromos/"><button class="btn-white stocksSingle__btn">
                         <svg width="7.500000" height="15.000732" viewBox="0 0 7.5 15.0007" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <desc>
                                 Created with Pixso.
@@ -40,7 +42,7 @@ $stocks = get_posts($params);
             </div>
             <div class="stocksSingle__wrap-right">
                 <div class="stocksSingle__endTime"><?= get_field('promodate', $item->ID)?></div>
-                <div class="singleNews__infoBox">
+                <div class="stocksSingle__infoBox">
                     <div class="stocksSingle__date stocksSingle__infotext"><img src="http://viatka1c.loc/wp-content/themes/viatka1s/frontend/dev/assets//images/icons/date.svg" alt="date"><span>Дата:</span><?= Helper::getHumanDate($item->post_date) ?></div>
                     <?php
                     $viewing = get_field('promo-views') + 1;

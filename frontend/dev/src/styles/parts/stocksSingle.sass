@@ -63,10 +63,90 @@
     display: flex
     gap: 16px
     align-items: center
+  &__infoBox
+    border-radius: 24px
+    background: rgb(246, 246, 250)
+    padding: 24px
+    display: flex
+    flex-direction: column
+    gap: 16px
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
 
 
+@media (max-width: 424px)
+  .stocksSingle
+    &__wrap
+      flex-direction: column-reverse
+    &__endTime
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+      padding: 16px
+    &__infoBox
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+    h4
+      font-size: 20px
+      font-weight: 600
+      line-height: 28px
+    &__info
+      gap: 16px
+    ul
+      padding-left: 18px
+    h3
+      font-size: 22px
+      font-weight: 600
+      line-height: 30px
+    &__btn
+      width: 100%
+      max-width: none
+      display: flex
+      justify-content: center
+    &__btnLink
+      width: 100%
+
+@media (min-width: 425px) and (max-width: 767px)
+  .stocksSingle
+    &__wrap
+      flex-direction: column-reverse
+    &__endTime
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+      padding: 16px
+    &__infoBox
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+    h4
+      font-size: 20px
+      font-weight: 600
+      line-height: 28px
+    &__info
+      gap: 16px
+    ul
+      padding-left: 18px
+    h3
+      font-size: 22px
+      font-weight: 600
+      line-height: 30px
+    &__btn
+      width: 100%
+      max-width: none
+      display: flex
+      justify-content: center
+    &__btnLink
+      width: 100%
+    &__wrap-right
+      max-width: none
 
 
-
-
-
+@media (min-width: 768px) and (max-width: 1023px)
+  .stocksSingle
+    &__wrap-right
+      min-width: 270px

@@ -14,15 +14,18 @@ $partners = get_posts($params);
 <section class="singlePartners newSection">
     <div class="container">
         <div class="singlePartners__bgWrap background-wrap">
-            <div class="singlePartners__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/partners-programms/">Партнерам</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="/partners-programms/">Партнёрские программы</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive"><?= $partner->post_title ?></div>
+            <div class="scroller">
+                <div class="singlePartners__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/partners-programms/">Партнерам</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/partners-programms/">Партнёрские программы</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive"><?= $partner->post_title ?></div>
+                </div>
             </div>
+
             <h2 class="singlePartners title"><?= $partner->post_title ?></h2>
         </div>
         <div class="singlePartners__info fs16"><?= $partner->post_content ?></div>

@@ -17,14 +17,16 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
     <section class="eventsSingle newSection">
         <div class="container">
             <div class="contacts__bgWrap background-wrap">
-                <div class="contacts__breadСrumbs breadСrumbs">
-                    <a href="/">Главная</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="#">События</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/allevents/">Мероприятия</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div  class="crumbActive"><?= get_field('event-name', $item->ID) ?></div>
+                <div class="scroller">
+                    <div class="contacts__breadСrumbs breadСrumbs">
+                        <a href="/">Главная</a>
+                        <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                        <a href="#">События</a>
+                        <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                        <a href="/allevents/">Мероприятия</a>
+                        <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                        <div  class="crumbActive"><?= get_field('event-name', $item->ID) ?></div>
+                    </div>
                 </div>
                 <h2 class="eventsSingle__title title"><?= get_field('event-name', $item->ID) ?></h2>
             </div>

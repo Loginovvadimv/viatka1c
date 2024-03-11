@@ -27,22 +27,26 @@ foreach ($news->posts as $article) {
 <section class="pageNews newSection">
     <div class="container">
         <div class="pageNews__bgWrap background-wrap">
-            <div class="pageNews__breadСrumbs breadСrumbs">
-                <a href="/">Главная</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <a href="#">События</a>
-                <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                <div class="crumbActive">Новости</div>
+            <div class="scroller">
+                <div class="pageNews__breadСrumbs breadСrumbs">
+                    <a href="/">Главная</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="#">События</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive">Новости</div>
+                </div>
             </div>
             <div class="pageNews__title title">Новости</div>
         </div>
-            <div class="quickLinks">
-                <div class="link-block quickLinks__block">
-                    <a href="/allnews/" class="active">Новости</a>
-                    <a href="/allevents/">Мероприятия</a>
-                    <a href="/allpromos/">Акции</a>
+            <div class="scroller">
+                <div class="quickLinks">
+                    <div class="link-block quickLinks__block">
+                        <a href="/allnews/" class="active">Новости</a>
+                        <a href="/allevents/">Мероприятия</a>
+                        <a href="/allpromos/">Акции</a>
+                    </div>
+                    <div class="quickLinks__line"></div>
                 </div>
-                <div class="quickLinks__line"></div>
             </div>
         <div class="pageNews__wrapper">
             <?php foreach ($data['articles'] as $article): ?>
