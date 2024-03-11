@@ -21,7 +21,14 @@ $events = get_posts($params);
             </div>
             <h2 class="allEvents__title title">Мероприятия</h2>
         </div>
-
+        <div class="quickLinks">
+            <div class="link-block quickLinks__block">
+                <a href="/allnews/">Новости</a>
+                <a href="/allevents/" class="active">Мероприятия</a>
+                <a href="/allpromos/">Акции</a>
+            </div>
+            <div class="quickLinks__line"></div>
+        </div>
         <div class="allEvents__wrapper">
                 <?php foreach ($events as $key => $event): ?>
                 <div class="events__wrap">

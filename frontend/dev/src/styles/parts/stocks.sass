@@ -12,8 +12,9 @@
     padding: 16px
     display: flex
     gap: 24px
-    max-width: 600px
+    max-width: none
     height: auto
+    width: 49%
   &__img
     border-radius: 24px
     max-width: 184px
@@ -33,8 +34,8 @@
     flex-direction: column
     gap: 16px
     align-items: flex-start
+    justify-content: space-between
   &__date
-    color: rgb(208, 0, 0)
     font-size: 16px
     font-weight: 600
     line-height: 24px
@@ -46,4 +47,42 @@
     padding: 6px 12px
   &__swiper
     position: relative
+
+@media (max-width: 480px)
+  .stocks
+    &__box
+      flex-direction: column
+      align-items: center
+      gap: 16px
+      margin-bottom: 16px
+    &__wrap
+      flex-direction: column
+      gap: 12px
+      align-items: center
+    &__img
+      max-width: 112px
+      height: 84px
+    &__info
+      font-size: 16px
+      font-weight: 600
+      line-height: 24px
+      align-items: center
+    &__text
+      text-align: center
+
+
+@media (min-width: 481px) and (max-width: 767px)
+  .stocks
+    &__wrap
+      width: 100%
+      max-width: none
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .stocks
+    &__wrap
+      width: 49%
+      max-width: none
+    &__img
+      max-width: 30%
 

@@ -14,7 +14,7 @@ $stocks = get_posts($params);
                 <h2 class="stocks__title title">Акции</h2>
                 <a href="/allpromos/"><button class="btn-white stocks-btn">Все акции</button></a>
             </div>
-            <div class="stocks__swiper">
+            <div class="stocks__swiper slider__opacity slider__opacity-2-elements">
                 <div class="swiper">
                     <div class="swiper-wrapper">
                         <?php foreach ($stocks as $key => $stock): ?>

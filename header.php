@@ -41,7 +41,7 @@
                 </div>
                 <ul class="navContainer">
                     <li>
-                        <a class="drop" href="#">События</a>
+                        <a class="drop" href="/allnews/">События</a>
                         <ul>
                             <li><a href="/allnews/">Новости</a></li>
                             <li><a href="/allevents/">Мероприятия</a></li>

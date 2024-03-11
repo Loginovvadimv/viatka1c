@@ -36,12 +36,14 @@ foreach ($news->posts as $article) {
             </div>
             <div class="pageNews__title title">Новости</div>
         </div>
-        <nav class="quick-links">
-            <a href="#"></a>
-            <a href="#"></a>
-            <a href="#"></a>
-        </nav>
-
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/allnews/" class="active">Новости</a>
+                    <a href="/allevents/">Мероприятия</a>
+                    <a href="/allpromos/">Акции</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
         <div class="pageNews__wrapper">
             <?php foreach ($data['articles'] as $article): ?>
                 <div class="pageNews__wrap">

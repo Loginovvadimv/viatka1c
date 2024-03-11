@@ -39,9 +39,128 @@
     display: flex
     gap: 24px
     flex-wrap: wrap
+    justify-content: space-between
   &__text
     color: rgb(136, 136, 136)
     font-size: 16px
     font-weight: 600
     line-height: 24px
 
+@media (max-width: 424px)
+  .news
+    &__flexBox
+      flex-direction: column
+      align-items: center
+      margin-bottom: 16px
+    &__title
+      margin-bottom: 16px
+    &__wrapper
+      gap: 16px
+    &__wrap
+      width: 47%
+      gap: 14px
+      picture
+        height: 94px
+        border-radius: 16px
+        img
+          height: 94px
+          border-radius: 16px
+    &__imgLink
+      height: 94px
+    &__date
+      padding: 2px 6px
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+      img
+        display: none
+    &__info
+      gap: 6px
+    &__text
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+    &__btn
+      width: 100%
+      max-width: none
+    &__linkBnt
+      width: 100%
+
+@media (min-width: 425px) and (max-width: 767px)
+  .news
+    &__flexBox
+      flex-direction: column
+      align-items: center
+      margin-bottom: 16px
+    &__title
+      margin-bottom: 16px
+    &__wrapper
+      gap: 16px
+      justify-content: center
+    &__wrap
+      width: 47%
+      gap: 14px
+      max-width: none
+      picture
+        height: 120px
+        border-radius: 16px
+        img
+          height: 120px
+          border-radius: 16px
+          object-fit: cover
+    &__imgLink
+      height: 120px
+    &__date
+      padding: 2px 6px
+      font-size: 16px
+      font-weight: 600
+      line-height: 22px
+      img
+        display: none
+    &__text
+      font-size: 16px
+      font-weight: 600
+      line-height: 22px
+    &__btn
+      width: 100%
+      max-width: none
+    &__linkBnt
+      width: 100%
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .news
+    &__wrapper
+      justify-content: space-between
+      gap: 16px
+    &__wrap
+      width: 23%
+      picture
+        height: 140px
+        border-radius: 16px
+        img
+          height: 140px
+          border-radius: 16px
+          object-fit: cover
+      &__imgLink
+        height: 140px
+    &__date
+      img
+        display: none
+
+
+@media (min-width: 1024px) and (max-width: 1260px)
+  .news
+    &__wrapper
+      justify-content: space-between
+      gap: 16px
+    &__wrap
+      width: 23%
+      picture
+        height: 140px
+        border-radius: 16px
+        img
+          height: 140px
+          border-radius: 16px
+          object-fit: cover
+      &__imgLink
+        height: 140px

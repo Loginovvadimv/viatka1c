@@ -83,6 +83,7 @@
     gap: 16px
     display: flex
     align-items: center
+    font-family: Manrope
     img
       width: 110px
       height: 45px
@@ -96,7 +97,91 @@
       transition: 0.4s all
 
 
+@media (max-width: 424px)
+  .footer
+    padding: 16px 0
+    &__wrapper
+      flex-direction: column
+      align-items: center
+      gap: 12px
+    &__logo
+      margin-bottom: 12px
+    &__nav
+      align-items: center
+      ul
+        align-items: center
+        gap: 8px
+    &__linksWrap
+      align-items: center
+    &__company
+      flex-direction: column
+      gap: 12px
+      align-items: center
+    &__razrab
+      color: rgb(136, 136, 136)
+      font-family: Manrope
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+    &__upBtn
+      display: none
+
+@media (min-width: 425px) and (max-width: 767px)
+  .footer
+    padding: 16px 0
+    &__wrapper
+      flex-direction: column
+      align-items: center
+      gap: 12px
+    &__logo
+      margin-bottom: 12px
+    &__nav
+      align-items: center
+      ul
+        align-items: center
+        gap: 8px
+    &__linksWrap
+      align-items: center
+    &__company
+      flex-direction: column
+      gap: 12px
+      align-items: center
+    &__razrab
+      color: rgb(136, 136, 136)
+      font-family: Manrope
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+    &__upBtn
+      display: none
 
 
+@media (min-width: 768px) and (max-width: 1023px)
+  .footer
+    &__upBtn
+      display: none
+    &__wrapper
+      flex-wrap: wrap
+      gap: 24px
+      justify-content: center
+    &__logo
+      width: 100%
+      a
+        img
+          margin: 0 auto
 
+@media (min-width: 1023px) and (max-width: 1400px)
+  .footer
+    &__upBtn
+      bottom: 370px
 
+@media (min-width: 1023px) and (max-width: 1100px)
+  .footer
+    &__wrapper
+      gap: 12px
+    &__phone
+      font-size: 18px
+    &__logo
+      max-width: 100px
+    &__address
+      font-size: 14px

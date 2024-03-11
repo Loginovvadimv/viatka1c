@@ -97,6 +97,10 @@ export default class Slider {
                 calculateHeight: false,
                 speed: 1000,
                 breakpoints: {
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 12,
+                    },
                     1024: {
                         slidesPerView: 'auto',
                         spaceBetween: 24,

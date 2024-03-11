@@ -88,4 +88,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
     ///////end
 
+    //link-active
+
+    // const texts = document.querySelectorAll('.content p > span');
+    const links = document.querySelectorAll('.link-block a');
+    links.forEach(el => {
+        el.addEventListener('click', e => {
+            const id = e.target.getAttribute('href');
+            links.forEach(el => {
+                el.classList.remove('active');
+            });
+            e.target.classList.add('active');
+            document.querySelector(id).classList.remove('hidden');
+        });
+    });
+
+    //end
+
 })

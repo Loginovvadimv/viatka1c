@@ -30,6 +30,7 @@
     line-height: 24px
     padding: 16px 24px
     border-top: 1px solid rgb(215, 216, 225)
+    align-items: center
     div
       span
         border: 1px solid rgb(215, 216, 225)
@@ -84,3 +85,97 @@
     display: flex
     flex-direction: column
     gap: 32px
+
+
+@media (max-width: 452px)
+  .examens
+    &__wrapper
+      width: max-content
+    &__li
+      align-items: center
+    &__infoText
+      font-size: 24px
+      font-weight: 600
+      line-height: 32px
+      text-align: center
+      max-width: 350px
+    &__info
+      flex-direction: column
+      padding: 16px 16px 75px 16px
+      gap: 16px
+    &__elipce
+      width: 122px
+      height: 122px
+      transform: translate(-50%, 110%)
+      left: 50%
+      img
+        width: 58px
+        height: 58px
+    &__btn
+      width: 100%
+      max-width: none
+    &__scrollBox
+      overflow-x: scroll
+      width: 100%
+
+
+@media (min-width: 453px) and (max-width: 767px)
+  .examens
+    &__wrapper
+      width: max-content
+    &__li
+      align-items: center
+    &__infoText
+      font-size: 20px
+      font-weight: 600
+      line-height: 28px
+      text-align: center
+    &__info
+      padding: 24px 24px 75px 24px
+      gap: 16px
+    &__elipce
+      width: 122px
+      height: 122px
+      transform: translate(-50%, 50%)
+      left: 50%
+      img
+        width: 70px
+        height: 70px
+    &__scrollBox
+      overflow-x: scroll
+      width: 100%
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .examens
+    &__wrapper
+      width: max-content
+    &__li
+      align-items: center
+    &__infoText
+      font-size: 24px
+      font-weight: 600
+      line-height: 28px
+      text-align: center
+    &__info
+      padding: 24px
+      gap: 16px
+    &__elipce
+      width: 80px
+      height: 80px
+      transform: translate(116%, -22%)
+      left: 50%
+      img
+        width: 70px
+        height: 70px
+    &__scrollBox
+      overflow-x: scroll
+      width: 100%
+
+@media (min-width: 1024px) and (max-width: 1320px)
+  .examens
+    &__wrapper
+      width: max-content
+    &__scrollBox
+      overflow-x: scroll
+      width: 100%

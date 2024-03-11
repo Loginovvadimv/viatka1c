@@ -25,13 +25,13 @@ foreach ($news->posts as $article) {
     <div class="container">
         <div class="news__flexBox">
             <div class="news__title title">Новости</div>
-            <a href="/allnews/"><button class="news__btn btn-white">Все новости</button></a>
+            <a class="news__linkBnt" href="/allnews/"><button class="news__btn btn-white">Все новости</button></a>
         </div>
 
             <div class="news__wrapper">
                 <?php foreach ($data['articles'] as $article): ?>
                 <div class="news__wrap">
-                    <a href="<?= $article['link'] ?>">
+                    <a class="news__imgLink" href="<?= $article['link'] ?>">
                         <?= $article['preview'] ?>
                     </a>
                     <div class="news__info">

@@ -22,6 +22,14 @@ $stocks = get_posts($params);
         </div>
         <h2 class="allStocks__title title">Акции</h2>
         </div>
+        <div class="quickLinks">
+            <div class="link-block quickLinks__block">
+                <a href="/allnews/">Новости</a>
+                <a href="/allevents/">Мероприятия</a>
+                <a href="/allpromos/" class="active">Акции</a>
+            </div>
+            <div class="quickLinks__line"></div>
+        </div>
         <div class="allStocks__wrapper">
                 <?php foreach ($stocks as $key => $stock): ?>
                     <div class="stocks__wrap allStocks__wrap">
