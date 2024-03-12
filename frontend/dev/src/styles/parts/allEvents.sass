@@ -1,5 +1,141 @@
 .allEvents
+  &__wrap
+    padding: 16px
+    border-radius: 24px
+    background: rgb(246, 246, 250)
+    display: flex
+    gap: 16px
+  &__box
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+  &__img
+    width: 168px
+    height: 128px
+    border-radius: 16px
+  &__date
+    color: rgb(250, 126, 16)
+    border-radius: 48px
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.06)
+    background: rgb(255, 255, 255)
+    padding: 6px 12px 6px 12px
+    align-items: flex-start
+    height: fit-content
+  &__time
+    color: rgb(136, 136, 136)
+    display: flex
+    gap: 4.3px
+    align-items: center
+    img
+      width: 15.4px
+      height: 15.4px
+  &__info
+    display: flex
+    flex-direction: column
+    gap: 12px
+    align-items: flex-start
   &__wrapper
     display: flex
     flex-direction: column
-    gap: 24px
+    gap: 16px
+    &-mob
+      display: none
+
+
+@media (max-width: 424px)
+  .allEvents
+    &__box
+      display: flex
+      flex-direction: column
+      gap: 16px
+      margin-bottom: 16px
+      a
+        width: 100%
+    &__title
+      text-align: center
+      margin: 0 auto
+    &__btn
+      width: 100%
+      max-width: none
+      margin: 0 auto
+    &__wrapper
+      display: none
+      &-mob
+        display: flex
+        flex-direction: column
+        gap: 16px
+    &__wrap
+      flex-wrap: wrap
+      justify-content: center
+    &__img
+      width: 100%
+      height: 60px
+      object-fit: cover
+    &__wrapBox
+      display: flex
+      gap: 12px
+      flex-wrap: wrap
+      margin: 0 auto
+      width: 100%
+      justify-content: center
+      a
+        width: 33%
+    &__infoBox
+      display: flex
+      flex-direction: column
+      gap: 6px
+    &__time
+      color: rgb(136, 136, 136)
+      font-family: Manrope
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+    &__name
+      text-align: center
+
+
+@media (min-width: 425px) and (max-width: 767px)
+  .allEvents
+    &__box
+      display: flex
+      flex-direction: column
+      gap: 16px
+      margin-bottom: 16px
+      a
+        width: 100%
+    &__title
+      text-align: center
+      margin: 0 auto
+    &__btn
+      width: 100%
+      max-width: none
+      margin: 0 auto
+    &__wrap
+      flex-wrap: wrap
+      justify-content: center
+    &__img
+      width: 100%
+      height: 100px
+      object-fit: cover
+    &__wrapBox
+      display: flex
+      gap: 12px
+      flex-wrap: wrap
+      margin: 0 auto
+      width: 100%
+      justify-content: center
+      align-items: center
+      a
+        width: 33%
+    &__infoBox
+      display: flex
+      flex-direction: column
+      gap: 16px
+    &__name
+      text-align: center
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .allEvents
+    &__imgLink
+      max-width: 168px
+      width: 100%

@@ -6,7 +6,7 @@
 
 .quickLinks
   margin-bottom: 36px
-  width: max-content
+
   &__line
     border: 1px solid rgb(215, 216, 225)
     z-index: 1
@@ -15,10 +15,21 @@
     a
       position: relative
       z-index: 3
-      padding: 0 6px 10px 6px
+      padding: 0 8px 10px 8px
 
 
-
-@media (max-width: 424px)
+@media (max-width: 767px)
   .quickLinks
     margin-bottom: 24px
+    width: max-content
+    &__block
+      a
+        padding: 0 8px 2px 8px
+    &__line
+      margin-top: 1px
+
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .quickLinks
+    width: max-content

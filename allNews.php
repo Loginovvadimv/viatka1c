@@ -66,6 +66,7 @@ foreach ($news->posts as $article) {
                         <div class="pageNews__text fs16">
                             <?=$article['content'] ?>
                         </div>
+                        <a href=""><div class="pageNews__more">Читать полностью</div></a>
                     </div>
                 </div>
             <?php endforeach; ?>

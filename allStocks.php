@@ -44,7 +44,7 @@ $stocks = get_posts($params);
                             </a>
                         </div>
                         <div class="stocks__info">
-                            <a href="<?= $stock->guid ?>"><div class="stocks__text"><?= $stock->post_title  ?></div></a>
+                            <a class="stocks__text" href="<?= $stock->guid ?>"><?= $stock->post_title  ?></a>
                             <div class="stocks__date"><?= get_field('promodate', $stock->ID)?></div>
                         </div>
                     </div>

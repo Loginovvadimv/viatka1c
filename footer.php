@@ -68,6 +68,6 @@
             </div>
             <a href="#banner"><div class="footer__upBtn"><img src="<?= ASSETS ?>/images/icons/upb.svg" alt="up"></div></a>
         </footer>
-        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<c2a888d7-28f1-4234-89bb-c4785a857bc4>" type="text/javascript"></script>
+<!--        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<c2a888d7-28f1-4234-89bb-c4785a857bc4>"></script>-->
     </body>
 </html>

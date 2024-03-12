@@ -36,3 +36,70 @@
     font-size: 14px
     font-weight: 600
     line-height: 22px
+
+
+@media (max-width: 424px)
+  .needQuestion
+    &__wrapper
+      padding: 16px
+      gap: 12px
+      border-radius: 16px
+    &__title
+      font-size: 22px
+      font-weight: 600
+      line-height: 30px
+    &__img
+      display: none
+    &__subtitle
+      text-align: center
+    .form__box
+      flex-direction: column
+      gap: 12px
+    &__btn
+      padding: 16px 24px 16px 24px
+
+
+@media (min-width: 425px) and (max-width: 767px)
+  .needQuestion
+    &__wrapper
+      padding: 16px
+      gap: 12px
+      border-radius: 24px
+    &__title
+      font-size: 22px
+      font-weight: 600
+      line-height: 30px
+    &__img
+      display: none
+    &__subtitle
+      text-align: center
+    .form__box
+      flex-direction: column
+      gap: 12px
+    .form__inputWrap
+      margin: 0 auto
+    &__btn
+      padding: 16px 24px 16px 24px
+      margin: 0 auto
+    &__link
+      margin: 0 auto
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .needQuestion
+    &__wrapper
+      padding: 24px
+    &__btn
+      padding: 16px
+      width: 33%
+    .form__inputWrap
+      width: 33%
+    &__title
+      font-size: 35px
+
+@media (min-width: 1024px) and (max-width: 1200px)
+  .needQuestion
+    .form__inputWrap
+      width: 33%
+    &__btn
+      padding: 16px
+      width: 33%

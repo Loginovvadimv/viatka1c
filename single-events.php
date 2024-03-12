@@ -67,7 +67,7 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         <div class="eventsSingle__conditionsTitle subtitle"><?= get_field('events-conditions-title', $item->ID) ?></div>
                         <ul class="eventsSingle__conditionsUl">
                             <?php foreach ($eventsСonditions as $item5): ?>
-                            <li class="eventsSingle__conditionsLi"><div class="eventsSingle__ellipse"></div><?= $item5['events-condition'] ?></li>
+                            <li class="eventsSingle__conditionsLi li"><?= $item5['events-condition'] ?></li>
                             <?php endforeach; ?>
                         </ul>
                     </div>
@@ -75,9 +75,9 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                     <?php if(!empty($eventsAttentions)): ?>
                     <div class="eventsSingle__attention">
                         <div class="eventsSingle__attentionTitle subtitle">Внимание</div>
-                        <ul>
+                        <ul class="eventsSingle__attentionUl">
                             <?php foreach ($eventsAttentions as $item6): ?>
-                            <li><?= $item6['events-attention'] ?></li>
+                            <li class="li"><?= $item6['events-attention'] ?></li>
                             <?php endforeach; ?>
                         </ul>
                         <div class="eventsSingle__blockColor"></div>
@@ -105,6 +105,27 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         <?php endforeach; ?>
                     </div>
                 </div>
+                <div class="eventsSingle__wrapper-mob">
+                    <h2 class="eventsSingle__allEventsTitle h2">Похожие мероприятия</h2>
+                <?php foreach ($events as $key => $event): ?>
+                    <div class="events__wrap">
+                        <div class="events__wrapBox">
+                            <a class="events__imgLink" href="<?= $event->guid ?>">
+                                <img class="events__img" src="<?= get_field('event-img', $event->ID)?>" alt="event" loading="lazy">
+                            </a>
+                            <div class="events__infoBox">
+                                <div class="events__date fs16"><?= get_field('event-date', $event->ID) ?></div>
+                                <div class="events__time fs16">
+                                    <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
+                    </div>
+                <?php endforeach; ?>
+            </div>
         </div>
     </section>
 <?php endforeach; ?>

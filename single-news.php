@@ -42,7 +42,7 @@ foreach ($news->posts as $item) {
                     <a href="" class="crumbActive"><?= $article->post_title ?></a>
                 </div>
             </div>
-            <h1 class="singleNews__h1 h1"><?= $article->post_title ?></h1>
+            <h1 class="singleNews__h1 h1 title"><?= $article->post_title ?></h1>
         </div>
         <div class="singleNews__wrapper">
             <div class="singleNews__wrap">
@@ -52,7 +52,7 @@ foreach ($news->posts as $item) {
                     </svg>Назад к списку</button></a>
             </div>
             <div class="singleNews__wrap-right">
-                <?php $preview = get_the_post_thumbnail($article->ID, 'full', ['loading'=>'lazy']) ?>
+                <?php $preview = get_the_post_thumbnail($article->ID, 'full', ['loading'=>'lazy'])?>
                 <?php if(isset($preview) && !empty($preview)) : ?>
                     <?= $preview ?>
                 <?php else : ?>
