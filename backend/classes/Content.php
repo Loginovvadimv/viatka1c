@@ -115,6 +115,20 @@ class Content {
                 'parent_slug' => 'content-settings',
                 'update_button' => 'Обновить',
             ) );
+            acf_add_options_sub_page( array(
+                'page_title' => '1С:Предприятие 8',
+                'menu_title' => '1С:Предприятие 8',
+                'menu_slug' => 'predpr',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
+            acf_add_options_sub_page( array(
+                'page_title' => '1С:ИТС',
+                'menu_title' => '1С:ИТС',
+                'menu_slug' => 'its',
+                'parent_slug' => 'content-settings',
+                'update_button' => 'Обновить',
+            ) );
 
 
 

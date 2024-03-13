@@ -1,0 +1,83 @@
+.shablon
+  margin: 158px 0 100px 0
+  &__wrapper
+    margin-bottom: 48px
+  h3
+    font-size: 32px
+    font-weight: 600
+    line-height: 40px
+    margin-bottom: 16px
+  p
+    margin-bottom: 24px
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 16px
+    font-weight: 800
+    line-height: 24px
+  h4
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 26px
+    font-weight: 600
+    line-height: 34px
+    margin-bottom: 16px
+  ul
+    display: flex
+    flex-direction: column
+    gap: 8px
+    margin-bottom: 32px
+  li
+    position: relative
+    padding-left: 16px
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
+    &::before
+      content: ''
+      position: absolute
+      top: 10px
+      left: 0px
+      width: 6px
+      height: 6px
+      border-radius: 100px
+      background: rgb(250, 126, 16)
+  ul>li>ul
+    margin-top: 8px
+    margin-bottom: 0px
+  ol
+    list-style-type: none
+    counter-reset: num
+    padding: 15px 0 5px 0
+    font-size: 16px
+    margin-bottom: 24px
+  ol li
+    position: relative
+    margin: 0 0 0 0
+    padding: 0 0 10px 0
+    line-height: 1.4
+  ol li:before
+    content: counter(num)
+    counter-increment: num
+    position: absolute
+    top: 0
+    left: -38px
+    width: 24px
+    height: 24px
+    background: rgb(250, 126, 16)
+    color: #FFFFFF
+    text-align: center
+    line-height: 24px
+    font-size: 16px
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    font-weight: 600
+  .examens__li
+    &:before
+      content: initial
+  .examens__section
+    margin: 100px 0 100px 0
+

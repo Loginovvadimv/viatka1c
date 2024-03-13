@@ -1,0 +1,46 @@
+.listOpen
+  &__wrapper
+    display: flex
+    flex-direction: column
+    gap: 16px
+  &__wrap
+    display: flex
+    flex-direction: column
+    gap: 16px
+    padding: 20px 24px
+    border-radius: 24px
+    background: rgb(246, 246, 250)
+    position: relative
+  &__plus
+    background: rgb(255, 255, 255)
+    width: 36px
+    height: 36px
+    border-radius: 50%
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    cursor: pointer
+    span
+      width: 17.5px
+      height: 2px
+      background: rgb(250, 126, 16)
+      &:nth-child(1)
+        position: absolute
+        transform: rotate(90deg)
+        transition: .5s all
+  &__plusOpen
+    span
+      &:nth-child(1)
+        transform: rotate(0deg)
+        transition: .5s all
+        background: rgb(136, 136, 136)
+  &__plusBox
+    position: absolute
+    top: 16px
+    right: 16px
+  &__wrapSubtitle
+    display: none
+    &-open
+      display: block
+

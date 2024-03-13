@@ -59,10 +59,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="#">Продукты</a>
+                        <a class="drop" href="/company-8/">Продукты</a>
                         <ul class="ul3">
-                            <li><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
+                            <li><a href="/company-8/">1С:Предприятие 8</a></li>
+                            <li><a href="/1sits/">1С:ИТС</a></li>
                             <li><a href="#">3</a></li>
                         </ul>
                     </li>
