@@ -42,6 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             map.controls.remove('rulerControl');
             // map.controls.remove('scrollZoom');
             map.geoObjects.add(placemark);
+            map.behaviors.disable('scrollZoom');
         }
     }
 

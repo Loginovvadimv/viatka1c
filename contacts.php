@@ -3,7 +3,7 @@
     get_header();
 ?>
 
-<section class="contacts">
+<section class="contacts newSection">
     <div class="container">
             <div class="contacts__bgWrap background-wrap">
                 <div class="scroller">
@@ -27,7 +27,7 @@
                 </div>
                 <div class="contacts__wrapBox">
                     <div class="contacts__wrapTitle">Адрес:</div>
-                    <div class="contacts__wrapLink"><?= get_field('address', 'options') ?></div>
+                    <div class="contacts__wrapLink contacts__address"><?= get_field('address', 'options') ?></div>
                     <div class="contacts__dopinfo">(внутренний дворик)</div>
                 </div>
                 <div class="contacts__wrapBox">
