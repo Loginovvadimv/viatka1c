@@ -20,6 +20,9 @@
     line-height: 24px
     text-align: left
     padding: 30px 12px
+    a
+      svg
+        display: none
   .nav > ul > li > ul
     position: absolute
     left: 0
@@ -38,8 +41,6 @@
     visibility: visible
     opacity: 1
     background-color: #FFFFFF
-  .nav > ul > li:hover .drop
-    font-weight: bold
   &__search
     align-items: center
     display: flex
@@ -109,7 +110,7 @@
     span
       border-radius: 10px
       width: 24px
-      height: 2px
+      height: 3px
       background-color: #212121
       display: block
       transition: .3s all
@@ -118,6 +119,7 @@
         transition: .3s all
         &:nth-child(1)
           transform: rotate(-45deg)
+          margin-bottom: -1px
         &:nth-child(2)
           display: none
         &:nth-child(3)
@@ -131,6 +133,10 @@
     &__topWrap
       display: none
     .navContainer
+      flex-direction: column
+      align-items: baseline
+      gap: 16px
+      width: 100%
       display: none
     &__wrap
       display: none
@@ -140,6 +146,7 @@
     &__flexBox
       padding: 11px 16px
       box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+      position: relative
     &__logo
       max-width: 104px
       width: 100%
@@ -153,15 +160,55 @@
         justify-content: center
         border-radius: 12px
         background: rgb(246, 246, 250)
+        position: absolute
+        right: 80px
     &__hamb
       display: flex
-      position: inherit
       justify-content: center
       align-items: center
       width: 48px
       height: 48px
       border-radius: 12px
       background: rgb(246, 246, 250)
+      position: absolute
+      right: 16px
+      top: 11px
+    .nav
+      flex-direction: column
+      gap: 24px
+      width: 100%
+      align-items: baseline
+    .nav > ul > li
+      padding: 0
+      width: 100%
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        svg
+          display: block
+        &:hover
+          svg
+            path
+              fill: rgb(250, 126, 16)
+    .nav > ul > li > ul
+      border-top: 0 solid #FFFFFF
+      position: relative
+      opacity: 1
+      display: none
+      padding: 0
+      z-index: 3
+      visibility: visible
+      top: 16px
+      background: #FFFFFF
+      gap: 14px
+      margin: 0 0 16px 0
+    .ul2
+      padding: 0 !important
+    .ul3
+      padding: 0 !important
+    .visibility
+      display: flex !important
 
 
 

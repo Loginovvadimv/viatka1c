@@ -40,7 +40,10 @@
                 </div>
                 <ul class="navContainer">
                     <li>
-                        <a class="drop" href="/allnews/">События</a>
+                        <a class="drop" href="/allnews/">События<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </a>
                         <ul>
                             <li><a href="/allnews/">Новости</a></li>
                             <li><a href="/allevents/">Мероприятия</a></li>
@@ -48,7 +51,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="/partnership/">Партнёрам</a>
+                        <a class="drop" href="/partnership/">Партнёрам<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </a>
                         <ul class="ul2">
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
@@ -57,7 +63,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="/company-8/">Продукты</a>
+                        <a class="drop" href="/company-8/">Продукты<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </a>
                         <ul class="ul3">
                             <li><a href="/company-8/">1С:Предприятие 8</a></li>
                             <li><a href="/1sits/">1С:ИТС</a></li>
@@ -65,10 +74,16 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="/forus/">О нас</a>
+                        <a class="drop" href="/forus/">О нас<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </a>
                     </li>
                     <li>
-                        <a class="drop" href="/contacts/">Контакты</a>
+                        <a class="drop" href="/contacts/">Контакты<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </div>

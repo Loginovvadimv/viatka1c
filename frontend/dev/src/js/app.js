@@ -40,7 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
             map.controls.remove('fullscreenControl');
             map.controls.remove('zoomControl');
             map.controls.remove('rulerControl');
-            // map.controls.remove('scrollZoom');
             map.geoObjects.add(placemark);
             map.behaviors.disable('scrollZoom');
         }
@@ -51,47 +50,32 @@ document.addEventListener('DOMContentLoaded', function() {
     ///hamb-mob
     const hamb = document.querySelector('.header__hamb');
     const header = document.querySelector('.header');
-    const headerNav = document.querySelector('.header__wrap');
-    const headerBtn = document.querySelector('.header__btn');
-    const headerWrap = document.querySelector('.header__wrapper');
+    const navContainer = document.querySelector('.navContainer');
+    const navLink = document.querySelectorAll('.header .nav > ul > li a');
+    const navUl = document.querySelector('.header .nav > ul > li > ul');
+
 
     hamb.addEventListener('click', () => {
         hamb.classList.toggle('header__hamb-open');
         if (hamb.classList.contains('header__hamb-open')) {
-            header.classList.add('header__open');
-            headerNav.classList.add('visible');
-            headerBtn.classList.add('visible');
-            headerWrap.classList.add('header__wrapper-open');
+            navContainer.classList.add('visibility');
         } else {
             header.classList.remove('header__open');
-            headerNav.classList.remove('visible');
-            headerBtn.classList.remove('visible');
-            headerWrap.classList.remove('header__wrapper-open');
+            navContainer.classList.remove('visibility');
         }
     });
+
+    navLink.forEach(item => {
+        item.addEventListener('click', (e) => {
+            navUl.classList.toggle('visibility');
+            e.preventDefault();
+
+        })
+    })
 
     //end hamb
 
 
-    //закрытие окна при переходе по ссылке
-
-
-    const headerLinks = document.querySelectorAll('.header__li a');
-    // if (window.matchMedia("(max-width: 1023px)").matches) {
-    headerLinks.forEach(item => {
-        item.addEventListener('click', function () {
-            hamb.classList.remove('header__hamb-open');
-            headerWrap.classList.remove('visible');
-            header.classList.remove('header__open');
-            headerNav.classList.remove('visible');
-            headerWrap.classList.remove('header__wrapper-open')
-            headerBtn.classList.remove('visible');
-        })
-    })
-
-    // }
-
-    ///////end
 
     //link-active
 
