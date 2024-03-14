@@ -12,12 +12,23 @@
                 <div class="becomePartnerpage__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/become-a-partner/">Партнёрам</a>
+                    <a href="/partnership/">Партнёрам</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <div  class="crumbActive">Как стать партнёром</div>
                 </div>
             </div>
             <h2 class="title becomePartnerpage__title">Как стать партнёром</h2>
+        </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/become-a-partner/" class="active">Как стать партнёром</a>
+                    <a href="/partners-programms/">Партнёрские программы</a>
+                    <a href="/certification/">Сертификация</a>
+                    <a href="/1ssoft/">1С:Софт</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
         </div>
         <div class="becomePartnerpage__wrapper">
             <div class="becomePartnerpage__become">

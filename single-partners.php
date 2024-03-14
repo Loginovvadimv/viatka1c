@@ -28,6 +28,16 @@ $partners = get_posts($params);
 
             <h2 class="singlePartners title"><?= $partner->post_title ?></h2>
         </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/partners/prodazha-kursov-1sucz-№1/">Продажа курсов 1с:УЦ №1</a>
+                    <a href="/partners/borba-s-piratstvom/">Борьба с пиратством</a>
+                    <a href="/partners/uchebnym-zavedeniyam/">Учебным заведениям</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
+        </div>
         <div class="singlePartners__info fs16"><?= $partner->post_content ?></div>
     </div>
 </section>

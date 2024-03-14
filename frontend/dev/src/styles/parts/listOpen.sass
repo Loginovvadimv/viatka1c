@@ -5,12 +5,13 @@
     gap: 16px
   &__wrap
     display: flex
-    flex-direction: column
     gap: 16px
     padding: 20px 24px
     border-radius: 24px
     background: rgb(246, 246, 250)
     position: relative
+    justify-content: space-between
+    align-items: center
   &__plus
     background: rgb(255, 255, 255)
     width: 36px
@@ -39,8 +40,12 @@
     position: absolute
     top: 16px
     right: 16px
-  &__wrapSubtitle
+  &__answer
     display: none
-    &-open
+    &_active
       display: block
-
+      padding: 0px 24px 20px 24px
+      border-radius: 24px
+  &__greyBox
+    background: #f6f6fa
+    border-radius: 24px

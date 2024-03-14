@@ -110,14 +110,74 @@ document.addEventListener('DOMContentLoaded', function() {
     //end
 
     //plus=minus
-    const listOpen = document.querySelector('.listOpen__wrapSubtitle');
-    const plus = document.querySelectorAll('.listOpen__plus');
-    plus.forEach(item => {
-        item.addEventListener('click', e => {
+
+    const trigger = document.querySelectorAll('.listOpen__plus');
+    trigger.forEach(item => {
+        item.addEventListener('click', (e) => {
             item.classList.toggle('listOpen__plusOpen');
-            listOpen.classList.toggle('listOpen__wrapSubtitle-open');
-        })
-    })
+            const target = item.closest('.listOpen__wrap');
+            target.nextElementSibling.classList.toggle('listOpen__answer_active');
+
+        });
+    });
+//end
+
+    //pagination\\\\\\\\\\\\\\\\\\\\\\\\\\\\
+
+        // const content = document.querySelector('.content');
+        // const itemsPerPage = 1; // set number of items per page
+        // let currentPage = 0;
+        // const items = Array.from(content.getElementsByTagName('section')).slice(0); // tag name set to section and slice set to 0
+        //
+        // function showPage(page) {
+        //     const startIndex = page * itemsPerPage;
+        //     const endIndex = startIndex + itemsPerPage;
+        //     items.forEach((item, index) => {
+        //         item.classList.toggle('hidden', index < startIndex || index >= endIndex);
+        //     });
+        //     updateActiveButtonStates();
+        // }
+        //
+        // function createPageButtons() {
+        //     const totalPages = Math.ceil(items.length / itemsPerPage);
+        //     const paginationContainer = document.createElement('div');
+        //     const paginationDiv = document.body.appendChild(paginationContainer);
+        //     paginationContainer.classList.add('pagination');
+        //
+        //     // Add page buttons
+        //     for (let i = 0; i < totalPages; i++) {
+        //         const pageButton = document.createElement('button');
+        //         pageButton.textContent = i + 1;
+        //         pageButton.addEventListener('click', () => {
+        //             currentPage = i;
+        //             showPage(currentPage);
+        //             updateActiveButtonStates();
+        //         });
+        //
+        //         content.appendChild(paginationContainer);
+        //         paginationDiv.appendChild(pageButton);
+        //     }
+        // }
+        //
+        // function updateActiveButtonStates() {
+        //     const pageButtons = document.querySelectorAll('.pagination button');
+        //     pageButtons.forEach((button, index) => {
+        //         if (index === currentPage) {
+        //             button.classList.add('active');
+        //         } else {
+        //             button.classList.remove('active');
+        //         }
+        //     });
+        // }
+        //
+        // createPageButtons(); // Call this function to create the page buttons initially
+        // showPage(currentPage);
+
+
+
+
+    //endPagination
+
 
 
 })

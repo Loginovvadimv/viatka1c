@@ -11,12 +11,23 @@ $sertList = get_field('sert-list', 'options');
                 <div class="certification__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/become-a-partner/">Партнёрам</a>
+                    <a href="/partnership/">Партнёрам</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <div class="crumbActive">Сертификация</div>
                 </div>
             </div>
             <h2 class="certification__title title">Сертификация</h2>
+        </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/become-a-partner/" >Как стать партнёром</a>
+                    <a href="/partners-programms/" >Партнёрские программы</a>
+                    <a href="/certification/" class="active">Сертификация</a>
+                    <a href="/1ssoft/">1С:Софт</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
         </div>
         <div class="certification__wrapper">
             <div class="certification__info fs16"><?= get_field('sert-text', 'options') ?></div>

@@ -16,12 +16,23 @@ $partners = get_posts($params);
                 <div class="partnersProgramms__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="#">Партнерам</a>
+                    <a href="/partnership/">Партнерам</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <div class="crumbActive">Партнёрские программы</div>
                 </div>
             </div>
             <h2 class="pageNews__title title">Партнёрские программы</h2>
+        </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/become-a-partner/" >Как стать партнёром</a>
+                    <a href="/partners-programms/" class="active">Партнёрские программы</a>
+                    <a href="/certification/">Сертификация</a>
+                    <a href="/1ssoft/">1С:Софт</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
         </div>
         <div class="partnersProgramms__wrapper">
         <?php foreach ($partners as $key => $partner): ?>
@@ -46,3 +57,4 @@ $partners = get_posts($params);
         </div>
     </div>
 </section>
+<?php get_footer() ?>

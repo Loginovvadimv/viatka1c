@@ -1,6 +1,6 @@
 // document.addEventListener('DOMContentLoaded', function () {
 //     const pagination = (wrapperContent, boxContent, numContent) => {
-//         const content = document.querySelector(wrapperContent);
+//         const content = document.querySelectorAll(wrapperContent);
 //         const itemsPerPage = numContent; // set number of items per page
 //         let currentPage = 0;
 //         const items = Array.from(document.querySelectorAll(boxContent)); // tag name set to section and slice set to 0

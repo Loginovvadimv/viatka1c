@@ -6,9 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="shortcut icon" href="<?= get_site_url() ?>/favicon.png" type="image/png">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c2a888d7-28f1-4234-89bb-c4785a857bc4"></script>
-
     <? the_field('header_code', 'options') ?>
-
     <script>
         var ajax = '<?= get_admin_url() ?>admin-ajax.php'
     </script>
@@ -50,7 +48,7 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="/become-a-partner/">Партнёрам</a>
+                        <a class="drop" href="/partnership/">Партнёрам</a>
                         <ul class="ul2">
                             <li><a href="/become-a-partner/">Стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
