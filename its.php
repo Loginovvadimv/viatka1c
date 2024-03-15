@@ -70,7 +70,7 @@ $itsPrices = get_field('its-prices', 'options');
                 <h3 class="its__pricesTitle h3">Цены и условия договора</h3>
                 <div class="its__pricesWrapper">
                     <?php foreach ($itsPrices as $item): ?>
-                        <div class="its__pricesWrap fs16"><?= $item['its-price'] ?><a href="<?= $item['its-price-link']['url'] ?>"><?= $item['its-price-link']['title'] ?></a></div>
+                        <div class="its__pricesWrap fs16"><?= $item['its-price'] ?><a target="_blank" href="<?= $item['its-price-link']['url'] ?>"><?= $item['its-price-link']['title'] ?></a></div>
                     <?php endforeach; ?>
                 </div>
             </div>

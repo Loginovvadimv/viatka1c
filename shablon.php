@@ -15,7 +15,11 @@ $linksRep = get_field('links-rep');
                 <div class="allEvents__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">Заголовок типовой контентной страницы</div>
+                    <a href="/company-8/">Продукты</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <a href="/1sits/">1С:ИТС</a>
+                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
+                    <div class="crumbActive"><?= get_the_title() ?></div>
                 </div>
             </div>
             <h2 class="allEvents__title title"><?= get_the_title() ?></h2>
