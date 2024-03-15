@@ -106,21 +106,21 @@ $linksRep = get_field('links-rep');
 
             </div>
         </section>
-
+        <?php if(!empty($shablonListOpen)): ?>
         <section class="listOpen">
         <div class="container">
-        <h2 class="listOpen__title title">Раскрывающийся список</h2>
+        <h2 class="listOpen__title title"><?= get_field('listOpenTitle') ?></h2>
         <div class="listOpen__wrapper">
         <?php foreach ($shablonListOpen as $item): ?>
         <div class="listOpen__greyBox">
             <div class="listOpen__wrap">
-                <div class="listOpen__text"><?= $item['shablon-li'] ?></div>
+                <div class="listOpen__text fs16"><?= $item['shablon-li'] ?></div>
                 <div class="listOpen__plus">
                     <span></span>
                     <span></span>
                 </div>
             </div>
-            <div class="listOpen__answer">
+            <div class="listOpen__answer fs16">
                 <?= $item['shablon-li-open'] ?>
             </div>
         </div>
@@ -130,10 +130,12 @@ $linksRep = get_field('links-rep');
         </div>
         </div>
     </section>
+        <?php endif; ?>
 
 
 
     </div>
 </section>
+<?php get_template_part('templates/neenQuestion') ?>
 
 <?php get_footer(); ?>

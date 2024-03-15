@@ -65,13 +65,18 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    navLink.forEach(item => {
-        item.addEventListener('click', (e) => {
-            navUl.classList.toggle('visibility');
-            e.preventDefault();
+    const mediaQuery = window.matchMedia('(max-width: 1023px)')
+    if (mediaQuery.matches) {
 
-        })
-    })
+        navLink.forEach(item => {
+            item.addEventListener('click', (e) => {
+                navUl.classList.toggle('visibility');
+                e.preventDefault();
+            });
+        });
+    }
+
+
 
     //end hamb
 

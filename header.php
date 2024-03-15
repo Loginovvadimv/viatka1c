@@ -70,7 +70,8 @@
                         <ul class="ul3">
                             <li><a href="/company-8/">1С:Предприятие 8</a></li>
                             <li><a href="/1sits/">1С:ИТС</a></li>
-                            <li><a href="#">3</a></li>
+                            <li><a href="/commercial-equipment/">Торговое оборудование</a></li>
+                            <li><a href="/distribution/">1С:Дистрибьюция</a></li>
                         </ul>
                     </li>
                     <li>

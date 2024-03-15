@@ -3,6 +3,7 @@
     display: flex
     flex-direction: column
     gap: 48px
+    margin-bottom: 100px
   &__info
     display: flex
     flex-direction: column
@@ -25,3 +26,43 @@
       svg
         width: 20px
         height: 20px
+  &__contract
+    display: flex
+    flex-direction: column
+    gap: 16px
+  &__contractUl
+    display: flex
+    flex-direction: column
+    gap: 8px
+  &__contractLi
+    position: relative
+    padding-left: 16px
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
+    &::before
+      content: ''
+      position: absolute
+      top: 10px
+      left: 0px
+      width: 6px
+      height: 6px
+      border-radius: 100px
+      background: rgb(250, 126, 16)
+  &__prices
+    display: flex
+    flex-direction: column
+    gap: 24px
+  &__pricesWrapper
+    display: flex
+    flex-direction: column
+    gap: 24px
+  &__pricesWrap
+    a
+      color: rgb(250, 126, 16)
+      &:hover
+        color: rgb(249, 95, 9)
+  .needQuestion
+    margin-bottom: 0px

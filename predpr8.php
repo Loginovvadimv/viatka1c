@@ -22,8 +22,8 @@ get_header();
                 <div class="link-block quickLinks__block">
                     <a href="/company-8/" class="active">1С:Предприятие 8</a>
                     <a href="/1sits/">1С:ИТС</a>
-                    <a href="">Торговое оборудование</a>
-                    <a href="">1С:Дистрибьюция</a>
+                    <a href="/commercial-equipment/">Торговое оборудование</a>
+                    <a href="/distribution/">1С:Дистрибьюция</a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>

@@ -67,7 +67,19 @@
       color: rgb(249, 95, 9)
 
 
-@media (max-width: 424px)
+@media (max-width: 767px)
   .pageNews
     &__wrap
       flex-direction: column
+      gap: 16px
+      picture
+        img
+          max-width: none
+    &__info
+      align-items: center
+    &__text
+      text-align: center
+    &__link
+      max-width: none
+    &__wrapper
+      gap: 16px
