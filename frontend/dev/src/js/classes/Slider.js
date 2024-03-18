@@ -39,19 +39,22 @@ export default class Slider {
         const diploms = document.querySelector('.diploms')
         if (diploms) {
             this.createSlider(diploms, {
-                slidesPerView: 1,
-                spaceBetween: 24,
+                slidesPerView: 2,
+                spaceBetween: 12,
                 allowTouchMove: true,
                 loop: true,
                 autoHeight: false,
                 calculateHeight: false,
                 speed: 1000,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: true,
-                    pauseOnMouseEnter: false
-                },
                 breakpoints: {
+                    425: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
                     1024: {
                         slidesPerView: 'auto',
                         spaceBetween: 24,
@@ -64,19 +67,22 @@ export default class Slider {
         const letters = document.querySelector('.letters')
         if (letters) {
             this.createSlider(letters, {
-                slidesPerView: 1,
+                slidesPerView: 2,
                 spaceBetween: 12,
                 allowTouchMove: true,
                 loop: true,
                 autoHeight: false,
                 calculateHeight: false,
                 speed: 1000,
-                autoplay: {
-                    delay: 4000,
-                    disableOnInteraction: true,
-                    pauseOnMouseEnter: false
-                },
                 breakpoints: {
+                    425: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
                     1024: {
                         slidesPerView: 'auto',
                         spaceBetween: 24,

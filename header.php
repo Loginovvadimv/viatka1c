@@ -89,6 +89,10 @@
                 </ul>
             </div>
             <div class="header__wrap">
+                <div class="header__info-mob">
+                    <div class="header__adress fs16"><img src="<?= ASSETS ?>/images/icons/locate.svg" alt="locate"><?= get_field('address', 'options') ?></div>
+                    <div class="header__mail fs16"><a href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a></div>
+                </div>
                 <div class="header__phone"><a href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a></div>
                 <div class="header__btn btn-orange">Задать вопрос</div>
             </div>

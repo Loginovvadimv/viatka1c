@@ -51,34 +51,61 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamb = document.querySelector('.header__hamb');
     const header = document.querySelector('.header');
     const navContainer = document.querySelector('.navContainer');
-    const navLink = document.querySelectorAll('.header .nav > ul > li a');
-    const navUl = document.querySelector('.header .nav > ul > li > ul');
+    const navLink = document.querySelectorAll('.header .nav > ul > li > a');
+    const navItems = document.querySelectorAll('.header .nav > ul > li');
+    const navUl = document.querySelectorAll('.header .nav > ul > li > ul');
+    const headerBottomWrapper = document.querySelector('.header__bottomWrapper');
+    const body = document.querySelector('body');
+    const headerWrap = document.querySelector('.header__wrap');
 
 
     hamb.addEventListener('click', () => {
         hamb.classList.toggle('header__hamb-open');
         if (hamb.classList.contains('header__hamb-open')) {
             navContainer.classList.add('visibility');
+            headerBottomWrapper.classList.add('max-wrap');
+            body.style.overflow = 'hidden';
+            headerWrap.classList.add('header__wrap-mobile');
+
         } else {
             header.classList.remove('header__open');
             navContainer.classList.remove('visibility');
+            headerBottomWrapper.classList.remove('max-wrap');
+            body.style.overflow = '';
+            headerWrap.classList.remove('header__wrap-mobile');
         }
     });
 
     const mediaQuery = window.matchMedia('(max-width: 1023px)')
     if (mediaQuery.matches) {
-
-        navLink.forEach(item => {
+        navItems.forEach(item => {
             item.addEventListener('click', (e) => {
-                navUl.classList.toggle('visibility');
+                navItems.forEach(item_2 => {
+                    if (item != item_2) {
+                        item_2.classList.remove('visibility');
+                    }
+                })
+
+                item.classList.toggle('visibility');
                 e.preventDefault();
             });
         });
     }
 
-
-
     //end hamb
+
+
+    //plus=minus
+
+    const trigger = document.querySelectorAll('.listOpen__plus');
+    trigger.forEach(item => {
+        item.addEventListener('click', (e) => {
+            item.classList.toggle('listOpen__plusOpen');
+            const target = item.closest('.listOpen__wrap');
+            target.nextElementSibling.classList.toggle('listOpen__answer_active');
+        });
+    });
+//end
 
 
 
@@ -98,18 +125,58 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //end
 
-    //plus=minus
 
-    const trigger = document.querySelectorAll('.listOpen__plus');
-    trigger.forEach(item => {
-        item.addEventListener('click', (e) => {
-            item.classList.toggle('listOpen__plusOpen');
-            const target = item.closest('.listOpen__wrap');
-            target.nextElementSibling.classList.toggle('listOpen__answer_active');
 
-        });
-    });
-//end
+
+    //table
+    const tables = document.querySelectorAll('table');
+    const div = document.createElement("div");
+    div.classList.add('tables');
+    tables.forEach(item => {
+        var parent = item.parentNode;
+        parent.insertBefore(div, item);
+        div.appendChild(item);
+    })
+    //end
+
+    const btnUp = {
+        el: document.querySelector('.btn-up'),
+        show() {
+            // удалим у кнопки класс btn-up_hide
+            this.el.classList.remove('btn-up_hide');
+        },
+        hide() {
+            // добавим к кнопке класс btn-up_hide
+            this.el.classList.add('btn-up_hide');
+        },
+        addEventListener() {
+            // при прокрутке содержимого страницы
+            window.addEventListener('scroll', () => {
+                // определяем величину прокрутки
+                const scrollY = window.scrollY || document.documentElement.scrollTop;
+                // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+                scrollY > 800 ? this.show() : this.hide();
+            });
+            // при нажатии на кнопку .btn-up
+            document.querySelector('.btn-up').onclick = () => {
+                // переместим в начало страницы
+                window.scrollTo({
+                    top: 0,
+                    left: 0,
+                    behavior: 'smooth'
+                });
+            }
+        }
+    }
+    btnUp.addEventListener();
+
+
+    //btn
+
+
+
+
+
 
     //pagination\\\\\\\\\\\\\\\\\\\\\\\\\\\\
 

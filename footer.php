@@ -66,8 +66,8 @@
                     <div class="footer__razrab">Разработка сайта: <a href="https://vyatka-it.ru/" target="_blank"><img src="<?= ASSETS ?>/images/icons/light.webp" alt="company"></a></div>
                 </div>
             </div>
-            <a href="#banner"><div class="footer__upBtn"><img src="<?= ASSETS ?>/images/icons/upb.svg" alt="up"></div></a>
+<!--            <a href="#"><div class="footer__upBtn"><img src="--><?php //= ASSETS ?><!--/images/icons/upb.svg" alt="up"></div></a>-->
+            <div class="btn-up btn-up_hide"><img src="<?= ASSETS ?>/images/icons/upb.svg" alt="up"></div>
         </footer>
-<!--        <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=<c2a888d7-28f1-4234-89bb-c4785a857bc4>"></script>-->
     </body>
 </html>

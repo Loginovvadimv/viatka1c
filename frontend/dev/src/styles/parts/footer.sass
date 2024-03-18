@@ -87,14 +87,27 @@
     img
       width: 110px
       height: 45px
-  &__upBtn
-    position: absolute
-    bottom: 140px
-    right: 30px
+  .btn-up
+    position: fixed
+    right: 20px
+    bottom: 20px
     cursor: pointer
+    width: 44px
+    height: 44px
+    z-index: 10
     &:hover
       transform: scale(1.05)
-      transition: 0.4s all
+      transition: .3s all
+  .btn-up::before
+    content: ""
+    text-align: center
+    position: absolute
+    width: 20px
+    height: 20px
+    left: 12px
+    top: 12px
+  .btn-up_hide
+    display: none
 
 
 @media (max-width: 424px)
@@ -123,8 +136,7 @@
       font-size: 14px
       font-weight: 600
       line-height: 22px
-    &__upBtn
-      display: none
+
 
 @media (min-width: 425px) and (max-width: 767px)
   .footer

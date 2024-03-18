@@ -14,7 +14,7 @@
                 <div class="forus__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/forus/" class="crumbActive">О нас</a>
+                    <div class="crumbActive">О нас</div>
                 </div>
             </div>
 
