@@ -129,6 +129,8 @@
           margin-top: -7px
   .active
     border-bottom: 2px solid #E5573C
+  .header-up_hide
+    display: none
 
 @media (max-width: 424px)
   .header
@@ -253,17 +255,38 @@
     &__topWrap
       display: none
     .navContainer
+      flex-direction: column
+      align-items: baseline
+      gap: 24px
+      width: 100%
       display: none
     &__wrap
       display: none
       &-mob
         display: flex
         gap: 16px
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 3
+      &-mobile
+        display: flex
+        flex-direction: column
+        gap: 12px
+        padding: 16px
+        background-color: rgb(246, 246, 250)
+        border-radius: 16px
+        text-align: center
     &__flexBox
       padding: 11px 16px
       box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+      position: relative
+      display: flex
+      flex-direction: column
+      gap: 36px
+      justify-content: flex-start
     &__logo
-      max-width: 104px
+      max-width: 120px
       width: 100%
       height: 43px
     &__phone
@@ -275,15 +298,77 @@
         justify-content: center
         border-radius: 12px
         background: rgb(246, 246, 250)
+        position: absolute
+        right: 80px
+        top: 11px
     &__hamb
       display: flex
-      position: inherit
       justify-content: center
       align-items: center
       width: 48px
       height: 48px
       border-radius: 12px
       background: rgb(246, 246, 250)
+      position: absolute
+      right: 16px
+      top: 11px
+    .nav
+      flex-direction: column
+      gap: 36px
+      width: 100%
+      align-items: baseline
+    .nav > ul > li
+      padding: 0
+      width: 100%
+      display: flex
+      flex-direction: column
+      font-size: 20px
+      line-height: 26px
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        svg
+          display: block
+        &:hover
+          svg
+            path
+              fill: rgb(250, 126, 16)
+    .nav > ul > li
+      &.visibility
+        ul
+          display: flex !important
+    .nav > ul > li > ul
+      border-top: 0 solid #FFFFFF
+      position: relative
+      opacity: 1
+      display: none
+      padding: 0
+      z-index: 3
+      visibility: visible
+      top: 16px
+      background: #FFFFFF
+      gap: 14px
+      margin: 0 0 16px 12px
+    .ul2
+      padding: 0 !important
+    .ul3
+      padding: 0 !important
+    .visibility
+      display: flex !important
+    .max-wrap
+      height: 100vh
+    &__btn
+      width: 100%
+      max-width: 358px
+      text-align: center
+      margin: 0 auto
+    &__info-mob
+      display: block
+    &__adress
+      gap: 8px
+      color: rgb(136, 136, 136)
+      margin-bottom: 12px
 
 
 @media (min-width: 768px) and (max-width: 1023px)
@@ -291,17 +376,38 @@
     &__topWrap
       display: none
     .navContainer
+      flex-direction: column
+      align-items: baseline
+      gap: 24px
+      width: 100%
       display: none
     &__wrap
       display: none
       &-mob
         display: flex
         gap: 16px
+        position: absolute
+        top: 0
+        right: 0
+        z-index: 3
+      &-mobile
+        display: flex
+        flex-direction: column
+        gap: 12px
+        padding: 16px
+        background-color: rgb(246, 246, 250)
+        border-radius: 16px
+        text-align: center
     &__flexBox
       padding: 11px 16px
       box-shadow: 0px 0px 12px 0px rgba(0, 0, 0, 0.08)
+      position: relative
+      display: flex
+      flex-direction: column
+      gap: 36px
+      justify-content: flex-start
     &__logo
-      max-width: 104px
+      max-width: 120px
       width: 100%
       height: 43px
     &__phone
@@ -313,15 +419,77 @@
         justify-content: center
         border-radius: 12px
         background: rgb(246, 246, 250)
+        position: absolute
+        right: 80px
+        top: 11px
     &__hamb
       display: flex
-      position: inherit
       justify-content: center
       align-items: center
       width: 48px
       height: 48px
       border-radius: 12px
       background: rgb(246, 246, 250)
+      position: absolute
+      right: 16px
+      top: 11px
+    .nav
+      flex-direction: column
+      gap: 36px
+      width: 100%
+      align-items: baseline
+    .nav > ul > li
+      padding: 0
+      width: 100%
+      display: flex
+      flex-direction: column
+      font-size: 24px
+      line-height: 30px
+      a
+        display: flex
+        justify-content: space-between
+        align-items: center
+        svg
+          display: block
+        &:hover
+          svg
+            path
+              fill: rgb(250, 126, 16)
+    .nav > ul > li
+      &.visibility
+        ul
+          display: flex !important
+    .nav > ul > li > ul
+      border-top: 0 solid #FFFFFF
+      position: relative
+      opacity: 1
+      display: none
+      padding: 0
+      z-index: 3
+      visibility: visible
+      top: 16px
+      background: #FFFFFF
+      gap: 14px
+      margin: 0 0 16px 12px
+    .ul2
+      padding: 0 !important
+    .ul3
+      padding: 0 !important
+    .visibility
+      display: flex !important
+    .max-wrap
+      height: 100vh
+    &__btn
+      width: 100%
+      max-width: 358px
+      text-align: center
+      margin: 0 auto
+    &__info-mob
+      display: block
+    &__adress
+      gap: 8px
+      color: rgb(136, 136, 136)
+      margin-bottom: 12px
 
 
 @media (min-width: 1023px) and (max-width: 1100px)

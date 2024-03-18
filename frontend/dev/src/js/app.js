@@ -52,7 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const header = document.querySelector('.header');
     const navContainer = document.querySelector('.navContainer');
     const navLink = document.querySelectorAll('.header .nav > ul > li > a');
-    const navItems = document.querySelectorAll('.header .nav > ul > li');
     const navUl = document.querySelectorAll('.header .nav > ul > li > ul');
     const headerBottomWrapper = document.querySelector('.header__bottomWrapper');
     const body = document.querySelector('body');
@@ -78,15 +77,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const mediaQuery = window.matchMedia('(max-width: 1023px)')
     if (mediaQuery.matches) {
-        navItems.forEach(item => {
+        navLink.forEach(item => {
             item.addEventListener('click', (e) => {
-                navItems.forEach(item_2 => {
-                    if (item != item_2) {
-                        item_2.classList.remove('visibility');
-                    }
+                navUl.forEach(nav => {
+                    nav.classList.remove('visibility');
                 })
-
-                item.classList.toggle('visibility');
+                item.nextElementSibling.classList.toggle('visibility');
                 e.preventDefault();
             });
         });
@@ -139,6 +135,8 @@ document.addEventListener('DOMContentLoaded', function() {
     })
     //end
 
+    //btnup
+
     const btnUp = {
         el: document.querySelector('.btn-up'),
         show() {
@@ -170,12 +168,33 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     btnUp.addEventListener();
 
+    //end
 
-    //btn
+    //topHeaderHide
 
+    const headerTopWrap = {
+        el: document.querySelector('.header__topWrap'),
+        show() {
+            // удалим у хедера класс header-up_hide
+            this.el.classList.remove('header-up_hide');
+        },
+        hide() {
+            // добавим хедеру класс btn-up_hide
+            this.el.classList.add('header-up_hide');
+        },
+        addEventListener() {
+            // при прокрутке содержимого страницы
+            window.addEventListener('scroll', () => {
+                // определяем величину прокрутки
+                const scrollY = window.scrollY || document.documentElement.scrollTop;
+                // если страница прокручена больше чем на 400px, то делаем кнопку видимой, иначе скрываем
+                scrollY > 800 ? this.hide() : this.show();
+            });
+        }
+    }
+    headerTopWrap.addEventListener();
 
-
-
+    //end
 
 
     //pagination\\\\\\\\\\\\\\\\\\\\\\\\\\\\

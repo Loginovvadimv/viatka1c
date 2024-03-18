@@ -11,27 +11,27 @@
                     <div class="footer__nav">
                         События
                         <ul>
-                            <li><a href="">Новости</a></li>
-                            <li><a href="">Акции</a></li>
-                            <li><a href="">Мероприятия</a></li>
+                            <li><a href="/allnews/">Новости</a></li>
+                            <li><a href="/allpromos/">Акции</a></li>
+                            <li><a href="/allevents/">Мероприятия</a></li>
                         </ul>
                     </div>
                     <div class="footer__nav">
                         Партнёрам
                         <ul>
-                            <li><a href="">Как стать партнёром</a></li>
-                            <li><a href="">Партнёрские программы</a></li>
-                            <li><a href="">Сертификация</a></li>
-                            <li><a href="">1С:Софт</a></li>
+                            <li><a href="/become-a-partner/">Стать партнёром</a></li>
+                            <li><a href="/partners-programms/">Партнёрские программы</a></li>
+                            <li><a href="/certification/">Сертификация</a></li>
+                            <li><a href="/1ssoft/">1С:Софт</a></li>
                         </ul>
                     </div>
                     <div class="footer__nav">
                         Продукты
                         <ul>
-                            <li><a href="">1С:Предприятие</a></li>
-                            <li><a href="">1С:ИТС</a></li>
-                            <li><a href="">1С:Дистрибьюция</a></li>
-                            <li><a href="">Торговое оборудование</a></li>
+                            <li><a href="/company-8/">1С:Предприятие</a></li>
+                            <li><a href="/1sits/">1С:ИТС</a></li>
+                            <li><a href="/distribution/">1С:Дистрибьюция</a></li>
+                            <li><a href="/commercial-equipment/">Торговое оборудование</a></li>
                         </ul>
                     </div>
                     <div class="footer__nav">
@@ -66,7 +66,6 @@
                     <div class="footer__razrab">Разработка сайта: <a href="https://vyatka-it.ru/" target="_blank"><img src="<?= ASSETS ?>/images/icons/light.webp" alt="company"></a></div>
                 </div>
             </div>
-<!--            <a href="#"><div class="footer__upBtn"><img src="--><?php //= ASSETS ?><!--/images/icons/upb.svg" alt="up"></div></a>-->
             <div class="btn-up btn-up_hide"><img src="<?= ASSETS ?>/images/icons/upb.svg" alt="up"></div>
         </footer>
     </body>
