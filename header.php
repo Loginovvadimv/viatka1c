@@ -94,7 +94,7 @@
                     <div class="header__mail fs16"><a href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a></div>
                 </div>
                 <div class="header__phone"><a href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a></div>
-                <div class="header__btn btn-orange">Задать вопрос</div>
+                <div class="header__btn btn-orange" data-modal="orders">Задать вопрос</div>
             </div>
             <div class="header__wrap-mob">
                 <a href="<?= get_field('phone-link', 'options') ?>"><div class="header__phone-mob"><img src="<?= ASSETS ?>/images/icons/call.svg" alt="phone"></div></a>
