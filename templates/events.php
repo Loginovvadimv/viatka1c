@@ -30,6 +30,10 @@ $events = get_posts($params);
                 </div>
             </div>
             <?php endforeach; ?>
+            <button data-next="<?= ($paged + 1) ?>" class="btn btn-5 catalog-next">
+                Следующая
+                <img src="<?=ASSETS?>/images/icons/call.svg" alt="">
+            </button>
         </div>
         <div class="events__wrapper-mob">
             <?php foreach ($events as $key => $event): ?>

@@ -15,7 +15,7 @@
                             <h2 class="banner__title"><?= $item['banner_title'] ?></h2>
                             <div class="banner__subtitle"><?= $item['banner_subtitle'] ?></div>
                         </div>
-                        <a href="/partners-programms/"><button class="banner__btn btn-orange">Подробнее</button></a>
+                        <a href="/partners-programms/"><button class="banner__btn btn-orange">Подробнee</button></a>
                     </div>
                     <?php endforeach; ?>
                 </div>

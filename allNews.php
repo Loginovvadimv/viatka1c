@@ -2,12 +2,16 @@
 <?php
     // Template Name: Все новости
 get_header();
+
+$current_page = $_GET['pag'] ? $_GET['pag'] : 1;
+
 $args = array(
-    'posts_per_page' => -1,
+    'posts_per_page' => 1,
     'post_type' => 'news',
     'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
+    'paged' => $current_page
 );
 $news = new WP_Query($args);
 
@@ -22,6 +26,16 @@ foreach ($news->posts as $article) {
         'date' => Helper::getHumanDate($article->post_date),
     ];
 }
+
+$pagination = Pagination::create(
+        [
+            'pages' => $news->max_num_pages,
+            'paged' => $current_page,
+            'range' => 1,
+            'post_type' => 'news'
+        ]
+);
+
 ?>
 
 <section class="pageNews newSection">
@@ -41,7 +55,7 @@ foreach ($news->posts as $article) {
             <div class="scroller">
                 <div class="quickLinks">
                     <div class="link-block quickLinks__block">
-                        <a href="/allnews/" class="active">Новости</a>
+                        <a href="<?= get_permalink(181) ?>" class="active">Новости</a>
                         <a href="/allevents/">Мероприятия</a>
                         <a href="/allpromos/">Акции</a>
                     </div>
@@ -70,6 +84,7 @@ foreach ($news->posts as $article) {
                     </div>
                 </div>
             <?php endforeach; ?>
+            <?= $pagination ?>
         </div>
 
     </div>

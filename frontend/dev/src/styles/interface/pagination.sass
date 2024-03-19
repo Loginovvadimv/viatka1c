@@ -1,0 +1,31 @@
+.pagination
+  display: flex
+  justify-content: center
+  ul
+    display: flex
+    gap: 12px
+    align-items: center
+    margin: 0 auto
+  li
+    width: 48px
+    height: 48px
+    box-sizing: border-box
+    border: 1px solid rgb(215, 216, 225)
+    border-radius: 12px
+    background: rgb(255, 255, 255)
+    display: flex
+    align-items: center
+    justify-content: center
+    color: rgb(37, 37, 37)
+    font-family: Manrope
+    font-size: 16px
+    font-weight: 600
+    line-height: 24px
+    &:hover
+      background: rgb(250, 126, 16)
+      border: 1px solid rgb(250, 126, 16)
+      color: rgb(244, 244, 244)
+  .pagination__item-active
+    background: rgb(250, 126, 16)
+    border: 1px solid rgb(250, 126, 16)
+    color: rgb(244, 244, 244)

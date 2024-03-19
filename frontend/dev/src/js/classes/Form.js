@@ -52,4 +52,6 @@ class Form {
 
     }
 }
-Form.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Form.init()
+});

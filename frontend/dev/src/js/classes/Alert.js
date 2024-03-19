@@ -45,5 +45,6 @@ export default class Alert {
         document.body.append(alert)
     }
 }
-
-Alert.create()
+document.addEventListener('DOMContentLoaded', function() {
+    Alert.create()
+});

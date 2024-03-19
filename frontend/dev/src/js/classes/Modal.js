@@ -109,4 +109,6 @@ export default class Modal extends Controls {
     }
 }
 
-Modal.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Modal.init()
+})

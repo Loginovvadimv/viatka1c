@@ -60,5 +60,6 @@ export default class Inputer {
     }
 
 }
-
-Inputer.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Inputer.init()
+});

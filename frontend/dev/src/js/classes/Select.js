@@ -120,5 +120,6 @@ export default class Select extends Controls {
         }
     }
 }
-
-Select.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Select.init()
+});

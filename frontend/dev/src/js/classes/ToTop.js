@@ -30,5 +30,6 @@ class ToTop {
     }
 
 }
-
-new ToTop()
+document.addEventListener('DOMContentLoaded', function() {
+    new ToTop()
+});

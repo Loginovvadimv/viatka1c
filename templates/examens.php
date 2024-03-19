@@ -27,7 +27,7 @@
 
             <div class="examens__info">
                 <div class="examens__infoText">Узнайте подробнее о сертификации</div>
-                <button class="examens__btn btn-orange">Подробнее</button>
+                <a href="/partnership/certification/"><button class="examens__btn btn-orange">Подробнее</button></a>
                 <div class="examens__elipce">
                     <img class="examens__img" src="<?= ASSETS ?>/images/examens/1.svg" alt="info">
                 </div>

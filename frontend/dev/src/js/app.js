@@ -11,6 +11,7 @@ import './classes/ToTop.js'
 import './classes/Form.js'
 import './classes/Validation.js'
 import './classes/Util.js'
+import './classes/Lightbox.js'
 
 
 
@@ -200,7 +201,4 @@ document.addEventListener('DOMContentLoaded', function() {
     //end
 
 
-
-
-
-})
+});

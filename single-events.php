@@ -105,9 +105,12 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         <?php endforeach; ?>
                     </div>
                 </div>
+
+
+
                 <div class="eventsSingle__wrapper-mob">
                     <h2 class="eventsSingle__allEventsTitle h2">Похожие мероприятия</h2>
-                <?php foreach ($events as $key => $event): ?>
+                <?php foreach ($events as $event): ?>
                     <div class="events__wrap">
                         <div class="events__wrapBox">
                             <a class="events__imgLink" href="<?= $event->guid ?>">
@@ -119,9 +122,7 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                                     <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
                                 </div>
                             </div>
-
                         </div>
-
                         <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
                     </div>
                 <?php endforeach; ?>

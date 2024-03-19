@@ -83,5 +83,6 @@ class Mask {
         }
     }
 }
-
-Mask.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Mask.init()
+});

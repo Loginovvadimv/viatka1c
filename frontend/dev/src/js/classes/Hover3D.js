@@ -107,5 +107,6 @@ export default class Hover3D {
         }
     }
 }
-
-Hover3D.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Hover3D.init()
+});

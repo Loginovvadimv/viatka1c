@@ -33,5 +33,6 @@ export default class Tabs {
         }
     }
 }
-
-Tabs.init()
+document.addEventListener('DOMContentLoaded', function() {
+    Tabs.init()
+})

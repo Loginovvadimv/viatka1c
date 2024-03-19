@@ -50,7 +50,7 @@
                             <a class="footer__email" href="mailto:<?= get_field('email', 'options') ?>"><?= get_field('email', 'options') ?></a>
                             <div class="footer__address"><?= get_field('address', 'options') ?></div>
                         </div>
-                        <button class="footer__btn btn-white">Задать вопрос</button>
+                        <button class="footer__btn btn-white" data-modal="orders">Задать вопрос</button>
 
 
                     </div>
@@ -71,12 +71,12 @@
 
         <div class="modal modal__content open" data-modal-type="orders" hidden>
             <div class="modal__wrapper form__wrapper">
-                <h3 class="modal__title">Оставить заявку</h3>
-                <h4 class="modal__subtitle">Оставьте свои контакты и мы скоро
-                    свяжемся с Вами </h4>
+                <h3 class="modal__title">Задать вопрос</h3>
+                <h4 class="modal__subtitle">Отправьте свой вопрос, мы свяжемся с Вами
+                    и ответим на все вопросы</h4>
                 <form class="form">
                     <div class="form__input-hidden">
-                        <input type="text" name="title" hidden value="Заказать звонок">
+                        <input type="text" name="title" hidden value="Задать вопрос">
                         <input type="text" name="code" hidden value="order">
                     </div>
                     <div class="form__input modal__field-name field field--required">
@@ -88,18 +88,18 @@
                     <div class="form__input">
                         <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
                     </div>
-                    <button class="form__button btn">Оставить заявку</button>
+                    <button class="form__button btn btn-orange">Отправить</button>
                     <div class="worksDone__link">
                         <label for="checkbox" class="form__checkbox">
                             <input type="checkbox" name="checkbox" id="checkbox" checked required>
                         </label>
                         <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
                     </div>
-                    <!--                    <div class="form__line"></div>-->
-                    <div class="form__text">Или напишите нам в мессенджеры</div>
-                    <div class="form__messegers">
-                        <a href="<?= get_field('telegram', 'options') ?>" class="telegram"><img src="<?= ASSETS ?>/images/messegers/telegram.svg" alt="telegram"></a>
-                        <a href="<?= get_field('whatsapp', 'options') ?>" class="whatsapp"><img src="<?= ASSETS ?>/images/messegers/whatsapp.svg" alt="whatsapp"></a>
+                                        <div class="form__line"></div>
+                    <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+                    <div class="form__contacts">
+                        <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                        <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
                     </div>
                 </form>
                 <button class="modal__close modal__close--fixed" type="button">
@@ -111,12 +111,12 @@
         <div class="modal modal__content" data-modal-type="thank" hidden>
             <div class="modal__wrapper form__wrapper modal__wrapper modal__wrapper-thanks">
                 <img src="<?= ASSETS ?>/images/modal-thk.png" alt="thanks">
-                <h3 class="form__title modal__title form__title-thank">Спасибо за заявку!</h3>
+                <h3 class="form__title modal__title form__title-thank">Спасибо за вопрос!</h3>
                 <p>Мы свяжемся с Вами в ближайшее время</p>
                 <button class="modal__close-thank modal__close btn btn-orange" type="button">
                     Закрыть
                 </button>
-                <button class="modal__close modal__close--fixed" type="button"></button>
+                <button class="modal__close modal__close--fixed modal__close-x" type="button"></button>
             </div>
         </div>
 
