@@ -1,19 +1,30 @@
 <?php
 get_header();
-$params = array(
-    'post_type' => 'events',
-    'orderby' => 'date',
-    'order' => 'DESC',
-    'posts_per_page' => -1,
-    'p'=> get_the_ID()
-);
-$events = get_posts($params);
-$eventsSpeakRep = get_field('events-speakRep', $events[0]->ID);
-$eventsСonditions = get_field('events-conditions', $events[0]->ID);
-$eventsAttentions = get_field('events-attentions', $events[0]->ID);
+
+$compare_events = get_field('compare-events-list', get_the_ID());
+$data['compare_title'] = get_field('compare-events-title', get_the_ID());
+
+if(isset($compare_events) && !empty($compare_events)){
+    foreach ($compare_events as $item) {
+        $data['compare_events'][] = [
+            'id' => $item->ID,
+            'name' => $item->post_title,
+            'preview' => get_the_post_thumbnail($item->ID, 'full', ['loading' => 'lazy', 'class'=>'eventsSingle__dopImg']),
+            'date' => get_field('event-date', $item->ID),
+            'time' => get_field('event-time', $item->ID),
+            'time-text' => get_field('event-time-single', $item->ID),
+        ];
+    }
+}
+
+$eventsSpeakRep = get_field('events-speakRep');
+$eventsСonditions = get_field('events-conditions');
+$eventsAttentions = get_field('events-attentions');
+
+
 ?>
 
-<?php foreach ($events as $key => $item): ?>
+
     <section class="eventsSingle newSection">
         <div class="container">
             <div class="contacts__bgWrap background-wrap">
@@ -25,26 +36,26 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                         <a href="/allevents/">Мероприятия</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                        <div  class="crumbActive"><?= get_field('event-name', $item->ID) ?></div>
+                        <div  class="crumbActive"><?= get_the_title() ?></div>
                     </div>
                 </div>
-                <h2 class="eventsSingle__title title"><?= get_field('event-name', $item->ID) ?></h2>
+                <h1 class="eventsSingle__title title"><?= get_the_title() ?></h1>
             </div>
             <div class="eventsSingle__wrapper">
                 <div class="eventsSingle__regWrap">
                     <div class="eventsSingle__regbox">
                         <div class="events__date eventsSingle__date fs16"><?= get_field('event-date', $item->ID) ?></div>
                         <div class="eventsSingle__time fs16">
-                            <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time-single', $item->ID) ?>
+                            <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time-single') ?>
                         </div>
                     </div>
-                    <div class="eventsSingle__price fs16">Стоимость обучения: <?= get_field('event-price', $item->ID) ?></div>
+                    <div class="eventsSingle__price fs16">Стоимость обучения: <?= get_field('event-price') ?></div>
                     <button class="eventsSingle__btn btn-orange">Зарегистрироваться</button>
 
                 </div>
                 <div class="eventsSingle__invation">
                     <div class="eventsSingle__infoWrapper">
-                        <?= $item->post_content ?>
+                        <?php the_content() ?>
                     </div>
                     <?php if(!empty($eventsSpeakRep)): ?>
                     <div class="eventsSingle__teachers">
@@ -86,50 +97,53 @@ $eventsAttentions = get_field('events-attentions', $events[0]->ID);
                     <button class="eventsSingle__regbtn btn-orange">Зарегистрироваться</button>
                 </div>
             </div>
+            <?php if(!empty($data['compare_events'])) : ?>
                 <div class="eventsSingle__allEvents">
-                    <h2 class="eventsSingle__allEventsTitle h2">Похожие мероприятия</h2>
-                    <div class="events__wrapper-dop">
-                        <?php foreach ($events as $event): ?>
-                            <div class="events__wrap">
-                                <a href="<?= $event->guid ?>">
-                                    <img class="events__img" src="<?= get_field('event-img', $event->ID)?>" alt="event" loading="lazy">
-                                </a>
-                                <div class="events__info">
-                                    <div class="events__date fs16"><?= get_field('event-date', $event->ID) ?></div>
-                                    <div class="events__time fs16">
-                                        <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
-                                    </div>
-                                    <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
+                <h2 class="eventsSingle__allEventsTitle h2"><?= $data['compare_title'] ?></h2>
+                <div class="events__wrapper-dop">
+                    <?php foreach ($data['compare_events'] as $event): ?>
+                        <div class="events__wrap">
+                            <a href="<?= get_permalink($event['id'])?>">
+                                <?= $event['preview'] ?>
+                            </a>
+                            <div class="events__info">
+                                <div class="events__date fs16"><?= $event['date'] ?></div>
+                                <div class="events__time fs16">
+                                    <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time">
+                                    <?= $event['time'] ?>
                                 </div>
+                                <a href="<?= get_permalink($event['id'])?>"><div class="events__name fs16"> <?= $event['name'] ?></div></a>
                             </div>
-                        <?php endforeach; ?>
-                    </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
+            </div>
+            <?php endif ?>
 
 
-
+            <?php if(!empty($data['compare_events'])) : ?>
                 <div class="eventsSingle__wrapper-mob">
-                    <h2 class="eventsSingle__allEventsTitle h2">Похожие мероприятия</h2>
-                <?php foreach ($events as $event): ?>
+                    <h2 class="eventsSingle__allEventsTitle h2"><?= $data['compare_title'] ?></h2>
+                    <?php foreach ($data['compare_events'] as $event): ?>
                     <div class="events__wrap">
                         <div class="events__wrapBox">
-                            <a class="events__imgLink" href="<?= $event->guid ?>">
-                                <img class="events__img" src="<?= get_field('event-img', $event->ID)?>" alt="event" loading="lazy">
+                            <a class="events__imgLink" href="<?= get_permalink($event['id'])?>">
+                                <?= $event['preview'] ?>
                             </a>
                             <div class="events__infoBox">
-                                <div class="events__date fs16"><?= get_field('event-date', $event->ID) ?></div>
+                                <div class="events__date fs16"><?= $event['date'] ?></div>
                                 <div class="events__time fs16">
-                                    <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
+                                    <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= $event['time'] ?>
                                 </div>
                             </div>
                         </div>
-                        <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
+                        <a href="<?= get_permalink($event['id'])?>"><div class="events__name fs16"> <?= $event['name'] ?></div></a>
                     </div>
                 <?php endforeach; ?>
             </div>
+            <?php endif ?>
         </div>
     </section>
-<?php endforeach; ?>
 
 
 

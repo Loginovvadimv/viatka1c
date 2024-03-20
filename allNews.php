@@ -6,7 +6,7 @@ get_header();
 $current_page = $_GET['pag'] ? $_GET['pag'] : 1;
 
 $args = array(
-    'posts_per_page' => 1,
+    'posts_per_page' => 5,
     'post_type' => 'news',
     'post_status' => 'publish',
     'orderby' => 'date',
@@ -37,6 +37,8 @@ $pagination = Pagination::create(
 );
 
 ?>
+
+
 
 <section class="pageNews newSection">
     <div class="container">

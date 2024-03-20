@@ -1,13 +1,39 @@
+
+
+
 <?php
     // Template Name: Все акции
 get_header();
+
+$current_page = $_GET['pag'] ? $_GET['pag'] : 1;
+
 $params = array(
+    'posts_per_page' => 10,
     'post_type' => 'stocks',
+    'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
-    'posts_per_page' => -1,
+    'paged' => $current_page,
 );
-$stocks = get_posts($params);
+
+$stocks = new WP_Query($params);
+
+foreach ($stocks->posts as $stock) {
+    $data['stocks'][] = [
+        'id' => $stock->ID,
+        'post_title' => get_the_title($stock->ID),
+    ];
+}
+
+$pagination = Pagination::create(
+    [
+        'pages' => $stocks->max_num_pages,
+        'paged' => $current_page,
+        'range' => 1,
+        'post_type' => 'stocks'
+    ]
+);
+
 ?>
 
 <section class="allStocks newSection">
@@ -36,19 +62,20 @@ $stocks = get_posts($params);
         </div>
 
         <div class="allStocks__wrapper">
-                <?php foreach ($stocks as $key => $stock): ?>
+                <?php foreach ($data['stocks'] as $stock): ?>
                     <div class="stocks__wrap allStocks__wrap">
                         <div class="stocks__img">
-                            <a href="<?= $stock->guid ?>">
-                                <img src="<?= get_the_post_thumbnail($stock->ID, 'full', ['loading' => 'lazy']) ?>" alt="logo">
+                            <a href="<?= get_permalink($stock['id']) ?>">
+                                <img src="<?= get_the_post_thumbnail($stock['id'], 'full', ['loading' => 'lazy']) ?>" alt="logo">
                             </a>
                         </div>
                         <div class="stocks__info">
-                            <a class="stocks__text" href="<?= $stock->guid ?>"><?= $stock->post_title  ?></a>
-                            <div class="stocks__date"><?= get_field('promodate', $stock->ID)?></div>
+                            <a class="stocks__text" href="<?= get_permalink($stock['id']) ?>"><?= $stock['post_title'] ?></a>
+                            <div class="stocks__date"><?= get_field('promodate', $stock['id'])?></div>
                         </div>
                     </div>
                 <?php endforeach; ?>
+            <?= $pagination ?>
         </div>
     </div>
 </section>

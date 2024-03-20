@@ -1,11 +1,33 @@
 <?php
+
+$current_page = $_GET['pag'] ? $_GET['pag'] : 1;
+
+
 $params = array(
+    'posts_per_page' => 4,
     'post_type' => 'events',
+    'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
-    'posts_per_page' => -1,
+    'paged' => $current_page,
 );
-$events = get_posts($params);
+
+$events = new WP_Query($params);
+
+foreach ($events->posts as $event) {
+    $data['events'][] = [
+        'id' => $event->ID,
+    ];
+}
+
+$pagination = Pagination::create(
+    [
+        'pages' => $events->max_num_pages,
+        'paged' => $current_page,
+        'range' => 1,
+        'post_type' => 'events'
+    ]
+);
 ?>
 
 
@@ -16,44 +38,42 @@ $events = get_posts($params);
                 <a href="/allevents/"><button class="events__btn btn-white">Все мероприятия</button></a>
             </div>
         <div class="events__wrapper">
-            <?php foreach ($events as $key => $event): ?>
+            <?php foreach ($data['events'] as $event): ?>
             <div class="events__wrap">
-                <a class="events__imgLink" href="<?= $event->guid ?>">
-                <img class="events__img" src="<?= get_field('event-img', $event->ID)?>" alt="event" loading="lazy">
+                <a class="events__imgLink" href="<?= get_permalink($event['id']) ?>">
+                <img class="events__img" src="<?= get_field('event-img', $event['id'])?>" alt="event" loading="lazy">
                 </a>
                 <div class="events__info">
-                    <div class="events__date fs16"><?= get_field('event-date', $event->ID) ?></div>
+                    <div class="events__date fs16"><?= get_field('event-date', $event['id']) ?></div>
                     <div class="events__time fs16">
-                        <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
+                        <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event['id']) ?>
                     </div>
-                    <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
+                    <a href="<?= get_permalink($event['id']) ?>"><div class="events__name fs16"><?= get_field('event-name', $event['id']) ?></div></a>
                 </div>
             </div>
             <?php endforeach; ?>
-            <button data-next="<?= ($paged + 1) ?>" class="btn btn-5 catalog-next">
-                Следующая
-                <img src="<?=ASSETS?>/images/icons/call.svg" alt="">
-            </button>
+            <?= $pagination ?>
         </div>
         <div class="events__wrapper-mob">
-            <?php foreach ($events as $key => $event): ?>
+            <?php foreach ($data['events'] as $event): ?>
                 <div class="events__wrap">
                     <div class="events__wrapBox">
-                        <a class="events__imgLink" href="<?= $event->guid ?>">
-                            <img class="events__img" src="<?= get_field('event-img', $event->ID)?>" alt="event" loading="lazy">
+                        <a class="events__imgLink" href="<?= get_permalink($event['id']) ?>">
+                            <img class="events__img" src="<?= get_field('event-img', $event['id'])?>" alt="event" loading="lazy">
                         </a>
                         <div class="events__infoBox">
-                            <div class="events__date fs16"><?= get_field('event-date', $event->ID) ?></div>
+                            <div class="events__date fs16"><?= get_field('event-date', $event['id']) ?></div>
                             <div class="events__time fs16">
-                                <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event->ID) ?>
+                                <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event['id']) ?>
                             </div>
                         </div>
 
                     </div>
 
-                        <a href="<?= $event->guid ?>"><div class="events__name fs16"><?= get_field('event-name', $event->ID) ?></div></a>
+                        <a href="<?= get_permalink($event['id']) ?>"><div class="events__name fs16"><?= get_field('event-time', $event['id']) ?></div></a>
                 </div>
             <?php endforeach; ?>
+            <?= $pagination ?>
         </div>
     </div>
 </section>

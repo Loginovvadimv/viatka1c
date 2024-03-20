@@ -1,11 +1,22 @@
 <?php
+
 $params = array(
+    'posts_per_page' => 2,
     'post_type' => 'stocks',
+    'post_status' => 'publish',
     'orderby' => 'date',
     'order' => 'DESC',
-    'posts_per_page' => -1,
 );
-$stocks = get_posts($params);
+
+$stocks = new WP_Query($params);
+
+foreach ($stocks->posts as $stock) {
+    $data['stocks'][] = [
+        'id' => $stock->ID,
+        'post_title' => get_the_title($stock->ID),
+    ];
+}
+
 ?>
 <section class="stocks section">
     <div class="container">
@@ -17,16 +28,16 @@ $stocks = get_posts($params);
             <div class="stocks__swiper slider__opacity slider__opacity-2-elements">
                 <div class="swiper">
                     <div class="swiper-wrapper">
-                        <?php foreach ($stocks as $key => $stock): ?>
+                        <?php foreach ($data['stocks'] as $stock): ?>
                             <div class="stocks__wrap">
                                 <div class="stocks__img">
-                                    <a href="<?= $stock->guid ?>">
-                                        <img src="<?= get_the_post_thumbnail($stock->ID, 'full', ['loading' => 'lazy']) ?>" alt="logo">
+                                    <a href="<?= get_permalink($stock['id']) ?>">
+                                        <img src="<?= get_the_post_thumbnail($stock['id'], 'full', ['loading' => 'lazy']) ?>" alt="logo">
                                     </a>
                                 </div>
                                 <div class="stocks__info">
-                                    <a class="stocks__text" href="<?= $stock->guid ?>"><?= $stock->post_title  ?></a>
-                                    <div class="stocks__date"><?= get_field('promodate', $stock->ID)?></div>
+                                    <a class="stocks__text" href="<?= get_permalink($stock['id']) ?>"><?= $stock['post_title'] ?></a>
+                                    <div class="stocks__date"><?= get_field('promodate', $stock['id'])?></div>
                                 </div>
                             </div>
                         <?php endforeach; ?>
