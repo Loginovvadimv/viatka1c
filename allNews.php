@@ -49,10 +49,10 @@ $pagination = Pagination::create(
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="#">События</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">Новости</div>
+                    <div class="crumbActive"><?= get_the_title() ?></div>
                 </div>
             </div>
-            <div class="pageNews__title title">Новости</div>
+            <h1 class="pageNews__title title"><?= get_the_title() ?></h1>
         </div>
             <div class="scroller">
                 <div class="quickLinks">

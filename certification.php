@@ -16,7 +16,7 @@ $sertList = get_field('sert-list', 'options');
                     <div class="crumbActive">Сертификация</div>
                 </div>
             </div>
-            <h2 class="certification__title title">Сертификация</h2>
+            <h1 class="certification__title title">Сертификация</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

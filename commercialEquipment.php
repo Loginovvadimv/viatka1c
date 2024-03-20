@@ -15,7 +15,7 @@ get_header();
                     <div class="crumbActive">Торговое оборудование</div>
                 </div>
             </div>
-            <h2 class="commercialEquipment__title title">Торговое оборудование</h2>
+            <h1 class="commercialEquipment__title title">Торговое оборудование</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

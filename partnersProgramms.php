@@ -21,7 +21,7 @@ $partners = get_posts($params);
                     <div class="crumbActive">Партнёрские программы</div>
                 </div>
             </div>
-            <h2 class="pageNews__title title">Партнёрские программы</h2>
+            <h1 class="pageNews__title title">Партнёрские программы</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

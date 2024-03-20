@@ -48,12 +48,12 @@ $pagination = Pagination::create(
                     <div class="crumbActive">Акции</div>
                 </div>
             </div>
-        <h2 class="allStocks__title title">Акции</h2>
+        <h1 class="allStocks__title title">Акции</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="/allnews/">Новости</a>
+                    <a href="<?= get_permalink(181) ?>">Новости</a>
                     <a href="/allevents/">Мероприятия</a>
                     <a href="/allpromos/" class="active">Акции</a>
                 </div>

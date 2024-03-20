@@ -19,7 +19,7 @@ $softListDown = get_field('soft-list-down', 'options');
                     <div class="crumbActive">1С:Софт</div>
                 </div>
             </div>
-            <h2 class="soft__title title">1С:Софт</h2>
+            <h1 class="soft__title title">1С:Софт</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

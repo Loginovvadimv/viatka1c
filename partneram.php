@@ -17,7 +17,7 @@ $destrRep = get_field('destr-rep', 'options');
                         <div  class="crumbActive">Как стать партнёром</div>
                     </div>
                 </div>
-                <h2 class="title becomePartnerpage__title">Как стать партнёром</h2>
+                <h1 class="title becomePartnerpage__title">Как стать партнёром</h1>
             </div>
             <div class="scroller">
                 <div class="quickLinks">

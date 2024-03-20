@@ -25,7 +25,7 @@ $stocks = get_posts($params);
                     <div  class="crumbActive"><?= $item->post_title ?></div>
                 </div>
             </div>
-            <h2 class="eventsSingle__title title"><?= $item->post_title ?></h2>
+            <h1 class="eventsSingle__title title"><?= $item->post_title ?></h1>
         </div>
         <div class="stocksSingle__wrap">
             <div class="stocksSingle__info">

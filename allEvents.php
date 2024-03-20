@@ -1,5 +1,7 @@
 <?php
+    // Template Name: Все мероприятия
 get_header();
+
 $current_page = $_GET['pag'] ? $_GET['pag'] : 1;
 
 
@@ -17,6 +19,12 @@ $events = new WP_Query($params);
 foreach ($events->posts as $event) {
     $data['events'][] = [
         'id' => $event->ID,
+        'name' => $event->post_title,
+        'content' => apply_filters('the_content', get_post_field('post_content', $event->ID)),
+        'preview' => get_the_post_thumbnail($event->ID, 'full', ['loading' => 'lazy']),
+        'except' => get_the_excerpt($event->ID),
+        'link' => get_permalink($event->ID),
+        'date' => Helper::getHumanDate($event->post_date),
     ];
 }
 
@@ -30,6 +38,8 @@ $pagination = Pagination::create(
 );
 ?>
 
+
+
 <section class="allEvents newSection">
     <div class="container">
         <div class="background-wrap">
@@ -39,22 +49,22 @@ $pagination = Pagination::create(
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="#" class="crumbActive">События</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">Мероприятия</div>
+                    <div class="crumbActive"><?= get_the_title() ?></div>
                 </div>
             </div>
-            <h2 class="allEvents__title title">Мероприятия</h2>
+            <h1 class="allEvents__title title"><?= get_the_title() ?></h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="/allnews/">Новости</a>
+                    <a href="<?= get_permalink(181) ?>">Новости</a>
                     <a href="/allevents/" class="active">Мероприятия</a>
                     <a href="/allpromos/">Акции</a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>
         </div>
-
+        <?php var_dump($event) ?>
         <div class="allEvents__wrapper">
             <?php foreach ($data['events'] as $event): ?>
                 <div class="events__wrap">
@@ -77,7 +87,7 @@ $pagination = Pagination::create(
                 <div class="events__wrap">
                     <div class="events__wrapBox">
                         <a class="events__imgLink" href="<?= get_permalink($event['id']) ?>">
-                            <img class="events__img" src="<?= get_field('event-img', $event['id'])?>" alt="event" loading="lazy">
+                            <?= $event['preview'] ?>
                         </a>
                         <div class="events__infoBox">
                             <div class="events__date fs16"><?= get_field('event-date', $event['id']) ?></div>

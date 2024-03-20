@@ -20,7 +20,7 @@ $specLinks = get_field('spec-links', 'options');
                     <div class="crumbActive">Сертификация "1С:Специалист</div>
                 </div>
             </div>
-            <h2 class="certification__title title">Сертификация "1С:Специалист</h2>
+            <h1 class="certification__title title">Сертификация "1С:Специалист</h1>
         </div>
         <div class="certSpecialist__wrapper">
             <?php if(!empty($specInfoRep)): ?>

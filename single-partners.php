@@ -26,7 +26,7 @@ $partners = get_posts($params);
                 </div>
             </div>
 
-            <h2 class="singlePartners title"><?= $partner->post_title ?></h2>
+            <h1 class="singlePartners title"><?= $partner->post_title ?></h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

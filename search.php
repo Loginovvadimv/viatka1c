@@ -89,7 +89,7 @@ add_filter( 'searchwp_live_search_configs', 'my_searchwp_live_search_configs' );
 
 <section class="newSection search">
     <div class="container">
-        <h2 class="title search__title">Поиск</h2>
+        <h1 class="title search__title">Поиск</h1>
         <div class="search__wrapper">
             <?php
             // if your form is generated using get_search_form() you do not need to do this

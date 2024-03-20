@@ -15,7 +15,7 @@ get_header();
                     <div class="crumbActive">1С:Предприятие 8</div>
                 </div>
             </div>
-            <h2 class="certification__title title">1С:Предприятие 8</h2>
+            <h1 class="certification__title title">1С:Предприятие 8</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

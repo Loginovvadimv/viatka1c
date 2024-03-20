@@ -16,7 +16,7 @@ $distrInfo = get_field('distr-info', 'options');
                         <div class="crumbActive">1С:Дистрибьюция</div>
                     </div>
                 </div>
-                <h2 class="distribution__title title">1С:Дистрибьюция</h2>
+                <h1 class="distribution__title title">1С:Дистрибьюция</h1>
             </div>
             <div class="scroller">
                 <div class="quickLinks">

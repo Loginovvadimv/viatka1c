@@ -5,6 +5,7 @@ $examensRep = get_field('examens-rep', 'options');
 $shablonListOpen = get_field('shablon-list-open');
 $blockInfoRep = get_field('blockInfo-rep');
 $linksRep = get_field('links-rep');
+$video = get_field('video');
 ?>
 
 
@@ -22,7 +23,7 @@ $linksRep = get_field('links-rep');
                     <div class="crumbActive"><?= get_the_title() ?></div>
                 </div>
             </div>
-            <h2 class="allEvents__title title"><?= get_the_title() ?></h2>
+            <h1 class="allEvents__title title"><?= get_the_title() ?></h1>
         </div>
         <div class="shablon__wrapper">
             <? the_content() ?>
@@ -132,6 +133,36 @@ $linksRep = get_field('links-rep');
 
         <?php endforeach; ?>
         </div>
+
+            <div class="video__wrapper">
+
+                <?php if(!empty(the_sub_field('video_file'))): ?>
+                    <a class="video__videoLink" data-fancybox href="<?php the_sub_field('video-file'); ?>"><div class="video__wrap video__wrap-link">
+                            <img src="<?php the_sub_field('video_img'); ?>" alt="video">
+
+                            <div class="video__container">
+                                <img class="video__play" src="<?= ASSETS ?>/images/video/play.webp" alt="play">
+                            </div>
+
+                        </div></a>
+                <?php endif; ?>
+
+
+
+                <?php if(empty($video['video_file'])): ?>
+                    <a class="video__videoLink" data-fancybox href='<?= $video['video_link'] ?>'><div class="video__wrap video__wrap-link">
+                            <img src="<?php the_sub_field('video_img'); ?>" alt="video">
+                            <div class="video__container">
+                                <img class="video__play" src="<?= ASSETS ?>/images/video/play.webp" alt="play">
+                            </div>
+
+                        </div></a>
+                <?php endif; ?>
+
+
+            </div>
+
+
         </div>
     </section>
         <?php endif; ?>

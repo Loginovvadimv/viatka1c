@@ -18,7 +18,7 @@ $itsPrices = get_field('its-prices', 'options');
                     <div class="crumbActive">1С:ИТС</div>
                 </div>
             </div>
-            <h2 class="its__title title">1С:ИТС</h2>
+            <h1 class="its__title title">1С:ИТС</h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">
