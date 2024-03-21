@@ -7,6 +7,7 @@
       gap: 8px
       display: flex
       flex-direction: column
+      padding-left: 18px
       li
         list-style-type: disc
       li::marker
@@ -37,3 +38,18 @@
       color: rgb(250, 126, 16)
       &:hover
         color: rgb(249, 95, 9)
+
+
+@media (max-width: 767px)
+  .certSpecialist
+    &__wrapper
+      gap: 32px
+    &__greyWrap
+      border-radius: 16px
+      padding: 16px
+      font-size: 18px
+      font-weight: 600
+      line-height: 26px
+    &__links
+      width: max-content
+

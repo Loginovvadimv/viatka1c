@@ -5,7 +5,7 @@ $examensRep = get_field('examens-rep', 'options');
 $shablonListOpen = get_field('shablon-list-open');
 $blockInfoRep = get_field('blockInfo-rep');
 $linksRep = get_field('links-rep');
-$video = get_field('video');
+//$video = get_field('video');
 ?>
 
 

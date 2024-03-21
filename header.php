@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<!--    <link rel="shortcut icon" href="--><?php //= get_site_url() ?><!--/favicon.svg" type="image/png">-->
+    <link rel="shortcut icon" href="<?= get_site_url() ?>/favicon.svg" type="image/png">
     <link type="image/x-icon" href="<?=ASSETS?>/images/favicon.svg" rel="shortcut icon">
     <link type="Image/x-icon" href="<?=ASSETS?>/images/favicon.svg" rel="icon">
     <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c2a888d7-28f1-4234-89bb-c4785a857bc4"></script>

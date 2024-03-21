@@ -66,7 +66,17 @@
                     <div class="footer__razrab">Разработка сайта: <a href="https://vyatka-it.ru/" target="_blank"><img src="<?= ASSETS ?>/images/icons/light.webp" alt="company"></a></div>
                 </div>
             </div>
-            <div class="btn-up btn-up_hide"><img src="<?= ASSETS ?>/images/icons/upb.svg" alt="up"></div>
+            <div class="btn-up btn-up_hide"><svg width="46.000000" height="46.000000" viewBox="0 0 46 46" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                    <defs>
+                        <clipPath id="clip51_4183">
+                            <rect id="Icons" width="24.000000" height="24.000000" transform="translate(11.000000 35.000000) rotate(-90.000000)" fill="white" fill-opacity="0"/>
+                        </clipPath>
+                    </defs>
+                    <circle id="Ellipse 62" cx="23.000000" cy="23.000000" r="23.000000" fill="#FFBA08" fill-opacity="1.000000"/>
+                    <g clip-path="url(#clip51_4183)">
+                        <path id="Arrow 1" d="M22 17.4143L18.0503 21.364C17.6543 21.76 17.032 21.76 16.636 21.364C16.2401 20.968 16.2401 20.3457 16.636 19.9497L22.2928 14.293C22.6888 13.897 23.3112 13.897 23.7072 14.293L29.364 19.9497C29.7599 20.3457 29.7599 20.968 29.364 21.364C28.968 21.76 28.3457 21.76 27.9497 21.364L24 17.4143L24 31C24 31.5601 23.5601 32 23 32C22.4399 32 22 31.5601 22 31L22 17.4143Z" fill="#F4F4F4" fill-opacity="1.000000" fill-rule="evenodd"/>
+                    </g>
+                </svg></div>
         </footer>
 
         <div class="modal modal__content open" data-modal-type="orders" hidden>
@@ -81,9 +91,11 @@
                     </div>
                     <div class="form__input modal__field-name field field--required">
                         <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
@@ -119,9 +131,11 @@
                     </div>
                     <div class="form__input modal__field-name field field--required">
                         <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
@@ -157,9 +171,11 @@
                     </div>
                     <div class="form__input modal__field-name field field--required">
                         <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
@@ -194,9 +210,51 @@
                     </div>
                     <div class="form__input modal__field-name field field--required">
                         <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <div class="requiredWrap"></div>
+                    </div>
+                    <div class="form__input">
+                        <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                    </div>
+                    <button class="form__button btn btn-orange">Отправить</button>
+                    <div class="worksDone__link">
+                        <label for="checkbox" class="form__checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" checked required>
+                        </label>
+                        <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
+                    </div>
+                    <div class="form__line"></div>
+                    <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+                    <div class="form__contacts">
+                        <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                        <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
+                    </div>
+                </form>
+                <button class="modal__close modal__close--fixed" type="button">
+                </button>
+            </div>
+        </div>
+
+
+        <div class="modal modal__content open" data-modal-type="events" hidden>
+            <div class="modal__wrapper form__wrapper">
+                <h3 class="modal__title">Заявка на мероприятие</h3>
+                <h4 class="modal__subtitle">Оставьте заявку, мы свяжемся с Вами в ближайшее время</h4>
+                <form class="form">
+                    <div class="form__input-hidden">
+                        <input type="text" name="title" hidden value="Заявка на мероприятие <?= get_the_title() ?>">
+                        <input type="text" name="code" hidden value="events">
+                    </div>
+                    <div class="form__input modal__field-name field field--required">
+                        <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                        <div class="requiredWrap"></div>
+                    </div>
+                    <div class="form__input">
+                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
                         <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>

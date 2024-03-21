@@ -53,11 +53,14 @@ $specLinks = get_field('spec-links', 'options');
             <?php endif; ?>
 
             <?php if(!empty($specLinks)): ?>
-                <div class="certSpecialist__links">
-                    <?php foreach ($specLinks as $item): ?>
-                        <div class="certSpecialist__link fs16"><?= $item['spec-linksText'] ?><a target="_blank" href="<?= $item['spec-link']['url'] ?>"><?= $item['spec-link']['title'] ?></a></div>
-                    <?php endforeach; ?>
+                <div class="scroller">
+                    <div class="certSpecialist__links">
+                        <?php foreach ($specLinks as $item): ?>
+                            <div class="certSpecialist__link fs16"><?= $item['spec-linksText'] ?><a target="_blank" href="<?= $item['spec-link']['url'] ?>"><?= $item['spec-link']['title'] ?></a></div>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
+
             <?php endif; ?>
 
 

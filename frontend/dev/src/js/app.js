@@ -72,6 +72,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headerWrap.classList.add('header__wrap-mobile');
             headerSearch.classList.add('sVisibility');
 
+
         } else {
             header.classList.remove('header__open');
             navContainer.classList.remove('visibility');
@@ -86,11 +87,14 @@ document.addEventListener('DOMContentLoaded', function() {
     if (mediaQuery.matches) {
         navLink.forEach(item => {
             item.addEventListener('click', (e) => {
+                e.preventDefault();
                 navUl.forEach(nav => {
-                    nav.classList.remove('visibility');
+                    if (nav!==item.nextElementSibling){
+                        nav.classList.remove('visibility');
+                    }
                 })
                 item.nextElementSibling.classList.toggle('visibility');
-                e.preventDefault();
+
             });
         });
     }
