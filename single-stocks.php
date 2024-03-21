@@ -18,7 +18,7 @@ $stocks = get_posts($params);
                 <div class="contacts__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="#">События</a>
+                    <a href="/allnews/">События</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="/allpromos/">Акции</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">

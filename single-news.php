@@ -35,7 +35,7 @@ foreach ($news->posts as $item) {
                 <div class="singleNews__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="#">События</a>
+                    <a href="/allnews/">События</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="/allnews/">Новости</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
@@ -65,7 +65,8 @@ foreach ($news->posts as $item) {
                     update_field('news-views', $viewing);
                     ?>
                     <div class="singleNews__views singleNews__infotext"><img src="<?= ASSETS ?>/images/icons/views.svg" alt="views"><span>Просмотров:</span><?= get_field('news-views') ?></div>
-                    <div class="singleNews__share singleNews__infotext"><div class="singleNews__shareImg"><img src="<?= ASSETS ?>/images/icons/share.svg" alt="share"></div><a href="#">Поделиться</a></div>
+<!--                    <div class="singleNews__share singleNews__infotext"><div class="singleNews__shareImg"><img src="--><?php //= ASSETS ?><!--/images/icons/share.svg" alt="share"></div><a href="#">Поделиться</a></div>-->
+                    <div class="ya-share2" data-curtain data-shape="round" data-limit="0" data-more-button-type="long" data-services="vkontakte,telegram,whatsapp"></div>
                 </div>
             </div>
         </div>

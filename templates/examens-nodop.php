@@ -17,7 +17,11 @@ $examensRep = get_field('examens-rep', 'options');
                     <?php if(!empty($examensRep)): ?>
                         <?php foreach ($examensRep as $item): ?>
                             <li class="examens__li"><div class="examens__date examens__headDate"><?= $item['date'] ?><span><?= $item['time'] ?></span></div><div class="examens__type examens__headType"><?= $item['type'] ?></div><div class="examens__price examens__headPrice"><?= $item['price'] ?></div>
-                                <a class="examens__reg" href="#">Подать заявку</a></li>
+                            <?php if(!empty($item['link'])): ?>
+                                <a target="_blank" class="examens__reg" href="<?= $item['link']?>">Подать заявку</a></li>
+                            <?php else: ?>
+                                <a class="examens__reg" data-modal="examens">Подать заявку</a></li>
+                            <?php endif; ?>
                         <?php endforeach; ?>
                     <?php endif; ?>
                 </ul>

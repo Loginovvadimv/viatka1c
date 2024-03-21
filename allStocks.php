@@ -43,7 +43,7 @@ $pagination = Pagination::create(
                 <div class="allStocks__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="#" class="crumbActive">События</a>
+                    <a href="/allnews/" class="crumbActive">События</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <div class="crumbActive">Акции</div>
                 </div>

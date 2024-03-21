@@ -17,6 +17,8 @@ $events = new WP_Query($params);
 foreach ($events->posts as $event) {
     $data['events'][] = [
         'id' => $event->ID,
+        'name' => $event->post_title,
+        'preview' => get_the_post_thumbnail($event->ID, 'full', ['loading' => 'lazy', 'class'=>'events__img']),
     ];
 }
 
@@ -41,7 +43,7 @@ $pagination = Pagination::create(
             <?php foreach ($data['events'] as $event): ?>
             <div class="events__wrap">
                 <a class="events__imgLink" href="<?= get_permalink($event['id']) ?>">
-                <img class="events__img" src="<?= get_field('event-img', $event['id'])?>" alt="event" loading="lazy">
+                    <?= $event['preview'] ?>
                 </a>
                 <div class="events__info">
                     <div class="events__date fs16"><?= get_field('event-date', $event['id']) ?></div>
@@ -59,7 +61,7 @@ $pagination = Pagination::create(
                 <div class="events__wrap">
                     <div class="events__wrapBox">
                         <a class="events__imgLink" href="<?= get_permalink($event['id']) ?>">
-                            <img class="events__img" src="<?= get_field('event-img', $event['id'])?>" alt="event" loading="lazy">
+                            <?= $event['preview'] ?>
                         </a>
                         <div class="events__infoBox">
                             <div class="events__date fs16"><?= get_field('event-date', $event['id']) ?></div>

@@ -32,7 +32,7 @@ $eventsAttentions = get_field('events-attentions');
                     <div class="contacts__breadСrumbs breadСrumbs">
                         <a href="/">Главная</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                        <a href="#">События</a>
+                        <a href="/allnews/">События</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                         <a href="/allevents/">Мероприятия</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
@@ -50,7 +50,7 @@ $eventsAttentions = get_field('events-attentions');
                         </div>
                     </div>
                     <div class="eventsSingle__price fs16">Стоимость обучения: <?= get_field('event-price') ?></div>
-                    <button class="eventsSingle__btn btn-orange">Зарегистрироваться</button>
+                    <button class="eventsSingle__btn btn-orange" data-modal="events">Зарегистрироваться</button>
 
                 </div>
                 <div class="eventsSingle__invation">
@@ -94,7 +94,7 @@ $eventsAttentions = get_field('events-attentions');
                         <div class="eventsSingle__blockColor"></div>
                     </div>
                     <?php endif; ?>
-                    <button class="eventsSingle__regbtn btn-orange">Зарегистрироваться</button>
+                    <button class="eventsSingle__regbtn btn-orange" data-modal="events">Зарегистрироваться</button>
                 </div>
             </div>
             <?php if(!empty($data['compare_events'])) : ?>
@@ -144,6 +144,44 @@ $eventsAttentions = get_field('events-attentions');
             <?php endif ?>
         </div>
     </section>
+
+
+<div class="modal modal__content open" data-modal-type="events" hidden>
+    <div class="modal__wrapper form__wrapper">
+        <h3 class="modal__title">Заявка на мероприятие</h3>
+        <h4 class="modal__subtitle">Оставьте заявку, мы свяжемся с Вами в ближайшее время</h4>
+        <form class="form">
+            <div class="form__input-hidden">
+                <input type="text" name="title" hidden value="Заявка на мероприятие <?= get_the_title() ?>">
+                <input type="text" name="code" hidden value="events">
+            </div>
+            <div class="form__input modal__field-name field field--required">
+                <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+            </div>
+            <div class="form__input">
+                <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+            </div>
+            <div class="form__input">
+                <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
+            </div>
+            <button class="form__button btn btn-orange">Отправить</button>
+            <div class="worksDone__link">
+                <label for="checkbox" class="form__checkbox">
+                    <input type="checkbox" name="checkbox" id="checkbox" checked required>
+                </label>
+                <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
+            </div>
+            <div class="form__line"></div>
+            <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+            <div class="form__contacts">
+                <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
+            </div>
+        </form>
+        <button class="modal__close modal__close--fixed" type="button">
+        </button>
+    </div>
+</div>
 
 
 

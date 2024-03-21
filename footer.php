@@ -108,6 +108,119 @@
         </div>
 
 
+        <div class="modal modal__content open" data-modal-type="examens" hidden>
+            <div class="modal__wrapper form__wrapper">
+                <h3 class="modal__title">Заявка на экзамен</h3>
+                <h4 class="modal__subtitle">Оставьте заявку, мы свяжемся с Вами в ближайшее время</h4>
+                <form class="form">
+                    <div class="form__input-hidden">
+                        <input type="text" name="title" hidden value="Заявка на экзамен">
+                        <input type="text" name="code" hidden value="examen">
+                    </div>
+                    <div class="form__input modal__field-name field field--required">
+                        <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                    </div>
+                    <div class="form__input">
+                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                    </div>
+                    <div class="form__input">
+                        <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                    </div>
+                    <button class="form__button btn btn-orange">Отправить</button>
+                    <div class="worksDone__link">
+                        <label for="checkbox" class="form__checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" checked required>
+                        </label>
+                        <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
+                    </div>
+                    <div class="form__line"></div>
+                    <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+                    <div class="form__contacts">
+                        <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                        <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
+                    </div>
+                </form>
+                <button class="modal__close modal__close--fixed" type="button">
+                </button>
+            </div>
+        </div>
+
+
+        <div class="modal modal__content open" data-modal-type="partners" hidden>
+            <div class="modal__wrapper form__wrapper">
+                <h3 class="modal__title">Заявка на партнёрство</h3>
+                <h4 class="modal__subtitle">Оставьте заявку, мы свяжемся с Вами в ближайшее время</h4>
+                <form class="form">
+                    <div class="form__input-hidden">
+                        <input type="text" name="title" hidden value="Заявка на партнёрство">
+                        <input type="text" name="code" hidden value="partners">
+                    </div>
+                    <div class="form__input modal__field-name field field--required">
+                        <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                    </div>
+                    <div class="form__input">
+                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                    </div>
+                    <div class="form__input">
+                        <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                    </div>
+                    <button class="form__button btn btn-orange">Отправить</button>
+                    <div class="worksDone__link">
+                        <label for="checkbox" class="form__checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" checked required>
+                        </label>
+                        <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
+                    </div>
+                    <div class="form__line"></div>
+                    <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+                    <div class="form__contacts">
+                        <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                        <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
+                    </div>
+                </form>
+                <button class="modal__close modal__close--fixed" type="button">
+                </button>
+            </div>
+        </div>
+
+        <div class="modal modal__content open" data-modal-type="сontactUs" hidden>
+            <div class="modal__wrapper form__wrapper">
+                <h3 class="modal__title">Заявка на звонок</h3>
+                <h4 class="modal__subtitle">Оставьте заявку, мы свяжемся с Вами в ближайшее время</h4>
+                <form class="form">
+                    <div class="form__input-hidden">
+                        <input type="text" name="title" hidden value="Заявка на звонок">
+                        <input type="text" name="code" hidden value="partners">
+                    </div>
+                    <div class="form__input modal__field-name field field--required">
+                        <input type="text" required="" placeholder="Ваше имя" class="validate-name required" name="name">
+                    </div>
+                    <div class="form__input">
+                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                    </div>
+                    <div class="form__input">
+                        <textarea name="comment" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                    </div>
+                    <button class="form__button btn btn-orange">Отправить</button>
+                    <div class="worksDone__link">
+                        <label for="checkbox" class="form__checkbox">
+                            <input type="checkbox" name="checkbox" id="checkbox" checked required>
+                        </label>
+                        <div class="worksDone__policy">Даю согласие на <a href="/policy/" target="_blank">обработку персональных данных</a></div>
+                    </div>
+                    <div class="form__line"></div>
+                    <div class="form__text">Или свяжитесь с нами другим удобным способом</div>
+                    <div class="form__contacts">
+                        <a class="form__phone" href="<?= get_field('phone-link', 'options') ?>"><?= get_field('phone', 'options') ?></a>
+                        <a target="_blank" class="form__messeger" href="https://vk.com/1c_vyatka"><img src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
+                    </div>
+                </form>
+                <button class="modal__close modal__close--fixed" type="button">
+                </button>
+            </div>
+        </div>
+
+
         <div class="modal modal__content" data-modal-type="thank" hidden>
             <div class="modal__wrapper form__wrapper modal__wrapper modal__wrapper-thanks">
                 <img src="<?= ASSETS ?>/images/modal-thk.png" alt="thanks">

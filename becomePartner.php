@@ -68,7 +68,7 @@
                     <div class="becomePartnerpage__comingPartnersTextSubitle fs16">Оставьте заявку, мы свяжемся с Вами и проконсультируем по всем вопросам</div>
                 </div>
                 <img class="becomePartnerpage__img" src="<?= ASSETS ?>/images/partners.webp" alt="partner" loading="lazy">
-                <button class="becomePartnerpage__btn btn-orange">Оставить заявку</button>
+                <button class="becomePartnerpage__btn btn-orange" data-modal="partners">Оставить заявку</button>
             </div>
 
 

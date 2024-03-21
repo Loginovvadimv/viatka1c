@@ -14,12 +14,14 @@ class Mailer {
         $title = $_POST['title'];
         $name = $_POST['name'];
         $phone = $_POST['phone'];
-        $to = 'm.yakimov@vyatka-it.ru';
+        $comment = $_POST['comment'];
+        $to = 'v.loginov@vyatka-it.ru';
 
         if (!empty($phone)) {
             $message = "Форма: " .$title. "\r\n";
             $message .= "Имя: " .$name. "\r\n";
             $message .= "Телефон: " .$phone. "\r\n";
+            $message .= "Комментарий: " .$comment. "\r\n";
 
 
             if (isset($_POST['subject'])) {
@@ -29,6 +31,9 @@ class Mailer {
             $headers = "From: Сайт <info@vyatka-it.ru>\r\n";
             $headers .= "MIME-Version: 1.0\r\n";
             $headers .= "Date: ". date('D, d M Y h:i:s O') ."\r\n";
+
+            $telegram = new Telegram();
+            $telegram->send($message);
 
             if (wp_mail($to, 'Новая заявка', $message, $headers)) {
                 echo wp_json_encode([

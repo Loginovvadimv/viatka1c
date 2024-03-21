@@ -66,7 +66,7 @@ $softListDown = get_field('soft-list-down', 'options');
                         <?php foreach ($softListDown as $item): ?>
                             <li class="soft__li fs16"><?= $item['soft-list'] ?>
                                 <?php if( $item['soft-list-link']): ?>
-                                <a href="<?= $item['soft-list-link']['url']?>"><?= $item['soft-list-link']['title']?></a>
+                                <a target="_blank" href="<?= $item['soft-list-link']['url']?>"><?= $item['soft-list-link']['title']?></a>
                                 <?php endif; ?>
                             </li>
                         <?php endforeach; ?>

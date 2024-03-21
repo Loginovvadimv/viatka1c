@@ -14,11 +14,11 @@
                 <div class="forus__breadСrumbs breadСrumbs">
                     <a href="/">Главная</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">О нас</div>
+                    <div class="crumbActive"><?= get_the_title(); ?></div>
                 </div>
             </div>
 
-            <h1 class="forus__title title">О нас</h1>
+            <h1 class="forus__title title"><?= get_the_title(); ?></h1>
         </div>
         <div class="forus__info">
             <?php foreach ($forusRep as $key => $item): ?>

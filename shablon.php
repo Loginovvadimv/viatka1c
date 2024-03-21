@@ -102,7 +102,7 @@ $video = get_field('video');
                             <?php if(!empty($examensRep)): ?>
                                 <?php foreach ($examensRep as $item): ?>
                                     <li class="examens__li"><div class="examens__date examens__headDate"><?= $item['date'] ?><span><?= $item['time'] ?></span></div><div class="examens__type examens__headType"><?= $item['type'] ?></div><div class="examens__price examens__headPrice"><?= $item['price'] ?></div>
-                                        <a class="examens__reg" href="#">Подать заявку</a></li>
+                                        <a class="examens__reg" data-modal="examens">Подать заявку</a></li>
                                 <?php endforeach; ?>
                             <?php endif; ?>
                         </ul>
@@ -134,33 +134,33 @@ $video = get_field('video');
         <?php endforeach; ?>
         </div>
 
-            <div class="video__wrapper">
-
-                <?php if(!empty(the_sub_field('video_file'))): ?>
-                    <a class="video__videoLink" data-fancybox href="<?php the_sub_field('video-file'); ?>"><div class="video__wrap video__wrap-link">
-                            <img src="<?php the_sub_field('video_img'); ?>" alt="video">
-
-                            <div class="video__container">
-                                <img class="video__play" src="<?= ASSETS ?>/images/video/play.webp" alt="play">
-                            </div>
-
-                        </div></a>
-                <?php endif; ?>
-
-
-
-                <?php if(empty($video['video_file'])): ?>
-                    <a class="video__videoLink" data-fancybox href='<?= $video['video_link'] ?>'><div class="video__wrap video__wrap-link">
-                            <img src="<?php the_sub_field('video_img'); ?>" alt="video">
-                            <div class="video__container">
-                                <img class="video__play" src="<?= ASSETS ?>/images/video/play.webp" alt="play">
-                            </div>
-
-                        </div></a>
-                <?php endif; ?>
-
-
-            </div>
+<!--            <div class="video__wrapper">-->
+<!---->
+<!--                --><?php //if(!empty(the_sub_field('video_file'))): ?>
+<!--                    <a class="video__videoLink" data-fancybox href="--><?php //the_sub_field('video-file'); ?><!--"><div class="video__wrap video__wrap-link">-->
+<!--                            <img src="--><?php //the_sub_field('video_img'); ?><!--" alt="video">-->
+<!---->
+<!--                            <div class="video__container">-->
+<!--                                <img class="video__play" src="--><?php //= ASSETS ?><!--/images/video/play.webp" alt="play">-->
+<!--                            </div>-->
+<!---->
+<!--                        </div></a>-->
+<!--                --><?php //endif; ?>
+<!---->
+<!---->
+<!---->
+<!--                --><?php //if(empty($video['video_file'])): ?>
+<!--                    <a class="video__videoLink" data-fancybox href='--><?php //= $video['video_link'] ?><!--'><div class="video__wrap video__wrap-link">-->
+<!--                            <img src="--><?php //the_sub_field('video_img'); ?><!--" alt="video">-->
+<!--                            <div class="video__container">-->
+<!--                                <img class="video__play" src="--><?php //= ASSETS ?><!--/images/video/play.webp" alt="play">-->
+<!--                            </div>-->
+<!---->
+<!--                        </div></a>-->
+<!--                --><?php //endif; ?>
+<!---->
+<!---->
+<!--            </div>-->
 
 
         </div>

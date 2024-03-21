@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const headerBottomWrapper = document.querySelector('.header__bottomWrapper');
     const body = document.querySelector('body');
     const headerWrap = document.querySelector('.header__wrap');
+    const headerSearch = document.querySelector('.header .search__wrapper');
 
 
     hamb.addEventListener('click', () => {
@@ -69,6 +70,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headerBottomWrapper.classList.add('max-wrap');
             body.style.overflow = 'hidden';
             headerWrap.classList.add('header__wrap-mobile');
+            headerSearch.classList.add('sVisibility');
 
         } else {
             header.classList.remove('header__open');
@@ -76,6 +78,7 @@ document.addEventListener('DOMContentLoaded', function() {
             headerBottomWrapper.classList.remove('max-wrap');
             body.style.overflow = '';
             headerWrap.classList.remove('header__wrap-mobile');
+            headerSearch.classList.remove('sVisibility');
         }
     });
 

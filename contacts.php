@@ -34,7 +34,7 @@
                     <div class="contacts__wrapTitle">Социальные сети:</div>
                     <a target="_blank" href="<?= get_field('messenger-vk', 'options') ?>"><img class="vk" src="<?= ASSETS ?>/images/icons/vk.svg" alt="vk"></a>
                 </div>
-                <button class="contacts__btn btn-orange">Связаться с нами</button>
+                <button class="contacts__btn btn-orange" data-modal="сontactUs">Связаться с нами</button>
             </div>
             <div class="contacts__map" id="map"></div>
             </div>
