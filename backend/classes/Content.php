@@ -25,13 +25,6 @@ class Content {
                 'update_button' => 'Обновить',
             ) );
             acf_add_options_sub_page( array(
-                'page_title' => 'Ближайшие мероприятия',
-                'menu_title' => 'Ближайшие мероприятия',
-                'menu_slug' => 'events',
-                'parent_slug' => 'content-settings',
-                'update_button' => 'Обновить',
-            ) );
-            acf_add_options_sub_page( array(
                 'page_title' => 'Станьте партнёром',
                 'menu_title' => 'Станьте партнёром',
                 'menu_slug' => 'partner',

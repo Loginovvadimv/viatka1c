@@ -53,7 +53,7 @@ $pagination = Pagination::create(
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="<?= get_permalink(181) ?>">Новости</a>
+                    <a href="/allnews/">Новости</a>
                     <a href="/allevents/">Мероприятия</a>
                     <a href="/allpromos/" class="active">Акции</a>
                 </div>

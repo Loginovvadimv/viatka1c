@@ -61,7 +61,7 @@
                             </svg>
                         </a>
                         <ul class="ul2">
-                            <li><a href="/become-a-partner/">Стать партнером</a></li>
+                            <li><a href="/become-a-partner/">Как стать партнером</a></li>
                             <li><a href="/partners-programms/">Партнерские программы</a></li>
                             <li><a href="/certification/">Сертификация</a></li>
                             <li><a href="/1ssoft/">1С:Софт</a></li>

@@ -21,10 +21,9 @@ $sertList = get_field('sert-list', 'options');
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="/become-a-partner/" >Как стать партнёром</a>
-                    <a href="/partners-programms/" >Партнёрские программы</a>
-                    <a href="/certification/" class="active">Сертификация</a>
-                    <a href="/1ssoft/">1С:Софт</a>
+                    <a href="/certification/" class="active">1С:СЭЦ</a>
+                    <a href="/certification-professional/" >1С:Профессионал</a>
+                    <a href="/partnership/certification/sert-spec/">1С:Специалист</a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>

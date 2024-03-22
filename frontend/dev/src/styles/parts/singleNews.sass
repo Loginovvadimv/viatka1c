@@ -4,6 +4,8 @@
     background: linear-gradient(90.00deg, rgb(233, 229, 247) 1%,rgb(241, 228, 230) 100%),rgb(246, 246, 250)
     padding: 24px 36px 24px 36px
     margin-bottom: 36px
+  &__h1
+    margin-bottom: 0
   &__wrapper
     display: flex
     gap: 24px
@@ -15,6 +17,10 @@
     line-height: 24px
     max-width: 1186px
     margin-bottom: 32px
+    ul
+      display: flex
+      flex-direction: column
+      gap: 24px
   &__wrap
     &-right
       max-width: 392px
@@ -62,12 +68,15 @@
   &__share
     align-items: center
     gap: 12px
-    a
-      border-bottom: 2px dashed rgb(250, 126, 16)
+    display: flex
+  &__shareText
+    color: rgb(37, 37, 37)
+    border-bottom: 2px dashed rgb(37, 37, 37)
+    cursor: pointer
+    &:hover
       color: rgb(250, 126, 16)
-      &:hover
-        color: rgb(37, 37, 37)
-        border-bottom: 2px dashed rgb(37, 37, 37)
+      border-bottom: 2px dashed rgb(250, 126, 16)
+
   &__btn
     display: inline-flex
     gap: 16px

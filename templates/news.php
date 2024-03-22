@@ -35,11 +35,11 @@ foreach ($news->posts as $article) {
                         <?= $article['preview'] ?>
                     </a>
                     <div class="news__info">
-                        <div class="news__date fs16"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
+                        <div class="news__date"><img src="<?= ASSETS ?>/images/icons/date.svg" alt="date">
                             <?= $article['date'] ?>
                         </div>
                         <a href="<?= $article['link'] ?>">
-                        <div class="news__name fs16">
+                        <div class="news__name">
                             <?= $article['name'] ?>
                         </div>
                         </a>

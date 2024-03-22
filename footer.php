@@ -19,7 +19,7 @@
                     <div class="footer__nav">
                         Партнёрам
                         <ul>
-                            <li><a href="/become-a-partner/">Стать партнёром</a></li>
+                            <li><a href="/become-a-partner/">Как стать партнёром</a></li>
                             <li><a href="/partners-programms/">Партнёрские программы</a></li>
                             <li><a href="/certification/">Сертификация</a></li>
                             <li><a href="/1ssoft/">1С:Софт</a></li>
@@ -60,7 +60,7 @@
                     <div class="footer__company">
                         <div id="year"><script>
                                 document.getElementById('year').textContent = new Date().getFullYear();
-                            </script>© ООО «1С-Вятка»</div>
+                            </script> © ООО «1С-Вятка»</div>
                         <div class="footer__policy"><a href="/policy/">Политика конфиденциальности</a></div>
                     </div>
                     <div class="footer__razrab">Разработка сайта: <a href="https://vyatka-it.ru/" target="_blank"><img src="<?= ASSETS ?>/images/icons/light.webp" alt="company"></a></div>
@@ -94,7 +94,7 @@
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
-                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <input type="tel" required="" placeholder="+7 (999) 999-99-99" class="tel" name="phone">
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
@@ -134,7 +134,7 @@
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
-                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <input type="tel" required="" placeholder="+7 (999) 999-99-99" class="tel" name="phone">
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
@@ -174,7 +174,7 @@
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
-                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <input type="tel" required="" placeholder="+7 (999) 999-99-99" class="tel" name="phone">
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
@@ -213,7 +213,7 @@
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
-                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <input type="tel" required="" placeholder="+7 (999) 999-99-99" class="tel" name="phone">
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
@@ -253,7 +253,7 @@
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">
-                        <input type="tel" required="" placeholder="Телефон" class="tel" name="phone">
+                        <input type="tel" required="" placeholder="+7 (999) 999-99-99" class="tel" name="phone">
                         <div class="requiredWrap"></div>
                     </div>
                     <div class="form__input">

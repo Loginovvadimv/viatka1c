@@ -45,7 +45,7 @@ $stocks = get_posts($params);
                     update_field('promo-views', $viewing);
                     ?>
                     <div class="stocksSingle__views stocksSingle__infotext"><img src="<?= ASSETS ?>/images/icons/views1.svg" alt="views"><span>Просмотров:</span><?= get_field('promo-views') ?></div>
-                    <div class="stocksSingle__share stocksSingle__infotext"><div class="stocksSingle__shareImg"><img src="<?= ASSETS ?>/images/icons/share.svg" alt="share"></div><a href="#">Поделиться</a></div>
+                    <div class="stocksSingle__share stocksSingle__infotext"><div class="ya-share2" data-curtain data-shape="round" data-limit="0" data-more-button-type="long" data-services="vkontakte,telegram,whatsapp"></div></div>
                 </div>
             </div>
 

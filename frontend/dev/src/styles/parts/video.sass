@@ -1,0 +1,42 @@
+.video
+  margin-top: 68px
+  &__wrap
+    height: 688px
+    width: 100%
+    overflow: hidden
+    border-radius: 36px
+    position: relative
+  &__play
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    z-index: 5
+  &__bg
+    height: 100%
+    width: 100%
+    object-fit: cover
+
+@media (max-width: 424px)
+  .video
+    margin-top: 48px
+    &__wrap
+      height: 19vh
+      border-radius: 16px
+    &__play
+      width: 48px
+      height: 48px
+
+@media (min-width: 425px) and (max-width: 767px)
+  .video
+    &__wrap
+      height: 340px
+      border-radius: 24px
+
+
+@media (min-width: 768px) and (max-width: 1023px)
+  .video
+    &__wrap
+      height: 500px
+      border-radius: 24px
+

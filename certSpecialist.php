@@ -22,6 +22,16 @@ $specLinks = get_field('spec-links', 'options');
             </div>
             <h1 class="certification__title title">Сертификация "1С:Специалист</h1>
         </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/certification/">1С:СЭЦ</a>
+                    <a href="/certification-professional/">1С:Профессионал</a>
+                    <a href="/partnership/certification/sert-spec/" class="active">1С:Специалист</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
+        </div>
         <div class="certSpecialist__wrapper">
             <?php if(!empty($specInfoRep)): ?>
                 <div class="certSpecialist__info">

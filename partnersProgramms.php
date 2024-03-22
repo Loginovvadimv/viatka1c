@@ -4,7 +4,7 @@ get_header();
 $params = array(
     'post_type' => 'partners',
     'orderby' => 'date',
-    'order' => 'DESC',
+    'order' => 'ASC',
     'posts_per_page' => -1,
 );
 $partners = get_posts($params);
@@ -26,10 +26,9 @@ $partners = get_posts($params);
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="/become-a-partner/" >Как стать партнёром</a>
-                    <a href="/partners-programms/" class="active">Партнёрские программы</a>
-                    <a href="/certification/">Сертификация</a>
-                    <a href="/1ssoft/">1С:Софт</a>
+                    <a href="<?= get_permalink(197) ?>">Учебным заведениям</a>
+                    <a href="<?= get_permalink(201) ?>">Борьба с пиратством</a>
+                    <a class="active" href="<?= get_permalink(203) ?>" >Продажа курсов 1с:УЦ №1</a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>

@@ -5,37 +5,33 @@ $examensRep = get_field('examens-rep', 'options');
 $shablonListOpen = get_field('shablon-list-open');
 $blockInfoRep = get_field('blockInfo-rep');
 $linksRep = get_field('links-rep');
-//$video = get_field('video');
+$video = get_field('video');
 ?>
+
 
 
 <section class="shablon">
     <div class="container">
         <div class="background-wrap">
             <div class="scroller">
-                <div class="allEvents__breadСrumbs breadСrumbs">
-                    <a href="/">Главная</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/company-8/">Продукты</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <a href="/1sits/">1С:ИТС</a>
-                    <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive"><?= get_the_title() ?></div>
+                <div class="shablon__breadСrumbs breadСrumbs">
+                   <?php do_action('pretty_breadcrumb'); ?>
                 </div>
+
             </div>
+
             <h1 class="allEvents__title title"><?= get_the_title() ?></h1>
         </div>
         <div class="shablon__wrapper">
             <? the_content() ?>
         </div>
 
-
+        <?php if(!empty($blockInfoRep)): ?>
         <div class="quotePhoto">
-            <?php if(!empty($blockInfoRep)): ?>
             <?php if(get_field('blockInfo-rep')): ?>
             <?php while(has_sub_field('blockInfo-rep')) : ?>
             <div class="quotePhoto__wrapper">
-                <h4 class="quotePhoto__title h4"><?php the_sub_field('blockInfo-title'); ?></h4>
+                <div class="quotePhoto__title"><?php the_sub_field('blockInfo-title'); ?></div>
                 <div class="quotePhoto__person">
                     <img src="<?php the_sub_field('blockInfo-img'); ?>" alt="person" class="quotePhoto__personImg">
                     <div class="quotePhoto__personWrap">
@@ -53,17 +49,39 @@ $linksRep = get_field('links-rep');
             </div>
                     <?php endwhile; ?>
                 <?php endif; ?>
-            <?php endif; ?>
+
         </div>
+        <?php endif; ?>
 
-        <section class="video">
+
+        <!--        video-->
+        <?php if(!empty($video)): ?>
+        <div class="video">
+            <h2 class="video__title title"><?= $video['video-title'] ?></h2>
             <div class="video__wrapper">
+                <?php if(!empty($video['video-file'])): ?>
+                    <a class="video__videoLink" data-fancybox href="<?= $video['video-file'] ?>">
+                        <div class="video__wrap video__wrap-link">
+                            <img class="video__bg" src="<?= $video['video-img'] ?>" alt="video">
+                            <img class="video__play" src="<?= ASSETS ?>/images/icons/play.svg" alt="play">
+                        </div>
+                    </a>
+                <?php endif; ?>
 
+                <?php if(empty($video['video-file'])): ?>
+                    <a class="video__videoLink" data-fancybox href='<?= $video['video-link'] ?>'><div class="video__wrap video__wrap-link">
+                            <img class="video__bg" src="<?= $video['video-img'] ?>" alt="video">
+                            <img class="video__play" src="<?= ASSETS ?>/images/icons/play.svg" alt="play">
+                        </div></a>
+                <?php endif; ?>
             </div>
-        </section>
+        </div>
+        <?php endif; ?>
+        <!--//end video-->
+
 
         <?php if(!empty($linksRep)): ?>
-        <section class="links section">
+        <section class="links">
             <div class="links__wrapper">
                 <h2 class="links__title">Блок с ссылками</h2>
                 <div class="links__wrap">
@@ -113,13 +131,12 @@ $linksRep = get_field('links-rep');
         </section>
         <?php if(!empty($shablonListOpen)): ?>
         <section class="listOpen">
-        <div class="container">
         <h2 class="listOpen__title title"><?= get_field('listOpenTitle') ?></h2>
         <div class="listOpen__wrapper">
         <?php foreach ($shablonListOpen as $item): ?>
         <div class="listOpen__greyBox">
             <div class="listOpen__wrap">
-                <div class="listOpen__text fs16"><?= $item['shablon-li'] ?></div>
+                <div class="listOpen__text"><?= $item['shablon-li'] ?></div>
                 <div class="listOpen__plus">
                     <span></span>
                     <span></span>
@@ -129,41 +146,11 @@ $linksRep = get_field('links-rep');
                 <?= $item['shablon-li-open'] ?>
             </div>
         </div>
-
-
         <?php endforeach; ?>
         </div>
 
-<!--            <div class="video__wrapper">-->
-<!---->
-<!--                --><?php //if(!empty(the_sub_field('video_file'))): ?>
-<!--                    <a class="video__videoLink" data-fancybox href="--><?php //the_sub_field('video-file'); ?><!--"><div class="video__wrap video__wrap-link">-->
-<!--                            <img src="--><?php //the_sub_field('video_img'); ?><!--" alt="video">-->
-<!---->
-<!--                            <div class="video__container">-->
-<!--                                <img class="video__play" src="--><?php //= ASSETS ?><!--/images/video/play.webp" alt="play">-->
-<!--                            </div>-->
-<!---->
-<!--                        </div></a>-->
-<!--                --><?php //endif; ?>
-<!---->
-<!---->
-<!---->
-<!--                --><?php //if(empty($video['video_file'])): ?>
-<!--                    <a class="video__videoLink" data-fancybox href='--><?php //= $video['video_link'] ?><!--'><div class="video__wrap video__wrap-link">-->
-<!--                            <img src="--><?php //the_sub_field('video_img'); ?><!--" alt="video">-->
-<!--                            <div class="video__container">-->
-<!--                                <img class="video__play" src="--><?php //= ASSETS ?><!--/images/video/play.webp" alt="play">-->
-<!--                            </div>-->
-<!---->
-<!--                        </div></a>-->
-<!--                --><?php //endif; ?>
-<!---->
-<!---->
-<!--            </div>-->
 
 
-        </div>
     </section>
         <?php endif; ?>
 

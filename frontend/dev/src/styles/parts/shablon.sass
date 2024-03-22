@@ -115,8 +115,31 @@
     margin-bottom: 0
     padding-left: 38px
     margin-top: 8px
-
-
+  &__breadСrumbs
+    ul
+      display: flex
+      flex-direction: row
+      gap: 6px
+      margin-bottom: 0
+      font-family: Manrope
+      font-size: 14px
+      font-weight: 600
+      line-height: 22px
+      li
+        padding: 0
+        align-items: center
+        display: flex
+        gap: 6px
+        &:before
+          width: 0
+          height: 0
+          background-color: transparent
+        a
+          span
+            &:hover
+              color: rgb(250, 126, 16)
+  &__breadСrumbsName
+    color: rgb(136, 136, 136) !important
 
 
 @media (max-width: 767px)
@@ -128,10 +151,19 @@
       font-size: 22px
       font-weight: 600
       line-height: 30px
+      text-align: center
     h2
       font-size: 22px
       font-weight: 600
       line-height: 30px
+      text-align: center
+    h4
+      color: rgb(37, 37, 37)
+      font-family: Manrope
+      font-size: 20px
+      font-weight: 600
+      line-height: 28px
+      text-align: center
     ol>li:before
       left: -30px
       width: 20px
@@ -142,6 +174,7 @@
       width: 20px
       height: 20px
       font-size: 14px
+
 
 
 @media (min-width: 768px) and (max-width: 1023px)

@@ -1,4 +1,5 @@
 .links
+  margin-top: 100px
   &__wrapper
     border-radius: 24px
     background: rgb(246, 246, 250)
@@ -23,3 +24,15 @@
     line-height: 24px
     &:hover
       color: rgb(249, 95, 9)
+
+
+@media (max-width: 767px)
+  .links
+    margin: 64px 0 64px 0
+    &__wrapper
+      border-radius: 16px
+      background: rgb(246, 246, 250)
+      padding: 16px
+      display: flex
+      flex-direction: column
+      gap: 16px

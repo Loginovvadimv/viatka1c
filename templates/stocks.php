@@ -23,7 +23,7 @@ foreach ($stocks->posts as $stock) {
         <div class="stocks__wrapper">
             <div class="stocks__box">
                 <h2 class="stocks__title title">Акции</h2>
-                <a href="/allpromos/"><button class="btn-white stocks-btn">Все акции</button></a>
+                <a href="/allpromos/"><button class="btn-white stocks__btn">Все акции</button></a>
             </div>
             <div class="stocks__swiper slider__opacity slider__opacity-2-elements">
                 <div class="swiper">

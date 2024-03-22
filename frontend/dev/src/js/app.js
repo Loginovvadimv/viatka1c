@@ -207,5 +207,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
     //end
 
+    //share
+
+
+    // window.addEventListener('load',()=>{
+    //     const share = document.querySelector('.singleNews__share');
+    //     const shareYan = document.querySelector('.ya-share2__link');
+    //
+    //     share.addEventListener('click', () => {
+    //         shareYan.dispatchEvent(new Event("click",{bubbles: true}))
+    //     })
+    // })
+
+
+
+    //end
 
 });

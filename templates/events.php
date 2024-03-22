@@ -36,7 +36,7 @@ $pagination = Pagination::create(
 <section class="events section">
     <div class="container">
             <div class="events__box">
-                <h2 class="events__title title"><?= get_field('evens-title', 'options') ?></h2>
+                <h2 class="events__title title">Ближайшие мероприятия</h2>
                 <a href="/allevents/"><button class="events__btn btn-white">Все мероприятия</button></a>
             </div>
         <div class="events__wrapper">
@@ -50,7 +50,7 @@ $pagination = Pagination::create(
                     <div class="events__time fs16">
                         <img src="<?= ASSETS ?>/images/icons/time.svg" alt="time"><?= get_field('event-time', $event['id']) ?>
                     </div>
-                    <a href="<?= get_permalink($event['id']) ?>"><div class="events__name fs16"><?= get_field('event-name', $event['id']) ?></div></a>
+                    <a href="<?= get_permalink($event['id']) ?>"><div class="events__name fs16"><?= $event['name'] ?></div></a>
                 </div>
             </div>
             <?php endforeach; ?>

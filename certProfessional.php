@@ -25,6 +25,16 @@ $professionalPriceRep = get_field('professional-price-rep', 'options');
 
             <h1 class="certification__title title">Сертификация 1С:Профессионал</h1>
         </div>
+        <div class="scroller">
+            <div class="quickLinks">
+                <div class="link-block quickLinks__block">
+                    <a href="/certification/">1С:СЭЦ</a>
+                    <a href="/certification-professional/" class="active">1С:Профессионал</a>
+                    <a href="/partnership/certification/sert-spec/">1С:Специалист</a>
+                </div>
+                <div class="quickLinks__line"></div>
+            </div>
+        </div>
         <div class="certProfessional__wrapper">
             <?php if(!empty($professionalNowRep)): ?>
             <div class="certProfessional__wrap">
