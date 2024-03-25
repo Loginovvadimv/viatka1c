@@ -77,13 +77,9 @@ $itsPrices = get_field('its-prices', 'options');
         <?php endif; ?>
     </div>
 
-<?php get_template_part('templates/neenQuestion') ?>
-
-
-
-
     </div>
 </section>
+<?php get_template_part('templates/neenQuestion') ?>
 
 
 <?php get_footer(); ?>

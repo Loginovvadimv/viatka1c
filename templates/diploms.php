@@ -24,7 +24,5 @@ $diplomsRep = get_field('diploms-rep', 'options');
                     </svg></button>
             </div>
         </div>
-
-
     </div>
 </section>

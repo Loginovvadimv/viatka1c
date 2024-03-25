@@ -4,12 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="shortcut icon" href="<?= get_site_url() ?>/favicon.svg" type="image/png">
-    <link type="image/x-icon" href="<?=ASSETS?>/images/favicon.svg" rel="shortcut icon">
-    <link type="Image/x-icon" href="<?=ASSETS?>/images/favicon.svg" rel="icon">
-    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=c2a888d7-28f1-4234-89bb-c4785a857bc4"></script>
-    <script src="https://yastatic.net/share2/share.js"></script>
-    <? the_field('header_code', 'options') ?>
+    <link rel="shortcut icon" href="<?= get_site_url() ?>/favicon.svg" type="image/svg">
+    <link type="image/x-icon" href="<?= get_site_url() ?>/favicon.svg" rel="shortcut icon">
+    <link type="Image/x-icon" href="<?= get_site_url() ?>/favicon.svg" rel="icon">
+    <script defer src="https://yastatic.net/share2/share.js"></script>
+    <? get_field('header_code', 'options') ?>
     <script>
         var ajax = '<?= get_admin_url() ?>admin-ajax.php'
     </script>
@@ -44,7 +43,7 @@
                 </div>
                 <?php get_template_part('templates/search') ?>
                 <ul class="navContainer">
-                    <li>
+                    <li class="is_drop">
                         <a class="drop" href="/allnews/">События<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
                             </svg>
@@ -55,7 +54,7 @@
                             <li><a href="/allpromos/">Акции</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="is_drop">
                         <a class="drop" href="/partnership/">Партнёрам<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
                             </svg>
@@ -67,7 +66,7 @@
                             <li><a href="/1ssoft/">1С:Софт</a></li>
                         </ul>
                     </li>
-                    <li>
+                    <li class="is_drop">
                         <a class="drop" href="/company-8/">Продукты<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                                 <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
                             </svg>
@@ -80,16 +79,10 @@
                         </ul>
                     </li>
                     <li>
-                        <a class="drop" href="/forus/">О нас<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
-                            </svg>
-                        </a>
+                        <a class="drop" href="/forus/">О нас</a>
                     </li>
                     <li>
-                        <a class="drop" href="/contacts/">Контакты<svg width="6.000000" height="13.000000" viewBox="0 0 6 13" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                                <path id="Path" d="M1.78 11.62L5.78 6.62C6.07 6.26 6.07 5.74 5.78 5.37L1.78 0.37C1.43 -0.06 0.8 -0.13 0.37 0.21C-0.06 0.56 -0.13 1.19 0.21 1.62L3.71 6L0.21 10.37C-0.13 10.8 -0.06 11.43 0.37 11.78C0.8 12.12 1.43 12.05 1.78 11.62Z" fill="#252525" fill-opacity="1.000000" fill-rule="evenodd"/>
-                            </svg>
-                        </a>
+                        <a class="drop" href="/contacts/">Контакты</a>
                     </li>
                 </ul>
             </div>

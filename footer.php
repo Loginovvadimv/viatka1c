@@ -1,6 +1,6 @@
         <? wp_footer() ?>
 
-<?// the_field('footer_code', 'options') ?>
+<? get_field('footer_code', 'options') ?>
 
         <footer class="footer">
             <div class="container">

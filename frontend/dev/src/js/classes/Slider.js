@@ -64,6 +64,34 @@ export default class Slider {
         }
 
 
+        const shablonPhotos = document.querySelector('.shablonPhotos')
+        if (shablonPhotos) {
+            this.createSlider(shablonPhotos, {
+                slidesPerView: 1,
+                spaceBetween: 12,
+                allowTouchMove: true,
+                loop: true,
+                autoHeight: false,
+                calculateHeight: false,
+                speed: 1000,
+                breakpoints: {
+                    425: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
+                    768: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 16,
+                    },
+                    1024: {
+                        slidesPerView: 'auto',
+                        spaceBetween: 24,
+                    }
+                }
+            })
+        }
+
+
         const letters = document.querySelector('.letters')
         if (letters) {
             this.createSlider(letters, {

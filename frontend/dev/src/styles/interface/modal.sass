@@ -37,8 +37,6 @@
       top: 16px
       right: 16px
       background: url(./images/icons/close.svg) center no-repeat
-      width: 14px
-      height: 14px
       background-color: #FFFFFF
       width: 32px
       height: 32px
@@ -68,3 +66,11 @@
   100%
     transform: scale(1)
     opacity: 1
+
+
+@media (max-width: 767px)
+  .modal
+    &__close
+      &--fixed
+        top: -15px
+        right: 0px
