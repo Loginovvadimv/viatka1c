@@ -12,10 +12,10 @@
                     <div class="contacts__breadСrumbs breadСrumbs">
                         <a href="/">Главная</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                        <a href="/contacts/" class="crumbActive">Контакты</a>
+                        <a href="/contacts/" class="crumbActive"><?= get_the_title(); ?></a>
                     </div>
                 </div>
-                <h1 class="contacts__title title">Контакты</h1>
+                <h1 class="contacts__title title"><?= get_the_title(); ?></h1>
             </div>
         <div class="contacts__wrapper">
             <div class="contacts__wrap">

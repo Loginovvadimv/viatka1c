@@ -12,10 +12,10 @@ get_header();
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="/company-8/">Продукты</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">Торговое оборудование</div>
+                    <div class="crumbActive"><?= get_the_title(); ?></div>
                 </div>
             </div>
-            <h1 class="commercialEquipment__title title">Торговое оборудование</h1>
+            <h1 class="commercialEquipment__title title"><?= get_the_title(); ?></h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">

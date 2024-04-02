@@ -14,15 +14,15 @@
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="/partnership/">Партнёрам</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div  class="crumbActive">Как стать партнёром</div>
+                    <div  class="crumbActive"><?= get_the_title(); ?></div>
                 </div>
             </div>
-            <h1 class="title becomePartnerpage__title">Как стать партнёром</h1>
+            <h1 class="title becomePartnerpage__title"><?= get_the_title(); ?></h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">
                 <div class="link-block quickLinks__block">
-                    <a href="/become-a-partner/" class="active">Как стать партнёром</a>
+                    <a href="/become-a-partner/" class="active"><?= get_the_title(); ?></a>
                     <a href="/partners-programms/">Партнёрские программы</a>
                     <a href="/certification/">Сертификация</a>
                     <a href="/1ssoft/">1С:Софт</a>

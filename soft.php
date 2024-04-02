@@ -16,10 +16,10 @@ $softListDown = get_field('soft-list-down', 'options');
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                     <a href="/partnership/">Партнёрам</a>
                     <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
-                    <div class="crumbActive">1С:Софт</div>
+                    <div class="crumbActive"><?= get_the_title(); ?></div>
                 </div>
             </div>
-            <h1 class="soft__title title">1С:Софт</h1>
+            <h1 class="soft__title title"><?= get_the_title(); ?></h1>
         </div>
         <div class="scroller">
             <div class="quickLinks">
@@ -27,7 +27,7 @@ $softListDown = get_field('soft-list-down', 'options');
                     <a href="/become-a-partner/" >Как стать партнёром</a>
                     <a href="/partners-programms/" >Партнёрские программы</a>
                     <a href="/certification/">Сертификация</a>
-                    <a href="/1ssoft/" class="active">1С:Софт</a>
+                    <a href="/1ssoft/" class="active"><?= get_the_title(); ?></a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>
