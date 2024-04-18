@@ -29,7 +29,7 @@ $sertList = get_field('sert-list', 'options');
             </div>
         </div>
         <div class="certification__wrapper">
-            <div class="certification__info fs16"><?= get_field('sert-text', 'options') ?></div>
+            <div class="certification__info fs16"><?= the_content(); ?></div>
             <div class="certification__wrap">
                 <h3 class="certification__wrapTitle subtitle">Фирма "1С" проводит два вида сертификаций на знание программных продуктов "1С":</h3>
                 <ul class="certification__ul">
