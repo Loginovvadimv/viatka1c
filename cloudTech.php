@@ -1,14 +1,13 @@
 <?php
-//Template name: 1С:Дистрибьюция
+//Template name: Облачные технологии 1С
 get_header();
-$distrInfo = get_field('distr-info', 'options');
 ?>
 
-    <section class="distribution newSection">
+    <section class="cloudTech newSection">
         <div class="container">
-            <div class="distribution__bgWrap background-wrap">
+            <div class="cloudTech__bgWrap background-wrap">
                 <div class="scroller">
-                    <div class="distribution__breadСrumbs breadСrumbs">
+                    <div class="cloudTech__breadСrumbs breadСrumbs">
                         <a href="/">Главная</a>
                         <img src="<?= ASSETS ?>/images/icons/crumb.svg" alt="crumb">
                         <a href="/company-8/">Продукты</a>
@@ -16,7 +15,7 @@ $distrInfo = get_field('distr-info', 'options');
                         <div class="crumbActive"><?= get_the_title(); ?></div>
                     </div>
                 </div>
-                <h1 class="distribution__title title"><?= get_the_title(); ?></h1>
+                <h1 class="certification__title title"><?= get_the_title(); ?></h1>
             </div>
             <div class="scroller">
                 <div class="quickLinks">
@@ -24,17 +23,23 @@ $distrInfo = get_field('distr-info', 'options');
                         <a href="/company-8/">1С:Предприятие 8</a>
                         <a href="/1sits/">1С:ИТС</a>
                         <a href="/commercial-equipment/">Торговое оборудование</a>
-                        <a class="active" href="/distribution/"><?= get_the_title(); ?></a>
+                        <a href="/distribution/">1С:Дистрибьюция</a>
                         <a href="/otraslevye-resheniya-1s/">Отраслевые решения 1С</a>
-                        <a href="/oblachnye-tehnologii-1s/">Облачные технологии 1С</a>
+                        <a href="/oblachnye-tehnologii-1s/" class="active"><?= get_the_title(); ?></a>
                     </div>
                     <div class="quickLinks__line"></div>
                 </div>
             </div>
-            <div class="distribution__wrapper">
-                <? the_content() ?>
+
+
+            <div class="cloudTech__wrapper">
+                <?php get_template_part('templates/examens') ?>
+                <?php the_content(); ?>
             </div>
+
+        </div>
     </section>
 <?php get_template_part('templates/neenQuestion') ?>
 
-<?php get_footer() ?>
+
+<?php get_footer(); ?>

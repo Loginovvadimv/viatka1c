@@ -24,6 +24,8 @@ get_header();
                     <a href="/1sits/">1С:ИТС</a>
                     <a href="/commercial-equipment/">Торговое оборудование</a>
                     <a href="/distribution/">1С:Дистрибьюция</a>
+                    <a href="/otraslevye-resheniya-1s/">Отраслевые решения 1С</a>
+                    <a href="/oblachnye-tehnologii-1s/">Облачные технологии 1С</a>
                 </div>
                 <div class="quickLinks__line"></div>
             </div>

@@ -76,6 +76,9 @@
                             <li><a href="/1sits/">1С:ИТС</a></li>
                             <li><a href="/commercial-equipment/">Торговое оборудование</a></li>
                             <li><a href="/distribution/">1С:Дистрибьюция</a></li>
+                            <li><a href="/otraslevye-resheniya-1s/">Отраслевые решения 1С</a></li>
+                            <li><a href="/oblachnye-tehnologii-1s/">Облачные технологии 1С</a></li>
+
                         </ul>
                     </li>
                     <li>

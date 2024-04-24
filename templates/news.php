@@ -21,6 +21,7 @@ foreach ($news->posts as $article) {
 }
 ?>
 
+    <?php if(!empty($data['articles'])):  ?>
 <section class="news section">
     <div class="container">
         <div class="news__flexBox">
@@ -52,3 +53,4 @@ foreach ($news->posts as $article) {
             </div>
     </div>
 </section>
+    <?php endif; ?>

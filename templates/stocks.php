@@ -18,6 +18,7 @@ foreach ($stocks->posts as $stock) {
 }
 
 ?>
+<?php if(!empty($data['stocks'])):  ?>
 <section class="stocks section">
     <div class="container">
         <div class="stocks__wrapper">
@@ -57,3 +58,4 @@ foreach ($stocks->posts as $stock) {
         </div>
     </div>
 </section>
+<?php endif; ?>

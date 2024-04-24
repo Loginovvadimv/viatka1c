@@ -82,10 +82,8 @@ $shablonPhotos = get_field('shablon-photos');
         <?php endif; ?>
 
 <!--        endSlider-->
-
-
         <!--        video-->
-        <?php if(!empty($video)): ?>
+        <?php if(!empty($video['video-file'] || $video['video-link'])): ?>
         <div class="video">
             <h2 class="video__title title"><?= $video['video-title'] ?></h2>
             <div class="video__wrapper">

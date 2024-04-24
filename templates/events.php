@@ -32,7 +32,7 @@ $pagination = Pagination::create(
 );
 ?>
 
-
+<?php if(!empty($data['events'])):  ?>
 <section class="events section">
     <div class="container">
             <div class="events__box">
@@ -79,3 +79,4 @@ $pagination = Pagination::create(
         </div>
     </div>
 </section>
+<?php endif; ?>
